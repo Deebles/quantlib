@@ -1,0 +1,119 @@
+\section{Quant\+Lib\+:\+:Year\+On\+Year\+Inflation\+Swap Class Reference}
+\label{class_quant_lib_1_1_year_on_year_inflation_swap}\index{Quant\+Lib\+::\+Year\+On\+Year\+Inflation\+Swap@{Quant\+Lib\+::\+Year\+On\+Year\+Inflation\+Swap}}
+
+
+Year-\/on-\/year inflation-\/indexed swap.  
+
+
+
+
+{\ttfamily \#include $<$yearonyearinflationswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Year\+On\+Year\+Inflation\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Year\+On\+Year\+Inflation\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for YoY swap calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from YoY swap calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Receiver} = -\/1, 
+{\bfseries Payer} = 1
+ \}\label{class_quant_lib_1_1_year_on_year_inflation_swap_ae67b8b5b5b37a05851b75b6a5db14363}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Year\+On\+Year\+Inflation\+Swap} (Type type, Real nominal, const Schedule \&fixed\+Schedule, Rate fixed\+Rate, const Day\+Counter \&fixed\+Day\+Count, const Schedule \&yoy\+Schedule, const boost\+::shared\+\_\+ptr$<$ Yo\+Y\+Inflation\+Index $>$ \&yoy\+Index, const Period \&observation\+Lag, Spread spread, const Day\+Counter \&yoy\+Day\+Count, const Calendar \&payment\+Calendar, Business\+Day\+Convention payment\+Convention=Modified\+Following)\label{class_quant_lib_1_1_year_on_year_inflation_swap_a93031f48f9c8890d74d28b582716c6b8}
+
+\item 
+virtual Real {\bfseries fixed\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a8d8da64894234c8e070ea93aeb80f811}
+
+\item 
+virtual Rate {\bfseries fair\+Rate} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_addc7b05f7f02f30354088eddc46566b4}
+
+\item 
+virtual Real {\bfseries yoy\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a6c4577143a8ad1d7d1945ff65fd8b8f7}
+
+\item 
+virtual Spread {\bfseries fair\+Spread} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a0404cf74f848cb157392e3a929b666cf}
+
+\item 
+virtual Type {\bfseries type} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a3c58f60420c62090af91dba866e6f15c}
+
+\item 
+virtual Real {\bfseries nominal} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a45ba579dde630801cda2ba0db5d37511}
+
+\item 
+virtual const Schedule \& {\bfseries fixed\+Schedule} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_af8c989fe171be784de2c79bed8281725}
+
+\item 
+virtual Rate {\bfseries fixed\+Rate} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_adc45b7785487922bf682fc47c84838dc}
+
+\item 
+virtual const Day\+Counter \& {\bfseries fixed\+Day\+Count} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a3399849a7081302e4bbd5eb6eb64c8ad}
+
+\item 
+virtual const Schedule \& {\bfseries yoy\+Schedule} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a875d4184eccfcdfde035835f82104f14}
+
+\item 
+virtual const boost\+::shared\+\_\+ptr$<$ Yo\+Y\+Inflation\+Index $>$ \& {\bfseries yoy\+Inflation\+Index} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_ac4bda131730e97b8e834681f00ed3915}
+
+\item 
+virtual Period {\bfseries observation\+Lag} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a857ae67713f2b88e56b9f55a2274ecfc}
+
+\item 
+virtual Spread {\bfseries spread} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a6fcb85e0a4313f79dce3a0025ceb3040}
+
+\item 
+virtual const Day\+Counter \& {\bfseries yoy\+Day\+Count} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_aa5bd2e39d188ba351f55d9f111be3296}
+
+\item 
+virtual Calendar {\bfseries payment\+Calendar} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a0f76f08272e1c82e15da430c4ac34b77}
+
+\item 
+virtual Business\+Day\+Convention {\bfseries payment\+Convention} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_aad93be5e4f8f667fab56775aea373028}
+
+\item 
+virtual const Leg \& {\bfseries fixed\+Leg} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a6afcf0d60afa50e5d3ee102479c0e904}
+
+\item 
+virtual const Leg \& {\bfseries yoy\+Leg} () const \label{class_quant_lib_1_1_year_on_year_inflation_swap_ac3e14e1da6019837c7c7c7965094236f}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$args) const \label{class_quant_lib_1_1_year_on_year_inflation_swap_aa376604d012f9242d037dd53c2e42d07}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_year_on_year_inflation_swap_a94b3d4f763b3a53675e5bf325d346699}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Year-\/on-\/year inflation-\/indexed swap. 
+
+Quoted as a fixed rate $ K $. At start\+: \[ \sum_{i=1}^{M} P_n(0,t_i) N K = \sum_{i=1}^{M} P_n(0,t_i) N \left[ \frac{I(t_i)}{I(t_i-1)} - 1 \right] \] where $ t_M $ is the maturity time, $ P_n(0,t) $ is the nominal discount factor at time $ t $, $ N $ is the notional, and $ I(t) $ is the inflation index value at time $ t $.
+
+\begin{DoxyNote}{Note}
+These instruments have now been changed to follow typical \doxyref{Vanilla\+Swap}{p.}{class_quant_lib_1_1_vanilla_swap} type design conventions w.\+r.\+t. Schedules etc. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf yearonyearinflationswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/yearonyearinflationswap.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\section{Quant\+Lib\+:\+:Yo\+Y\+Inflation\+Cap\+Floor Class Reference}
+\label{class_quant_lib_1_1_yo_y_inflation_cap_floor}\index{Quant\+Lib\+::\+Yo\+Y\+Inflation\+Cap\+Floor@{Quant\+Lib\+::\+Yo\+Y\+Inflation\+Cap\+Floor}}
+
+
+Base class for yoy inflation cap-\/like instruments.  
+
+
+
+
+{\ttfamily \#include $<$inflationcapfloor.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Yo\+Y\+Inflation\+Cap\+Floor\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Yo\+Y\+Inflation\+Cap\+Floor\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for YoY Inflation cap/floor calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em base class for cap/floor engines \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Cap}, 
+{\bfseries Floor}, 
+{\bfseries Collar}
+ \}\label{class_quant_lib_1_1_yo_y_inflation_cap_floor_af28f0f172a2f11bf7a06b4779fe9f05a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Yo\+Y\+Inflation\+Cap\+Floor} (Type type, const Leg \&yoy\+Leg, const std\+::vector$<$ Rate $>$ \&cap\+Rates, const std\+::vector$<$ Rate $>$ \&floor\+Rates)\label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a65a89f1b5e721d5e9566ff506cc2be58}
+
+\item 
+{\bfseries Yo\+Y\+Inflation\+Cap\+Floor} (Type type, const Leg \&yoy\+Leg, const std\+::vector$<$ Rate $>$ \&strikes)\label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a0ef2fabc52a2a45e181a86779d9a23fb}
+
+\item 
+virtual Rate {\bfseries atm\+Rate} (const Yield\+Term\+Structure \&discount\+Curve) const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_aed2713c60b490127ec6801dbeb0a2a78}
+
+\item 
+virtual Volatility {\bf implied\+Volatility} (Real price, const Handle$<$ Yo\+Y\+Inflation\+Term\+Structure $>$ \&yoy\+Curve, Volatility guess, Real accuracy=1.\+0e-\/4, Natural max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_abd869004a9b8fd2af58873552261aec3}
+
+\begin{DoxyCompactList}\small\item\em implied term volatility \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_ad58ce3eafc0d1218a340ecef8d961834}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a1a8bcb2872ab9d81a40131f677d1e596}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Type {\bfseries type} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a6b1cf600c4349f9e1da97528c3c4ec06}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries cap\+Rates} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_af09c3c229f7b4c4004305a7a5eb5a868}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries floor\+Rates} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a17feb1922cca9f6a8c851ceeb2f14da8}
+
+\item 
+const Leg \& {\bfseries yoy\+Leg} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a691823b1e0657895c1b4c572f7078307}
+
+\item 
+Date {\bfseries start\+Date} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a41aaded1c91b8cbaabc3bebc53f926bc}
+
+\item 
+Date {\bfseries maturity\+Date} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a3e2081fad522a9ab053fcf38c8214e75}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ Yo\+Y\+Inflation\+Coupon $>$ {\bfseries last\+Yo\+Y\+Inflation\+Coupon} () const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_a95991c4c5b21fb4451b0c886968f5980}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ {\bf Yo\+Y\+Inflation\+Cap\+Floor} $>$ {\bf optionlet} (const Size n) const \label{class_quant_lib_1_1_yo_y_inflation_cap_floor_acfa19e3966024e8811e17b3b4abff6e5}
+
+\begin{DoxyCompactList}\small\item\em Returns the n-\/th optionlet as a cap/floor with only one cash flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Base class for yoy inflation cap-\/like instruments. 
+
+Note that the standard YoY inflation cap/floor defined here is different from nominal, because in nominal world standard cap/floors do not have the first optionlet. This is because they set in advance so there is no point. However, yoy inflation generally sets (effectively) in arrears, (actually in arrears vs lag of a few months) thus the first optionlet is relevant. Hence we can do a parity test without a special definition of the YoY cap/floor instrument.
+
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]
+\begin{DoxyItemize}
+\item the relationship between the values of caps, floors and the resulting collars is checked.
+\item the put-\/call parity between the values of caps, floors and swaps is checked.
+\item the correctness of the returned value is tested by checking it against a known good value. 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/inflationcapfloor.\+hpp\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/inflationcapfloor.\+cpp\end{DoxyCompactItemize}

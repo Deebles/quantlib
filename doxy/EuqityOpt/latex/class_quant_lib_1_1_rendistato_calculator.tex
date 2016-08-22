@@ -1,0 +1,80 @@
+\section{Quant\+Lib\+:\+:Rendistato\+Calculator Class Reference}
+\label{class_quant_lib_1_1_rendistato_calculator}\index{Quant\+Lib\+::\+Rendistato\+Calculator@{Quant\+Lib\+::\+Rendistato\+Calculator}}
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Rendistato\+Calculator\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Rendistato\+Calculator\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Rendistato\+Calculator} (const boost\+::shared\+\_\+ptr$<$ {\bf Rendistato\+Basket} $>$ \&basket, const boost\+::shared\+\_\+ptr$<$ Euribor $>$ \&euribor\+Index, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve)\label{class_quant_lib_1_1_rendistato_calculator_a30454bdd1ce4fd269c7385ff93314e6a}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Calculations}\par
+\begin{DoxyCompactItemize}
+\item 
+Rate {\bfseries yield} () const \label{class_quant_lib_1_1_rendistato_calculator_a849dfe34954eea0266121339a77dafbb}
+
+\item 
+Time {\bfseries duration} () const \label{class_quant_lib_1_1_rendistato_calculator_ad15858294e9accaa9a570e5d496af742}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries yields} () const \label{class_quant_lib_1_1_rendistato_calculator_a2f39877f108930b37b6e75a089e50792}
+
+\item 
+const std\+::vector$<$ Time $>$ \& {\bfseries durations} () const \label{class_quant_lib_1_1_rendistato_calculator_ad5bf27010acd091f8b65744393db8f0b}
+
+\item 
+const std\+::vector$<$ Time $>$ \& {\bfseries swap\+Lengths} () const \label{class_quant_lib_1_1_rendistato_calculator_aff0d85793f6b98de7e4a4479c9543724}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries swap\+Rates} () const \label{class_quant_lib_1_1_rendistato_calculator_a57b387b3abcbf4bcf8e72195fd0bc6ca}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries swap\+Yields} () const \label{class_quant_lib_1_1_rendistato_calculator_a498755a4d2da7923a88f0bc117f463a9}
+
+\item 
+const std\+::vector$<$ Time $>$ \& {\bfseries swap\+Durations} () const \label{class_quant_lib_1_1_rendistato_calculator_ab261451124f93c51c79f6e0d44bebe34}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Equivalent Swap proxy}\par
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ {\bf Vanilla\+Swap} $>$ {\bfseries equivalent\+Swap} () const \label{class_quant_lib_1_1_rendistato_calculator_ae37e7aa93b7cffbc0d16d599a1e9799c}
+
+\item 
+Rate {\bfseries equivalent\+Swap\+Rate} () const \label{class_quant_lib_1_1_rendistato_calculator_a2e1c6ac9a6baaf27cc85e96dd909e772}
+
+\item 
+Rate {\bfseries equivalent\+Swap\+Yield} () const \label{class_quant_lib_1_1_rendistato_calculator_aa3da6ffd9109c85ca78b608541921d24}
+
+\item 
+Time {\bfseries equivalent\+Swap\+Duration} () const \label{class_quant_lib_1_1_rendistato_calculator_a281481a76bd7dd61a20d5010fee878f9}
+
+\item 
+Time {\bfseries equivalent\+Swap\+Length} () const \label{class_quant_lib_1_1_rendistato_calculator_abd81ba1c8bda4d287e011274c428e6cd}
+
+\item 
+Spread {\bfseries equivalent\+Swap\+Spread} () const \label{class_quant_lib_1_1_rendistato_calculator_a31fe41b098467df9ccfc0b6d4eee2d77}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{Indent}{\bf Lazy\+Object interface}\par
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries perform\+Calculations} () const \label{class_quant_lib_1_1_rendistato_calculator_aba1869e62de7c48d78fb9a06f2ed0156}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/{\bf btp.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/btp.\+cpp\end{DoxyCompactItemize}

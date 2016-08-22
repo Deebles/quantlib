@@ -1,0 +1,110 @@
+\section{Quant\+Lib\+:\+:Variance\+Swap Class Reference}
+\label{class_quant_lib_1_1_variance_swap}\index{Quant\+Lib\+::\+Variance\+Swap@{Quant\+Lib\+::\+Variance\+Swap}}
+
+
+Variance swap.  
+
+
+
+
+{\ttfamily \#include $<$varianceswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Variance\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Variance\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for forward fair-\/variance calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em base class for variance-\/swap engines \end{DoxyCompactList}\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from variance-\/swap calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Variance\+Swap} (Position\+::\+Type position, Real strike, Real notional, const Date \&start\+Date, const Date \&maturity\+Date)\label{class_quant_lib_1_1_variance_swap_a531be199ed9b567e424f9d03c81521d3}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$args) const \label{class_quant_lib_1_1_variance_swap_a54917efb14f856bacfae1ae03e9099e9}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_variance_swap_ab1f588cd7b834f0c56b19c7418384089}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_variance_swap_a66c9af22e2d11dae6640f333f914c955}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Additional interface}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries strike} () const \label{class_quant_lib_1_1_variance_swap_a295d12019f655252a2bbebedc5583f06}
+
+\item 
+Position\+::\+Type {\bfseries position} () const \label{class_quant_lib_1_1_variance_swap_ae747fa927e228cbbbe95fa761f977bb7}
+
+\item 
+Date {\bfseries start\+Date} () const \label{class_quant_lib_1_1_variance_swap_a633ad08c5dac3509b1e09bbe72ea96eb}
+
+\item 
+Date {\bfseries maturity\+Date} () const \label{class_quant_lib_1_1_variance_swap_afad4c81a960870471a9a209198f8f139}
+
+\item 
+Real {\bfseries notional} () const \label{class_quant_lib_1_1_variance_swap_a12ac3276b87405a3955c784979a1e5df}
+
+\item 
+Real {\bfseries variance} () const \label{class_quant_lib_1_1_variance_swap_aca9f14c02afacb796dd33828b7011530}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries setup\+Expired} () const \label{class_quant_lib_1_1_variance_swap_a97e3b12366697ef72b5741247b1af466}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Position\+::\+Type {\bfseries position\+\_\+}\label{class_quant_lib_1_1_variance_swap_a98e3c22aa7d2d65a8b75502ba497dc38}
+
+\item 
+Real {\bfseries strike\+\_\+}\label{class_quant_lib_1_1_variance_swap_aa09f8fc8005c75dc3617dc17abfe9fce}
+
+\item 
+Real {\bfseries notional\+\_\+}\label{class_quant_lib_1_1_variance_swap_accfc43cf3264a24cd5b5d1cfbb915210}
+
+\item 
+Date {\bfseries start\+Date\+\_\+}\label{class_quant_lib_1_1_variance_swap_a2f67896d683f2fd913c9f0ba4020a612}
+
+\item 
+Date {\bfseries maturity\+Date\+\_\+}\label{class_quant_lib_1_1_variance_swap_aeeb7150d864372e0a7104ba76b77dd61}
+
+\item 
+Real {\bfseries variance\+\_\+}\label{class_quant_lib_1_1_variance_swap_ad36c9a795be552c19bb848119b2db64d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Variance swap. 
+
+\begin{DoxyWarning}{Warning}
+This class does not manage seasoned variance swaps. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf varianceswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/varianceswap.\+cpp\end{DoxyCompactItemize}

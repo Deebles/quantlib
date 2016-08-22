@@ -1,0 +1,65 @@
+\section{Quant\+Lib\+:\+:Quanto\+Vanilla\+Option Class Reference}
+\label{class_quant_lib_1_1_quanto_vanilla_option}\index{Quant\+Lib\+::\+Quanto\+Vanilla\+Option@{Quant\+Lib\+::\+Quanto\+Vanilla\+Option}}
+
+
+quanto version of a vanilla option  
+
+
+
+
+{\ttfamily \#include $<$quantovanillaoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Quanto\+Vanilla\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Quanto\+Vanilla\+Option\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef One\+Asset\+Option\+::arguments {\bfseries arguments}\label{class_quant_lib_1_1_quanto_vanilla_option_a3aea7060e1a23d47d05b0f17cd117acf}
+
+\item 
+typedef {\bf Quanto\+Option\+Results}$<$ {\bf One\+Asset\+Option\+::results} $>$ {\bfseries results}\label{class_quant_lib_1_1_quanto_vanilla_option_a662dddd7e6a47a8ce5b1c43f691af3b0}
+
+\item 
+typedef Generic\+Engine$<$ arguments, {\bf results} $>$ {\bfseries engine}\label{class_quant_lib_1_1_quanto_vanilla_option_ac35fdceb3bc7205163506eeaa50f566a}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Quanto\+Vanilla\+Option} (const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&)\label{class_quant_lib_1_1_quanto_vanilla_option_a83a88266067cd7af6e681f8d1692f928}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_quanto_vanilla_option_a322b82c7fa2b5604829890338b7bccd2}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf greeks}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries qvega} () const \label{class_quant_lib_1_1_quanto_vanilla_option_a4cc67eb7daba2a79b8b45cf76793be60}
+
+\item 
+Real {\bfseries qrho} () const \label{class_quant_lib_1_1_quanto_vanilla_option_a9f1d6ae2f28b4bd95f741a0b03a1c0bb}
+
+\item 
+Real {\bfseries qlambda} () const \label{class_quant_lib_1_1_quanto_vanilla_option_aa523ba367fb558aec168e5a0336ee476}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+quanto version of a vanilla option 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf quantovanillaoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/quantovanillaoption.\+cpp\end{DoxyCompactItemize}

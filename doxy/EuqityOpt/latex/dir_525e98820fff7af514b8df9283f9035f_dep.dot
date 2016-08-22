@@ -1,0 +1,14 @@
+digraph "C:/quantlib/QuantLib/ql/instruments" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_958d2abebb9d0797c141a9841f9d5d39 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="ql" fontname="Helvetica", fontsize="10", URL="dir_958d2abebb9d0797c141a9841f9d5d39.html"]
+  subgraph clusterdir_525e98820fff7af514b8df9283f9035f {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_525e98820fff7af514b8df9283f9035f.html"];
+    dir_525e98820fff7af514b8df9283f9035f [shape=plaintext label="instruments"];
+    dir_5db9a3f36f73ca00d1e7f62d1975a70f [shape=box label="bonds" color="black" fillcolor="white" style="filled" URL="dir_5db9a3f36f73ca00d1e7f62d1975a70f.html"];
+  }
+  }
+  dir_525e98820fff7af514b8df9283f9035f->dir_5db9a3f36f73ca00d1e7f62d1975a70f [headlabel="1", labeldistance=1.5 headhref="dir_000001_000002.html"];
+}

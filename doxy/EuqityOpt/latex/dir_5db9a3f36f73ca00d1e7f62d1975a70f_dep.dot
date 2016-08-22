@@ -1,0 +1,9 @@
+digraph "C:/quantlib/QuantLib/ql/instruments/bonds" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_525e98820fff7af514b8df9283f9035f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="instruments" fontname="Helvetica", fontsize="10", URL="dir_525e98820fff7af514b8df9283f9035f.html"]
+  dir_5db9a3f36f73ca00d1e7f62d1975a70f [shape=box, label="bonds", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5db9a3f36f73ca00d1e7f62d1975a70f.html"];
+  }
+}

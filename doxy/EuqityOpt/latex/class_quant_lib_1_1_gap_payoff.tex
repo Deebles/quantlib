@@ -1,0 +1,65 @@
+\section{Quant\+Lib\+:\+:Gap\+Payoff Class Reference}
+\label{class_quant_lib_1_1_gap_payoff}\index{Quant\+Lib\+::\+Gap\+Payoff@{Quant\+Lib\+::\+Gap\+Payoff}}
+
+
+Binary gap payoff.  
+
+
+
+
+{\ttfamily \#include $<$payoffs.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Gap\+Payoff\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Gap\+Payoff\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Gap\+Payoff} (Option\+::\+Type type, Real strike, Real second\+Strike)\label{class_quant_lib_1_1_gap_payoff_aa2dde1adf3c786b2df14f2c28226072e}
+
+\item 
+Real {\bfseries second\+Strike} () const \label{class_quant_lib_1_1_gap_payoff_a15040a1bdd8ca9e222f179e14db98de3}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Payoff interface}\par
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries name} () const \label{class_quant_lib_1_1_gap_payoff_ac1a8d562e67dd8b02fbd65488e25aeb5}
+
+\item 
+std\+::string {\bfseries description} () const \label{class_quant_lib_1_1_gap_payoff_aaba37e8c2fe8c16898555fd0dad62a38}
+
+\item 
+Real {\bfseries operator()} (Real price) const \label{class_quant_lib_1_1_gap_payoff_a46b6a1b999a7239d4e3363bcde1c3124}
+
+\item 
+virtual void {\bfseries accept} (Acyclic\+Visitor \&)\label{class_quant_lib_1_1_gap_payoff_acf6bb947aba2d1bc198feac041d4aad3}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries second\+Strike\+\_\+}\label{class_quant_lib_1_1_gap_payoff_a54613db1125f2429839f20d39fb87d89}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Binary gap payoff. 
+
+This payoff is equivalent to being a) long a \doxyref{Plain\+Vanilla\+Payoff}{p.}{class_quant_lib_1_1_plain_vanilla_payoff} at the first strike (same Call/\+Put type) and b) short a \doxyref{Cash\+Or\+Nothing\+Payoff}{p.}{class_quant_lib_1_1_cash_or_nothing_payoff} at the first strike (same Call/\+Put type) with cash payoff equal to the difference between the second and the first strike. \begin{DoxyWarning}{Warning}
+this payoff can be negative depending on the strikes 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf payoffs.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/payoffs.\+cpp\end{DoxyCompactItemize}

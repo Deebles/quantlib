@@ -1,0 +1,99 @@
+\section{Quant\+Lib\+:\+:Asset\+Swap Class Reference}
+\label{class_quant_lib_1_1_asset_swap}\index{Quant\+Lib\+::\+Asset\+Swap@{Quant\+Lib\+::\+Asset\+Swap}}
+
+
+Bullet bond vs Libor swap.  
+
+
+
+
+{\ttfamily \#include $<$assetswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Asset\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Asset\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for asset swap calculation \end{DoxyCompactList}\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from simple swap calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Asset\+Swap} (bool pay\+Bond\+Coupon, const boost\+::shared\+\_\+ptr$<$ {\bf Bond} $>$ \&bond, Real bond\+Clean\+Price, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, Spread spread, const Schedule \&float\+Schedule=Schedule(), const Day\+Counter \&floating\+Day\+Count=Day\+Counter(), bool par\+Asset\+Swap=true)\label{class_quant_lib_1_1_asset_swap_a1122daa5896349bcbd5f724e16c4c68d}
+
+\item 
+{\bfseries Asset\+Swap} (bool par\+Asset\+Swap, const boost\+::shared\+\_\+ptr$<$ {\bf Bond} $>$ \&bond, Real bond\+Clean\+Price, Real non\+Par\+Repayment, Real gearing, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, Spread spread=0.\+0, const Day\+Counter \&floating\+Day\+Count=Day\+Counter(), Date deal\+Maturity=Date(), bool pay\+Bond\+Coupon=false)\label{class_quant_lib_1_1_asset_swap_a29adbaeaa9c77b1ed228dc0d8c822f3c}
+
+\item 
+Spread {\bfseries fair\+Spread} () const \label{class_quant_lib_1_1_asset_swap_afbbed86d5d76d8c2282b7bc98cd7d0f6}
+
+\item 
+Real {\bfseries floating\+Leg\+B\+PS} () const \label{class_quant_lib_1_1_asset_swap_a932fade3edf70e0ff0080a5379bd449f}
+
+\item 
+Real {\bfseries floating\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_asset_swap_a3d46e08b7c304b1d7f331497fe2be0eb}
+
+\item 
+Real {\bfseries fair\+Clean\+Price} () const \label{class_quant_lib_1_1_asset_swap_ab1af64e96b92409a04b9e44f3de2c7b0}
+
+\item 
+Real {\bfseries fair\+Non\+Par\+Repayment} () const \label{class_quant_lib_1_1_asset_swap_ad0ed22613ea230a40e35bdd555d9147d}
+
+\item 
+bool {\bfseries par\+Swap} () const \label{class_quant_lib_1_1_asset_swap_a04c97830957ce2df2d77b605c7e282c7}
+
+\item 
+Spread {\bfseries spread} () const \label{class_quant_lib_1_1_asset_swap_a83843504f87cdc65f4f4b88d34756d63}
+
+\item 
+Real {\bfseries clean\+Price} () const \label{class_quant_lib_1_1_asset_swap_a91e266b4c1dc91a19c4b3c519fc010bd}
+
+\item 
+Real {\bfseries non\+Par\+Repayment} () const \label{class_quant_lib_1_1_asset_swap_abb43c4137798f352379691c8d6275291}
+
+\item 
+const boost\+::shared\+\_\+ptr$<$ {\bf Bond} $>$ \& {\bfseries bond} () const \label{class_quant_lib_1_1_asset_swap_a70c8fb07fc50daa41c2e8b2ea704feee}
+
+\item 
+bool {\bfseries pay\+Bond\+Coupon} () const \label{class_quant_lib_1_1_asset_swap_a4f772f3a4ed8900675e26ab212c9a6ad}
+
+\item 
+const Leg \& {\bfseries bond\+Leg} () const \label{class_quant_lib_1_1_asset_swap_a7dc3bf3fcf0130a70f57a443cd44f42c}
+
+\item 
+const Leg \& {\bfseries floating\+Leg} () const \label{class_quant_lib_1_1_asset_swap_a940b7b6579e8974d1ccf027bee3692ee}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$args) const \label{class_quant_lib_1_1_asset_swap_ac235eea96276baa2ae5a8a7f36e4f123}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_asset_swap_a16b324563efbbe1419644b475fc49135}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Bullet bond vs Libor swap. 
+
+for mechanics of par asset swap and market asset swap, refer to \char`\"{}\+Introduction to Asset Swap\char`\"{}, Lehman Brothers European Fixed Income Research -\/ January 2000, D. O\textquotesingle{}Kane
+
+\begin{DoxyWarning}{Warning}
+bond\+Clean\+Price must be the (forward) price at the float\+Schedule start date
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Bug}
+\item[{\bf Bug}]fair prices are not calculated correctly when using indexed coupons. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf assetswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/assetswap.\+cpp\end{DoxyCompactItemize}

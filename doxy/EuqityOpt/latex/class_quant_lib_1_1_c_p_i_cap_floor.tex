@@ -1,0 +1,137 @@
+\section{Quant\+Lib\+:\+:C\+P\+I\+Cap\+Floor Class Reference}
+\label{class_quant_lib_1_1_c_p_i_cap_floor}\index{Quant\+Lib\+::\+C\+P\+I\+Cap\+Floor@{Quant\+Lib\+::\+C\+P\+I\+Cap\+Floor}}
+
+
+C\+PI cap or floor.  
+
+
+
+
+{\ttfamily \#include $<$cpicapfloor.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:C\+P\+I\+Cap\+Floor\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:C\+P\+I\+Cap\+Floor\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+P\+I\+Cap\+Floor} (Option\+::\+Type type, Real nominal, const Date \&start\+Date, Real base\+C\+PI, const Date \&maturity, const Calendar \&fix\+Calendar, Business\+Day\+Convention fix\+Convention, const Calendar \&pay\+Calendar, Business\+Day\+Convention pay\+Convention, Rate {\bf strike}, const Handle$<$ Zero\+Inflation\+Index $>$ \&inf\+Index, const Period \&observation\+Lag, C\+P\+I\+::\+Interpolation\+Type observation\+Interpolation=C\+P\+I\+::\+As\+Index)\label{class_quant_lib_1_1_c_p_i_cap_floor_a7cc708f30c4ea59a2073cc3ba40f9ed2}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Option\+::\+Type {\bfseries type} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_aa751ab9af4b974e79e3ee3af2622a893}
+
+\item 
+Real {\bfseries nominal} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_a7ea95d50ae601f5bf3e05b915f6fd3f3}
+
+\item 
+Rate {\bf strike} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_a32de6512745d4af8bd50b0944c1c143a}
+
+\begin{DoxyCompactList}\small\item\em $ K $ in the above formula. \end{DoxyCompactList}\item 
+Date {\bf fixing\+Date} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_afaf0c7ab7f6663eedcf25abaedd1c824}
+
+\begin{DoxyCompactList}\small\item\em when you fix -\/ but remember that there is an observation interpolation factor as well \end{DoxyCompactList}\item 
+Date {\bfseries pay\+Date} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_aab6ec074030a6631f7c2d2cf20b62ed9}
+
+\item 
+Handle$<$ Zero\+Inflation\+Index $>$ {\bfseries inflation\+Index} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_a02f9efb999d80dc36481bd0dbc2f7da0}
+
+\item 
+Period {\bfseries observation\+Lag} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_abbbd05828b9ebdbbc26c5dea8a53b8db}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_c_p_i_cap_floor_a8673a7890e80c53d75eb52f87e71759a}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_c_p_i_cap_floor_a5bb612df5ed39e367f47bab4f0ad137e}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$r) const \label{class_quant_lib_1_1_c_p_i_cap_floor_a375ca0ae287022b933d9a8e5151f91a6}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Option\+::\+Type {\bfseries type\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_aaab8e746ce61936f9fbed3d0a2ca1bde}
+
+\item 
+Real {\bfseries nominal\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a657589cc0a3846ab5ddab20db928a035}
+
+\item 
+Date {\bfseries start\+Date\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a009fae9b274dc8fc2ccadf5ed2596fb3}
+
+\item 
+Date {\bfseries fix\+Date\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_ab82fe0f12fcbe73f845fd026188a9d44}
+
+\item 
+Date {\bfseries pay\+Date\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_aeb735b60014d713dc4891440cc754a29}
+
+\item 
+Real {\bfseries base\+C\+P\+I\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a7a512eb1408ef6a255824e4b702360b1}
+
+\item 
+Date {\bfseries maturity\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a952ae623033c60e96581f1573f2133b5}
+
+\item 
+Calendar {\bfseries fix\+Calendar\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a4f53ffe45a886b2ce6421aeb82dcabff}
+
+\item 
+Business\+Day\+Convention {\bfseries fix\+Convention\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_ad4e736ab1a8f8040cca457666c5de739}
+
+\item 
+Calendar {\bfseries pay\+Calendar\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a43f143c4459ad63d3df36e974bf2bb3b}
+
+\item 
+Business\+Day\+Convention {\bfseries pay\+Convention\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_ad06a28dc5289291146934b5739557178}
+
+\item 
+Rate {\bfseries strike\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_ad9546706297b71ffe432ea7725255d4c}
+
+\item 
+Handle$<$ Zero\+Inflation\+Index $>$ {\bfseries inf\+Index\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_ae3dc75849e48462434fde5b19734db44}
+
+\item 
+Period {\bfseries observation\+Lag\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_a0b6fd82e776d4669219aad811bc78c48}
+
+\item 
+C\+P\+I\+::\+Interpolation\+Type {\bfseries observation\+Interpolation\+\_\+}\label{class_quant_lib_1_1_c_p_i_cap_floor_acc352da92497132358c2f041ced85b0b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C\+PI cap or floor. 
+
+Quoted as a fixed strike rate $ K $. Payoff\+: \[ P_n(0,T) \max(y (N [(1+K)^{T}-1] - N \left[ \frac{I(T)}{I(0)} -1 \right]), 0) \] where $ T $ is the maturity time, $ P_n(0,t) $ is the nominal discount factor at time $ t $, $ N $ is the notional, and $ I(t) $ is the inflation index value at time $ t $.
+
+Inflation is generally available on every day, including holidays and weekends. Hence there is a variable to state whether the observe/fix dates for inflation are adjusted or not. The default is not to adjust.
+
+N.\+B. a cpi cap or floor is an option, not a cap or floor on a coupon. Thus this is very similar to a Z\+C\+I\+IS and has a single flow, this is as usual for cpi because it is cumulative up to option maturity from base date.
+
+We do not inherit from Option, although this would be reasonable, because we do not have that degree of generality. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf cpicapfloor.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/cpicapfloor.\+cpp\end{DoxyCompactItemize}

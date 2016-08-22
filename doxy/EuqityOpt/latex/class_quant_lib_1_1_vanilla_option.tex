@@ -1,0 +1,59 @@
+\section{Quant\+Lib\+:\+:Vanilla\+Option Class Reference}
+\label{class_quant_lib_1_1_vanilla_option}\index{Quant\+Lib\+::\+Vanilla\+Option@{Quant\+Lib\+::\+Vanilla\+Option}}
+
+
+Vanilla option (no discrete dividends, no barriers) on a single asset.  
+
+
+
+
+{\ttfamily \#include $<$vanillaoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Vanilla\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Vanilla\+Option\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Vanilla\+Option} (const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&)\label{class_quant_lib_1_1_vanilla_option_a8109c57c8be7cebf1435d960cbe07541}
+
+\item 
+Volatility {\bf implied\+Volatility} (Real price, const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&process, Real accuracy=1.\+0e-\/4, Size max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Vanilla option (no discrete dividends, no barriers) on a single asset. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Vanilla\+Option@{Quant\+Lib\+::\+Vanilla\+Option}!implied\+Volatility@{implied\+Volatility}}
+\index{implied\+Volatility@{implied\+Volatility}!Quant\+Lib\+::\+Vanilla\+Option@{Quant\+Lib\+::\+Vanilla\+Option}}
+\subsubsection[{implied\+Volatility(\+Real price, const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&process, Real accuracy=1.\+0e-\/4, Size max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const }]{\setlength{\rightskip}{0pt plus 5cm}Volatility Quant\+Lib\+::\+Vanilla\+Option\+::implied\+Volatility (
+\begin{DoxyParamCaption}
+\item[{Real}]{price, }
+\item[{const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&}]{process, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/4}, }
+\item[{Size}]{max\+Evaluations = {\ttfamily 100}, }
+\item[{Volatility}]{min\+Vol = {\ttfamily 1.0e-\/7}, }
+\item[{Volatility}]{max\+Vol = {\ttfamily 4.0}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_vanilla_option_a9b60a5023111368668e1e8f8ebc4a59b}
+\begin{DoxyWarning}{Warning}
+currently, this method returns the Black-\/\+Scholes implied volatility using analytic formulas for European options and a finite-\/difference method for American and Bermudan options. It will give unconsistent results if the pricing was performed with any other methods (such as jump-\/diffusion models.)
+
+options with a gamma that changes sign (e.\+g., binary options) have values that are {\bfseries not} monotonic in the volatility. In these cases, the calculation can fail and the result (if any) is almost meaningless. Another possible source of failure is to have a target value that is not attainable with any volatility, e.\+g., a target value lower than the intrinsic value in the case of American options. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf vanillaoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/vanillaoption.\+cpp\end{DoxyCompactItemize}

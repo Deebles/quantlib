@@ -1,0 +1,62 @@
+\section{Quant\+Lib\+:\+:Quanto\+Barrier\+Option Class Reference}
+\label{class_quant_lib_1_1_quanto_barrier_option}\index{Quant\+Lib\+::\+Quanto\+Barrier\+Option@{Quant\+Lib\+::\+Quanto\+Barrier\+Option}}
+
+
+Quanto version of a barrier option.  
+
+
+
+
+{\ttfamily \#include $<$quantobarrieroption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Quanto\+Barrier\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Quanto\+Barrier\+Option\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef {\bf Barrier\+Option\+::arguments} {\bfseries arguments}\label{class_quant_lib_1_1_quanto_barrier_option_abdbcffc39808c2e502f41a7b643ada2e}
+
+\item 
+typedef {\bf Quanto\+Option\+Results}$<$ {\bf Barrier\+Option\+::results} $>$ {\bfseries results}\label{class_quant_lib_1_1_quanto_barrier_option_a8d9e84fb218ddd10f0760b3bbd56c4d4}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Quanto\+Barrier\+Option} (Barrier\+::\+Type barrier\+Type, Real barrier, Real rebate, const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&payoff, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise)\label{class_quant_lib_1_1_quanto_barrier_option_a59828cf1f9976df257b483dd3d911046}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_quanto_barrier_option_a6e7a53cfceebdbff15cd2b02477a7316}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf greeks}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries qvega} () const \label{class_quant_lib_1_1_quanto_barrier_option_a6dd20cb47412f68b0977fe3442f855a4}
+
+\item 
+Real {\bfseries qrho} () const \label{class_quant_lib_1_1_quanto_barrier_option_a3547ec3a1482d609ef69ba3cf83a6936}
+
+\item 
+Real {\bfseries qlambda} () const \label{class_quant_lib_1_1_quanto_barrier_option_a3547c67db9aa0f1e01bf3c6fbbee8739}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Quanto version of a barrier option. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf quantobarrieroption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/quantobarrieroption.\+cpp\end{DoxyCompactItemize}

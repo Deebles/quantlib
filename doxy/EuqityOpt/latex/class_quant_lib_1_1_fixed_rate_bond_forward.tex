@@ -1,0 +1,133 @@
+\section{Quant\+Lib\+:\+:Fixed\+Rate\+Bond\+Forward Class Reference}
+\label{class_quant_lib_1_1_fixed_rate_bond_forward}\index{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward@{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward}}
+
+
+Forward contract on a fixed-\/rate bond  
+
+
+
+
+{\ttfamily \#include $<$fixedratebondforward.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Fixed\+Rate\+Bond\+Forward\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Fixed\+Rate\+Bond\+Forward\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{Indent}{\bf Constructors}\par
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fixed\+Rate\+Bond\+Forward} (const Date \&value\+Date, const Date \&maturity\+Date, Position\+::\+Type type, Real strike, Natural settlement\+Days, const Day\+Counter \&day\+Counter, const Calendar \&calendar, Business\+Day\+Convention business\+Day\+Convention, const boost\+::shared\+\_\+ptr$<$ {\bf Fixed\+Rate\+Bond} $>$ \&fixed\+Coupon\+Bond, const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf discount\+Curve}=Handle$<$ Yield\+Term\+Structure $>$(), const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf income\+Discount\+Curve}=Handle$<$ Yield\+Term\+Structure $>$())
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Calculations}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bf forward\+Price} () const \label{class_quant_lib_1_1_fixed_rate_bond_forward_acd425fa57e66201208f9a86b42cbe70b}
+
+\begin{DoxyCompactList}\small\item\em (dirty) forward bond price \end{DoxyCompactList}\item 
+Real {\bf clean\+Forward\+Price} () const \label{class_quant_lib_1_1_fixed_rate_bond_forward_ace8ff40506fa52e238a5c1040561d87f}
+
+\begin{DoxyCompactList}\small\item\em (dirty) forward bond price minus accrued on bond at delivery \end{DoxyCompactList}\item 
+Real {\bf spot\+Income} (const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf income\+Discount\+Curve}) const 
+\begin{DoxyCompactList}\small\item\em N\+PV of bond coupons discounted using income\+Discount\+Curve. \end{DoxyCompactList}\item 
+Real {\bf spot\+Value} () const \label{class_quant_lib_1_1_fixed_rate_bond_forward_aae4212da9dde3d58302021cf763ea12d}
+
+\begin{DoxyCompactList}\small\item\em N\+PV of underlying bond. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries perform\+Calculations} () const \label{class_quant_lib_1_1_fixed_rate_bond_forward_afd7245562b3107f9948c236dc7ede4f3}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::shared\+\_\+ptr$<$ {\bf Fixed\+Rate\+Bond} $>$ {\bfseries fixed\+Coupon\+Bond\+\_\+}\label{class_quant_lib_1_1_fixed_rate_bond_forward_af74f7dfb75d1fbe53292d01911cadca8}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Forward contract on a fixed-\/rate bond 
+
+
+\begin{DoxyEnumerate}
+\item value\+Date refers to the settlement date of the bond forward contract. maturity\+Date is the delivery (or repurchase) date for the underlying bond (not the bond\textquotesingle{}s maturity date).
+\item Relevant formulas used in the calculations ( $P$ refers to a price)\+:
+
+a. $ P_{CleanFwd}(t) = P_{DirtyFwd}(t) - AI(t=deliveryDate) $ where $ AI $ refers to the accrued interest on the underlying bond.
+
+b. $ P_{DirtyFwd}(t) = \frac{P_{DirtySpot}(t) - SpotIncome(t)} {discountCurve->discount(t=deliveryDate)} $
+
+c. $ SpotIncome(t) = \sum_i \left( CF_i \times incomeDiscountCurve->discount(t_i) \right) $ where $ CF_i $ represents the ith bond cash flow (coupon payment) associated with the underlying bond falling between the settlement\+Date and the delivery\+Date. (Note the two different discount curves used in b. and c.)
+\end{DoxyEnumerate}
+
+{\bfseries Example\+: } \doxyref{valuation of a repo on a fixed-\/rate bond }{p.}{}
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]Add preconditions and tests\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]Create switch-\/ if coupon goes to seller is toggled on, don\textquotesingle{}t consider income in the $ P_{DirtyFwd}(t) $ calculation.\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]Verify this works when the underlying is paper (in which case ignore all AI.)\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+This class still needs to be rigorously tested 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward@{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward}!Fixed\+Rate\+Bond\+Forward@{Fixed\+Rate\+Bond\+Forward}}
+\index{Fixed\+Rate\+Bond\+Forward@{Fixed\+Rate\+Bond\+Forward}!Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward@{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward}}
+\subsubsection[{Fixed\+Rate\+Bond\+Forward(const Date \&value\+Date, const Date \&maturity\+Date, Position\+::\+Type type, Real strike, Natural settlement\+Days, const Day\+Counter \&day\+Counter, const Calendar \&calendar, Business\+Day\+Convention business\+Day\+Convention, const boost\+::shared\+\_\+ptr$<$ Fixed\+Rate\+Bond $>$ \&fixed\+Coupon\+Bond, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve=\+Handle$<$ Yield\+Term\+Structure $>$(), const Handle$<$ Yield\+Term\+Structure $>$ \&income\+Discount\+Curve=\+Handle$<$ Yield\+Term\+Structure $>$())}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward\+::\+Fixed\+Rate\+Bond\+Forward (
+\begin{DoxyParamCaption}
+\item[{const Date \&}]{value\+Date, }
+\item[{const Date \&}]{maturity\+Date, }
+\item[{Position\+::\+Type}]{type, }
+\item[{Real}]{strike, }
+\item[{Natural}]{settlement\+Days, }
+\item[{const Day\+Counter \&}]{day\+Counter, }
+\item[{const Calendar \&}]{calendar, }
+\item[{Business\+Day\+Convention}]{business\+Day\+Convention, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Fixed\+Rate\+Bond} $>$ \&}]{fixed\+Coupon\+Bond, }
+\item[{const Handle$<$ Yield\+Term\+Structure $>$ \&}]{discount\+Curve = {\ttfamily Handle$<$YieldTermStructure$>$()}, }
+\item[{const Handle$<$ Yield\+Term\+Structure $>$ \&}]{income\+Discount\+Curve = {\ttfamily Handle$<$YieldTermStructure$>$()}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_fixed_rate_bond_forward_a7d4203a7a52d080e11688bba2ac06aee}
+If strike is given in the constructor, can calculate the N\+PV of the contract via N\+P\+V().
+
+If strike/forward price is desired, it can be obtained via \doxyref{forward\+Price()}{p.}{class_quant_lib_1_1_fixed_rate_bond_forward_acd425fa57e66201208f9a86b42cbe70b}. In this case, the strike variable in the constructor is irrelevant and will be ignored. 
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward@{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward}!spot\+Income@{spot\+Income}}
+\index{spot\+Income@{spot\+Income}!Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward@{Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward}}
+\subsubsection[{spot\+Income(const Handle$<$ Yield\+Term\+Structure $>$ \&income\+Discount\+Curve) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Fixed\+Rate\+Bond\+Forward\+::spot\+Income (
+\begin{DoxyParamCaption}
+\item[{const Handle$<$ Yield\+Term\+Structure $>$ \&}]{income\+Discount\+Curve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_fixed_rate_bond_forward_a1731f37206ff563411819bf88838a36a}
+
+
+N\+PV of bond coupons discounted using income\+Discount\+Curve. 
+
+Here only coupons between max(evaluation date,settlement date) and maturity date of bond forward contract are considered income. 
+
+Implements {\bf Quant\+Lib\+::\+Forward} \doxyref{}{p.}{class_quant_lib_1_1_forward_ac5ab4da5fe37b6deb97d33ec5787d720}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf fixedratebondforward.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/fixedratebondforward.\+cpp\end{DoxyCompactItemize}

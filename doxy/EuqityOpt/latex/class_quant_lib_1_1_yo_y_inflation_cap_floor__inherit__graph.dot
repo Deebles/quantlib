@@ -1,0 +1,14 @@
+digraph "QuantLib::YoYInflationCapFloor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="QuantLib::YoYInflationCap\lFloor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Instrument",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="QuantLib::YoYInflationCap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_yo_y_inflation_cap.html",tooltip="Concrete YoY Inflation cap class. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QuantLib::YoYInflationCollar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_yo_y_inflation_collar.html",tooltip="Concrete YoY Inflation collar class. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="QuantLib::YoYInflationFloor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_yo_y_inflation_floor.html",tooltip="Concrete YoY Inflation floor class. "];
+}

@@ -1,0 +1,171 @@
+\section{Quant\+Lib\+:\+:Forward Class Reference}
+\label{class_quant_lib_1_1_forward}\index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+
+
+Abstract base forward class.  
+
+
+
+
+{\ttfamily \#include $<$forward.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Forward\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Forward\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Real {\bf spot\+Value} () const  =0\label{class_quant_lib_1_1_forward_a39e2d619090d24736a2c608655a65008}
+
+\begin{DoxyCompactList}\small\item\em returns spot value/price of an underlying financial instrument \end{DoxyCompactList}\item 
+virtual Real {\bf spot\+Income} (const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf income\+Discount\+Curve}) const  =0\label{class_quant_lib_1_1_forward_ac5ab4da5fe37b6deb97d33ec5787d720}
+
+\begin{DoxyCompactList}\small\item\em N\+PV of income/dividends/storage-\/costs etc. of underlying instrument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual Date {\bfseries settlement\+Date} () const \label{class_quant_lib_1_1_forward_a263c4e921e1bd897c16c3fc88d8128b6}
+
+\item 
+const Calendar \& {\bfseries calendar} () const \label{class_quant_lib_1_1_forward_a127e97ed6ab7b3439212bebe2ea82995}
+
+\item 
+Business\+Day\+Convention {\bfseries business\+Day\+Convention} () const \label{class_quant_lib_1_1_forward_a13ee2a8daddc8778e8332f870bc105ae}
+
+\item 
+const Day\+Counter \& {\bfseries day\+Counter} () const \label{class_quant_lib_1_1_forward_a79c4fce53c6b868718150242ad86a298}
+
+\item 
+Handle$<$ Yield\+Term\+Structure $>$ {\bf discount\+Curve} () const \label{class_quant_lib_1_1_forward_aafc13018431efc231aec1605bc716a4a}
+
+\begin{DoxyCompactList}\small\item\em term structure relevant to the contract (e.\+g. repo curve) \end{DoxyCompactList}\item 
+Handle$<$ Yield\+Term\+Structure $>$ {\bf income\+Discount\+Curve} () const \label{class_quant_lib_1_1_forward_a616de3361ca05ebbdffe138565883d15}
+
+\begin{DoxyCompactList}\small\item\em term structure that discounts the underlying\textquotesingle{}s income cash flows \end{DoxyCompactList}\item 
+bool {\bf is\+Expired} () const \label{class_quant_lib_1_1_forward_a955449cb01276a58144135c6fb858ecf}
+
+\begin{DoxyCompactList}\small\item\em returns whether the instrument is still tradable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Calculations}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual Real {\bf forward\+Value} () const 
+\begin{DoxyCompactList}\small\item\em forward value/price of underlying, discounting income/dividends \end{DoxyCompactList}\item 
+Interest\+Rate {\bf implied\+Yield} (Real underlying\+Spot\+Value, Real {\bf forward\+Value}, Date settlement\+Date, Compounding compounding\+Convention, Day\+Counter day\+Counter)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forward} (const Day\+Counter \&day\+Counter, const Calendar \&calendar, Business\+Day\+Convention business\+Day\+Convention, Natural settlement\+Days, const boost\+::shared\+\_\+ptr$<$ Payoff $>$ \&payoff, const Date \&value\+Date, const Date \&maturity\+Date, const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf discount\+Curve}=Handle$<$ Yield\+Term\+Structure $>$())\label{class_quant_lib_1_1_forward_a9567af380c361d8e5a67fccc54eafdb7}
+
+\item 
+void {\bfseries perform\+Calculations} () const \label{class_quant_lib_1_1_forward_a8b5e83ba13ff927a41dd539fdae469c9}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Real {\bf underlying\+Income\+\_\+}
+\item 
+Real {\bf underlying\+Spot\+Value\+\_\+}
+\item 
+Day\+Counter {\bfseries day\+Counter\+\_\+}\label{class_quant_lib_1_1_forward_ae4ab04af485ae5cfa36eaacf7f6a0e18}
+
+\item 
+Calendar {\bfseries calendar\+\_\+}\label{class_quant_lib_1_1_forward_af7d5d763ca827fba16dca1f6a58628c8}
+
+\item 
+Business\+Day\+Convention {\bfseries business\+Day\+Convention\+\_\+}\label{class_quant_lib_1_1_forward_a9d885c317ea8e1f3736d27acb84d640c}
+
+\item 
+Natural {\bfseries settlement\+Days\+\_\+}\label{class_quant_lib_1_1_forward_a2d084076e1c44718ddd03c70953abbea}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ Payoff $>$ {\bfseries payoff\+\_\+}\label{class_quant_lib_1_1_forward_a5ab951ae94d85bf803a3979960fbe78f}
+
+\item 
+Date {\bf value\+Date\+\_\+}
+\item 
+Date {\bf maturity\+Date\+\_\+}\label{class_quant_lib_1_1_forward_a3dc0d0f2332f1c25acb4d929139ce339}
+
+\begin{DoxyCompactList}\small\item\em maturity\+Date of the forward contract or delivery date of underlying \end{DoxyCompactList}\item 
+Handle$<$ Yield\+Term\+Structure $>$ {\bfseries discount\+Curve\+\_\+}\label{class_quant_lib_1_1_forward_a0d20518281bd7c01bce0e0959dcfba4d}
+
+\item 
+Handle$<$ Yield\+Term\+Structure $>$ {\bf income\+Discount\+Curve\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract base forward class. 
+
+Derived classes must implement the virtual functions \doxyref{spot\+Value()}{p.}{class_quant_lib_1_1_forward_a39e2d619090d24736a2c608655a65008} (N\+PV or spot price) and \doxyref{spot\+Income()}{p.}{class_quant_lib_1_1_forward_ac5ab4da5fe37b6deb97d33ec5787d720} associated with the specific relevant underlying (e.\+g. bond, stock, commodity, loan/deposit). These functions must be used to set the protected member variables underlying\+Spot\+Value\+\_\+ and underlying\+Income\+\_\+ within perform\+Calculations() in the derived class before the base-\/class implementation is called.
+
+\doxyref{spot\+Income()}{p.}{class_quant_lib_1_1_forward_ac5ab4da5fe37b6deb97d33ec5787d720} refers generically to the present value of coupons, dividends or storage costs.
+
+discount\+Curve\+\_\+ is the curve used to discount forward contract cash flows back to the evaluation day, as well as to obtain forward values for spot values/prices.
+
+income\+Discount\+Curve\+\_\+, which for generality is not automatically set to the discount\+Curve\+\_\+, is the curve used to discount future income/dividends/storage-\/costs etc back to the evaluation date.
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]Add preconditions and tests\end{DoxyRefDesc}
+
+
+\begin{DoxyWarning}{Warning}
+This class still needs to be rigorously tested 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}!forward\+Value@{forward\+Value}}
+\index{forward\+Value@{forward\+Value}!Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+\subsubsection[{forward\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Forward\+::forward\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_forward_a4aa8ae6071f43c5eb445162de7e3514b}
+
+
+forward value/price of underlying, discounting income/dividends 
+
+\begin{DoxyNote}{Note}
+if this is a bond forward price, is must be a dirty forward price. 
+\end{DoxyNote}
+\index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}!implied\+Yield@{implied\+Yield}}
+\index{implied\+Yield@{implied\+Yield}!Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+\subsubsection[{implied\+Yield(\+Real underlying\+Spot\+Value, Real forward\+Value, Date settlement\+Date, Compounding compounding\+Convention, Day\+Counter day\+Counter)}]{\setlength{\rightskip}{0pt plus 5cm}Interest\+Rate Quant\+Lib\+::\+Forward\+::implied\+Yield (
+\begin{DoxyParamCaption}
+\item[{Real}]{underlying\+Spot\+Value, }
+\item[{Real}]{forward\+Value, }
+\item[{Date}]{settlement\+Date, }
+\item[{Compounding}]{compounding\+Convention, }
+\item[{Day\+Counter}]{day\+Counter}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_forward_af5c7f69feae757ce5df2b547a2b7e30a}
+Simple yield calculation based on underlying spot and forward values, taking into account underlying income. When $ t>0 $, call with\+: underlying\+Spot\+Value=spot\+Value(t), forward\+Value=strike\+Price, to get current yield. For a repo, if $ t=0 $, implied\+Yield should reproduce the spot repo rate. For F\+RA\textquotesingle{}s, this should reproduce the relevant zero rate at the F\+RA\textquotesingle{}s maturity\+Date\+\_\+; 
+
+\subsection{Member Data Documentation}
+\index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}!income\+Discount\+Curve\+\_\+@{income\+Discount\+Curve\+\_\+}}
+\index{income\+Discount\+Curve\+\_\+@{income\+Discount\+Curve\+\_\+}!Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+\subsubsection[{income\+Discount\+Curve\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}Handle$<$Yield\+Term\+Structure$>$ Quant\+Lib\+::\+Forward\+::income\+Discount\+Curve\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_forward_ab0bb02779606e3e23cc54358b165fc26}
+must set this in derived classes, based on particular underlying \index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}!underlying\+Income\+\_\+@{underlying\+Income\+\_\+}}
+\index{underlying\+Income\+\_\+@{underlying\+Income\+\_\+}!Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+\subsubsection[{underlying\+Income\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Forward\+::underlying\+Income\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}\label{class_quant_lib_1_1_forward_aeb299610c4b6a2a00966883339366a26}
+derived classes must set this, typically via \doxyref{spot\+Income()}{p.}{class_quant_lib_1_1_forward_ac5ab4da5fe37b6deb97d33ec5787d720} \index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}!underlying\+Spot\+Value\+\_\+@{underlying\+Spot\+Value\+\_\+}}
+\index{underlying\+Spot\+Value\+\_\+@{underlying\+Spot\+Value\+\_\+}!Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+\subsubsection[{underlying\+Spot\+Value\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Forward\+::underlying\+Spot\+Value\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}\label{class_quant_lib_1_1_forward_a6aba48f67b6e6436117151fc9e9d9d75}
+derived classes must set this, typically via \doxyref{spot\+Value()}{p.}{class_quant_lib_1_1_forward_a39e2d619090d24736a2c608655a65008} \index{Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}!value\+Date\+\_\+@{value\+Date\+\_\+}}
+\index{value\+Date\+\_\+@{value\+Date\+\_\+}!Quant\+Lib\+::\+Forward@{Quant\+Lib\+::\+Forward}}
+\subsubsection[{value\+Date\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}Date Quant\+Lib\+::\+Forward\+::value\+Date\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_forward_a892cb1fb8680a85b8cbd9b0a414ab5d5}
+value\+Date = settlement date (date the fwd contract starts accruing) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf forward.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/forward.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+digraph "QuantLib::DividendBarrierOption::arguments"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="QuantLib::DividendBarrier\lOption::arguments",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="QuantLib::BarrierOption\l::arguments",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_barrier_option_1_1arguments.html",tooltip="Arguments for barrier option calculation "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="arguments",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

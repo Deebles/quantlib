@@ -1,0 +1,141 @@
+\section{Quant\+Lib\+:\+:United\+States Class Reference}
+\label{class_quant_lib_1_1_united_states}\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}
+
+
+United States calendars.  
+
+
+
+
+{\ttfamily \#include $<$unitedstates.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:United\+States\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:United\+States\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Market} \{ {\bf Settlement}, 
+{\bf N\+Y\+SE}, 
+{\bf Government\+Bond}, 
+{\bf N\+E\+RC}
+ \}\begin{DoxyCompactList}\small\item\em US calendars. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf United\+States} ({\bf Market} market={\bf Settlement})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+United States calendars. 
+
+Public holidays (see\+: {\tt http\+://www.\+opm.\+gov/fedhol/})\+: 
+\begin{DoxyItemize}
+\item Saturdays 
+\item Sundays 
+\item New Year\textquotesingle{}s Day, January 1st (possibly moved to Monday if actually on Sunday, or to Friday if on Saturday) 
+\item Martin Luther King\textquotesingle{}s birthday, third Monday in January (since 1983) 
+\item Presidents\textquotesingle{} Day (a.\+k.\+a. Washington\textquotesingle{}s birthday), third Monday in February 
+\item Memorial Day, last Monday in May 
+\item Independence Day, July 4th (moved to Monday if Sunday or Friday if Saturday) 
+\item Labor Day, first Monday in September 
+\item Columbus Day, second Monday in October 
+\item Veterans\textquotesingle{} Day, November 11th (moved to Monday if Sunday or Friday if Saturday) 
+\item Thanksgiving Day, fourth Thursday in November 
+\item Christmas, December 25th (moved to Monday if Sunday or Friday if Saturday) 
+\end{DoxyItemize}
+
+Holidays for the stock exchange (data from {\tt http\+://www.\+nyse.\+com})\+: 
+\begin{DoxyItemize}
+\item Saturdays 
+\item Sundays 
+\item New Year\textquotesingle{}s Day, January 1st (possibly moved to Monday if actually on Sunday) 
+\item Martin Luther King\textquotesingle{}s birthday, third Monday in January (since 1998) 
+\item Presidents\textquotesingle{} Day (a.\+k.\+a. Washington\textquotesingle{}s birthday), third Monday in February 
+\item Good Friday 
+\item Memorial Day, last Monday in May 
+\item Independence Day, July 4th (moved to Monday if Sunday or Friday if Saturday) 
+\item Labor Day, first Monday in September 
+\item Thanksgiving Day, fourth Thursday in November 
+\item Presidential election day, first Tuesday in November of election years (until 1980) 
+\item Christmas, December 25th (moved to Monday if Sunday or Friday if Saturday) 
+\item Special historic closings (see {\tt http\+://www.\+nyse.\+com/pdfs/closings.\+pdf}) 
+\end{DoxyItemize}
+
+Holidays for the government bond market (data from {\tt http\+://www.\+bondmarkets.\+com})\+: 
+\begin{DoxyItemize}
+\item Saturdays 
+\item Sundays 
+\item New Year\textquotesingle{}s Day, January 1st (possibly moved to Monday if actually on Sunday) 
+\item Martin Luther King\textquotesingle{}s birthday, third Monday in January (since 1983) 
+\item Presidents\textquotesingle{} Day (a.\+k.\+a. Washington\textquotesingle{}s birthday), third Monday in February 
+\item Good Friday 
+\item Memorial Day, last Monday in May 
+\item Independence Day, July 4th (moved to Monday if Sunday or Friday if Saturday) 
+\item Labor Day, first Monday in September 
+\item Columbus Day, second Monday in October 
+\item Veterans\textquotesingle{} Day, November 11th (moved to Monday if Sunday or Friday if Saturday) 
+\item Thanksgiving Day, fourth Thursday in November 
+\item Christmas, December 25th (moved to Monday if Sunday or Friday if Saturday) 
+\end{DoxyItemize}
+
+Holidays for the North American Energy Reliability Council (data from {\tt http\+://www.\+nerc.\+com/$\sim$oc/offpeaks.\+html})\+: 
+\begin{DoxyItemize}
+\item Saturdays 
+\item Sundays 
+\item New Year\textquotesingle{}s Day, January 1st (possibly moved to Monday if actually on Sunday) 
+\item Memorial Day, last Monday in May 
+\item Independence Day, July 4th (moved to Monday if Sunday) 
+\item Labor Day, first Monday in September 
+\item Thanksgiving Day, fourth Thursday in November 
+\item Christmas, December 25th (moved to Monday if Sunday) 
+\end{DoxyItemize}
+
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]the correctness of the returned results is tested against a list of known holidays. \end{DoxyRefDesc}
+
+
+\subsection{Member Enumeration Documentation}
+\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}!Market@{Market}}
+\index{Market@{Market}!Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}
+\subsubsection[{Market}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Quant\+Lib\+::\+United\+States\+::\+Market}}\label{class_quant_lib_1_1_united_states_a5762c566a5c65d261c7009ac2fdee7f4}
+
+
+US calendars. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Settlement@{Settlement}!Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}!Settlement@{Settlement}}\item[{\em 
+Settlement\label{class_quant_lib_1_1_united_states_a5762c566a5c65d261c7009ac2fdee7f4a6fd379202fe5a05928e2f8a5c285b91e}
+}]generic settlement calendar \index{N\+Y\+SE@{N\+Y\+SE}!Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}!N\+Y\+SE@{N\+Y\+SE}}\item[{\em 
+N\+Y\+SE\label{class_quant_lib_1_1_united_states_a5762c566a5c65d261c7009ac2fdee7f4aeb45e33a5d251f8d246735549e9fc648}
+}]New York stock exchange calendar. \index{Government\+Bond@{Government\+Bond}!Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}!Government\+Bond@{Government\+Bond}}\item[{\em 
+Government\+Bond\label{class_quant_lib_1_1_united_states_a5762c566a5c65d261c7009ac2fdee7f4ae9e8528a7a2f0b4c1ba0a1456bb5ec56}
+}]government-\/bond calendar \index{N\+E\+RC@{N\+E\+RC}!Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}!N\+E\+RC@{N\+E\+RC}}\item[{\em 
+N\+E\+RC\label{class_quant_lib_1_1_united_states_a5762c566a5c65d261c7009ac2fdee7f4a826bf8a46ffe006ac1d580c78da95b5a}
+}]off-\/peak days for N\+E\+RC \end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}!United\+States@{United\+States}}
+\index{United\+States@{United\+States}!Quant\+Lib\+::\+United\+States@{Quant\+Lib\+::\+United\+States}}
+\subsubsection[{United\+States(\+Market market=\+Settlement)}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+United\+States\+::\+United\+States (
+\begin{DoxyParamCaption}
+\item[{{\bf United\+States\+::\+Market}}]{market = {\ttfamily {\bf Settlement}}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_united_states_ad179bbd4f850458a6664ee2ed3df404a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/time/calendars/{\bf unitedstates.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/time/calendars/{\bf unitedstates.\+cpp}\end{DoxyCompactItemize}

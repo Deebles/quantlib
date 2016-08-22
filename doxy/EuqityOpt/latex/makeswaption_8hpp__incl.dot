@@ -1,0 +1,28 @@
+digraph "C:/quantlib/QuantLib/ql/instruments/makeswaption.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="C:/quantlib/QuantLib\l/ql/instruments/makeswaption.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ql/time/businessdayconvention.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ql/instruments/swaption.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$swaption_8hpp.html",tooltip="Swaption class. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ql/option.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="ql/instruments/vanillaswap.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vanillaswap_8hpp.html",tooltip="Simple fixed-rate vs Libor swap. "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="ql/instruments/swap.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$swap_8hpp.html",tooltip="Interest rate swap. "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ql/instrument.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="ql/cashflow.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="ql/time/daycounter.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="ql/time/schedule.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="boost/optional.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="ql/termstructures/yieldtermstructure.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

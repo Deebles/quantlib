@@ -1,0 +1,88 @@
+\section{Quant\+Lib\+:\+:Fixed\+Rate\+Bond Class Reference}
+\label{class_quant_lib_1_1_fixed_rate_bond}\index{Quant\+Lib\+::\+Fixed\+Rate\+Bond@{Quant\+Lib\+::\+Fixed\+Rate\+Bond}}
+
+
+fixed-\/rate bond  
+
+
+
+
+{\ttfamily \#include $<$fixedratebond.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Fixed\+Rate\+Bond\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Fixed\+Rate\+Bond\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fixed\+Rate\+Bond} (Natural settlement\+Days, Real face\+Amount, const Schedule \&schedule, const std\+::vector$<$ Rate $>$ \&coupons, const Day\+Counter \&accrual\+Day\+Counter, Business\+Day\+Convention payment\+Convention=Following, Real {\bf redemption}=100.\+0, const Date \&issue\+Date=Date(), const Calendar \&payment\+Calendar=Calendar(), const Period \&ex\+Coupon\+Period=Period(), const Calendar \&ex\+Coupon\+Calendar=Calendar(), const Business\+Day\+Convention ex\+Coupon\+Convention=Unadjusted, bool ex\+Coupon\+End\+Of\+Month=false)\label{class_quant_lib_1_1_fixed_rate_bond_a919cc92257c49761a6e24ef218f33afe}
+
+\begin{DoxyCompactList}\small\item\em simple annual compounding coupon rates \end{DoxyCompactList}\item 
+{\bf Fixed\+Rate\+Bond} (Natural settlement\+Days, const Calendar \&coupon\+Calendar, Real face\+Amount, const Date \&start\+Date, const Date \&maturity\+Date, const Period \&tenor, const std\+::vector$<$ Rate $>$ \&coupons, const Day\+Counter \&accrual\+Day\+Counter, Business\+Day\+Convention accrual\+Convention=Following, Business\+Day\+Convention payment\+Convention=Following, Real {\bf redemption}=100.\+0, const Date \&issue\+Date=Date(), const Date \&stub\+Date=Date(), Date\+Generation\+::\+Rule rule=Date\+Generation\+::\+Backward, bool end\+Of\+Month=false, const Calendar \&payment\+Calendar=Calendar(), const Period \&ex\+Coupon\+Period=Period(), const Calendar \&ex\+Coupon\+Calendar=Calendar(), const Business\+Day\+Convention ex\+Coupon\+Convention=Unadjusted, bool ex\+Coupon\+End\+Of\+Month=false)
+\item 
+{\bf Fixed\+Rate\+Bond} (Natural settlement\+Days, Real face\+Amount, const Schedule \&schedule, const std\+::vector$<$ Interest\+Rate $>$ \&coupons, Business\+Day\+Convention payment\+Convention=Following, Real {\bf redemption}=100.\+0, const Date \&issue\+Date=Date(), const Calendar \&payment\+Calendar=Calendar(), const Period \&ex\+Coupon\+Period=Period(), const Calendar \&ex\+Coupon\+Calendar=Calendar(), const Business\+Day\+Convention ex\+Coupon\+Convention=Unadjusted, bool ex\+Coupon\+End\+Of\+Month=false)\label{class_quant_lib_1_1_fixed_rate_bond_adb154998f899ea795cf608efa7aa2125}
+
+\begin{DoxyCompactList}\small\item\em generic compounding and frequency Interest\+Rate coupons \end{DoxyCompactList}\item 
+Frequency {\bfseries frequency} () const \label{class_quant_lib_1_1_fixed_rate_bond_a7121c22d5244456f363f14677c99348b}
+
+\item 
+const Day\+Counter \& {\bfseries day\+Counter} () const \label{class_quant_lib_1_1_fixed_rate_bond_ad57c43c6cb561aefe15aa3d641e7a4f0}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Frequency {\bfseries frequency\+\_\+}\label{class_quant_lib_1_1_fixed_rate_bond_a72d9eab2a7cdb6f2b90b42e8ca9674f7}
+
+\item 
+Day\+Counter {\bfseries day\+Counter\+\_\+}\label{class_quant_lib_1_1_fixed_rate_bond_aab42ac5ab053fcec9d0c46acf2b68ef4}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+fixed-\/rate bond 
+
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]calculations are tested by checking results against cached values. \end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+Fixed\+Rate\+Bond@{Quant\+Lib\+::\+Fixed\+Rate\+Bond}!Fixed\+Rate\+Bond@{Fixed\+Rate\+Bond}}
+\index{Fixed\+Rate\+Bond@{Fixed\+Rate\+Bond}!Quant\+Lib\+::\+Fixed\+Rate\+Bond@{Quant\+Lib\+::\+Fixed\+Rate\+Bond}}
+\subsubsection[{Fixed\+Rate\+Bond(\+Natural settlement\+Days, const Calendar \&coupon\+Calendar, Real face\+Amount, const Date \&start\+Date, const Date \&maturity\+Date, const Period \&tenor, const std\+::vector$<$ Rate $>$ \&coupons, const Day\+Counter \&accrual\+Day\+Counter, Business\+Day\+Convention accrual\+Convention=\+Following, Business\+Day\+Convention payment\+Convention=\+Following, Real redemption=100.\+0, const Date \&issue\+Date=\+Date(), const Date \&stub\+Date=\+Date(), Date\+Generation\+::\+Rule rule=\+Date\+Generation\+::\+Backward, bool end\+Of\+Month=false, const Calendar \&payment\+Calendar=\+Calendar(), const Period \&ex\+Coupon\+Period=\+Period(), const Calendar \&ex\+Coupon\+Calendar=\+Calendar(), const Business\+Day\+Convention ex\+Coupon\+Convention=\+Unadjusted, bool ex\+Coupon\+End\+Of\+Month=false)}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Fixed\+Rate\+Bond\+::\+Fixed\+Rate\+Bond (
+\begin{DoxyParamCaption}
+\item[{Natural}]{settlement\+Days, }
+\item[{const Calendar \&}]{coupon\+Calendar, }
+\item[{Real}]{face\+Amount, }
+\item[{const Date \&}]{start\+Date, }
+\item[{const Date \&}]{maturity\+Date, }
+\item[{const Period \&}]{tenor, }
+\item[{const std\+::vector$<$ Rate $>$ \&}]{coupons, }
+\item[{const Day\+Counter \&}]{accrual\+Day\+Counter, }
+\item[{Business\+Day\+Convention}]{accrual\+Convention = {\ttfamily Following}, }
+\item[{Business\+Day\+Convention}]{payment\+Convention = {\ttfamily Following}, }
+\item[{Real}]{redemption = {\ttfamily 100.0}, }
+\item[{const Date \&}]{issue\+Date = {\ttfamily Date()}, }
+\item[{const Date \&}]{stub\+Date = {\ttfamily Date()}, }
+\item[{Date\+Generation\+::\+Rule}]{rule = {\ttfamily DateGeneration\+:\+:Backward}, }
+\item[{bool}]{end\+Of\+Month = {\ttfamily false}, }
+\item[{const Calendar \&}]{payment\+Calendar = {\ttfamily Calendar()}, }
+\item[{const Period \&}]{ex\+Coupon\+Period = {\ttfamily Period()}, }
+\item[{const Calendar \&}]{ex\+Coupon\+Calendar = {\ttfamily Calendar()}, }
+\item[{const Business\+Day\+Convention}]{ex\+Coupon\+Convention = {\ttfamily Unadjusted}, }
+\item[{bool}]{ex\+Coupon\+End\+Of\+Month = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_fixed_rate_bond_ab52f0aa4c1fb5f30b5225befbeb21e36}
+simple annual compounding coupon rates with internal schedule calculation 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/{\bf fixedratebond.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/fixedratebond.\+cpp\end{DoxyCompactItemize}

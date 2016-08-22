@@ -1,0 +1,141 @@
+\section{Quant\+Lib\+:\+:C\+P\+I\+Swap Class Reference}
+\label{class_quant_lib_1_1_c_p_i_swap}\index{Quant\+Lib\+::\+C\+P\+I\+Swap@{Quant\+Lib\+::\+C\+P\+I\+Swap}}
+
+
+zero-\/inflation-\/indexed swap,  
+
+
+
+
+{\ttfamily \#include $<$cpiswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:C\+P\+I\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:C\+P\+I\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for swap calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from swap calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Receiver} = -\/1, 
+{\bfseries Payer} = 1
+ \}\label{class_quant_lib_1_1_c_p_i_swap_a6e0c016cbc9c9d6cd535c101578b7a33}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries C\+P\+I\+Swap} (Type type, Real nominal, bool subtract\+Inflation\+Nominal, Spread spread, const Day\+Counter \&float\+Day\+Count, const Schedule \&float\+Schedule, const Business\+Day\+Convention \&float\+Roll, Natural fixing\+Days, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&float\+Index, Rate fixed\+Rate, Real base\+C\+PI, const Day\+Counter \&fixed\+Day\+Count, const Schedule \&fixed\+Schedule, const Business\+Day\+Convention \&fixed\+Roll, const Period \&observation\+Lag, const boost\+::shared\+\_\+ptr$<$ Zero\+Inflation\+Index $>$ \&fixed\+Index, C\+P\+I\+::\+Interpolation\+Type observation\+Interpolation=C\+P\+I\+::\+As\+Index, Real inflation\+Nominal=Null$<$ Real $>$())\label{class_quant_lib_1_1_c_p_i_swap_aeabcb3e4f9390db2840f8945cc07beda}
+
+\item 
+virtual Real {\bfseries float\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_c_p_i_swap_a67a8b2e6af69d77aa20bc2f278fabd8a}
+
+\item 
+virtual Spread {\bfseries fair\+Spread} () const \label{class_quant_lib_1_1_c_p_i_swap_a13bc909ffa3da3552190bbf811053bfa}
+
+\item 
+virtual Real {\bfseries fixed\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_c_p_i_swap_a8d750f11462fdead6cf0cc245bdf7d05}
+
+\item 
+virtual Rate {\bfseries fair\+Rate} () const \label{class_quant_lib_1_1_c_p_i_swap_a04fc555bfd0d786e961d74fbdeeb7d4a}
+
+\item 
+virtual Type {\bfseries type} () const \label{class_quant_lib_1_1_c_p_i_swap_a86e6f0f43a4c1add02c69cde3ccbe40c}
+
+\item 
+virtual Real {\bfseries nominal} () const \label{class_quant_lib_1_1_c_p_i_swap_a0272317e8721c4a1d6d77e6a02256f09}
+
+\item 
+virtual bool {\bfseries subtract\+Inflation\+Nominal} () const \label{class_quant_lib_1_1_c_p_i_swap_a1f939e2ee24b2c3c41f398e86812334a}
+
+\item 
+virtual Spread {\bfseries spread} () const \label{class_quant_lib_1_1_c_p_i_swap_a969f252097580481603da47850c01fef}
+
+\item 
+virtual const Day\+Counter \& {\bfseries float\+Day\+Count} () const \label{class_quant_lib_1_1_c_p_i_swap_a3d5586a3237929be69ae5338d67bc980}
+
+\item 
+virtual const Schedule \& {\bfseries float\+Schedule} () const \label{class_quant_lib_1_1_c_p_i_swap_a38100daa48f8a2902ef67ef3a8dea17d}
+
+\item 
+virtual const Business\+Day\+Convention \& {\bfseries float\+Payment\+Roll} () const \label{class_quant_lib_1_1_c_p_i_swap_a532dc52928dce56aed42f3e01dc87c13}
+
+\item 
+virtual Natural {\bfseries fixing\+Days} () const \label{class_quant_lib_1_1_c_p_i_swap_a0a63fd5bc2212cf35499780a64ed36de}
+
+\item 
+virtual const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \& {\bfseries float\+Index} () const \label{class_quant_lib_1_1_c_p_i_swap_a7b5682023ca32bf850c54805b7e57686}
+
+\item 
+virtual Rate {\bfseries fixed\+Rate} () const \label{class_quant_lib_1_1_c_p_i_swap_a64f2e96cd41400901de013b80a6cbbe4}
+
+\item 
+virtual Real {\bfseries base\+C\+PI} () const \label{class_quant_lib_1_1_c_p_i_swap_a1f4862a14c6b56417e0221280dbe483a}
+
+\item 
+virtual const Day\+Counter \& {\bfseries fixed\+Day\+Count} () const \label{class_quant_lib_1_1_c_p_i_swap_a895d969d3106054cbf4c8e750b2067e1}
+
+\item 
+virtual const Schedule \& {\bfseries fixed\+Schedule} () const \label{class_quant_lib_1_1_c_p_i_swap_a5b5147ef4ecd016d3e7d23d30d41aeee}
+
+\item 
+virtual const Business\+Day\+Convention \& {\bfseries fixed\+Payment\+Roll} () const \label{class_quant_lib_1_1_c_p_i_swap_a3a71e86b4026ee02578a6cc4614c52e1}
+
+\item 
+virtual Period {\bfseries observation\+Lag} () const \label{class_quant_lib_1_1_c_p_i_swap_aa24d913c77d53852b5589f59911f800b}
+
+\item 
+virtual const boost\+::shared\+\_\+ptr$<$ Zero\+Inflation\+Index $>$ \& {\bfseries fixed\+Index} () const \label{class_quant_lib_1_1_c_p_i_swap_a18cbab644491d2a5b72d5044c98386e6}
+
+\item 
+virtual C\+P\+I\+::\+Interpolation\+Type {\bfseries observation\+Interpolation} () const \label{class_quant_lib_1_1_c_p_i_swap_afdc069ae77475b2dc6714b8dd766ec1b}
+
+\item 
+virtual Real {\bfseries inflation\+Nominal} () const \label{class_quant_lib_1_1_c_p_i_swap_ac9c3f4fbd8705c70612f2d0a5a535fa8}
+
+\item 
+virtual const Leg \& {\bfseries cpi\+Leg} () const \label{class_quant_lib_1_1_c_p_i_swap_a0bdee6997790a36874d6052082d7b796}
+
+\item 
+virtual const Leg \& {\bfseries float\+Leg} () const \label{class_quant_lib_1_1_c_p_i_swap_a16cc086eae31f64ecf520803409f9f1d}
+
+\item 
+void {\bf setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$args) const \label{class_quant_lib_1_1_c_p_i_swap_aaa5a7cf39bd352dc53f197a0eb29cb4b}
+
+\begin{DoxyCompactList}\small\item\em for simple case sufficient to copy base class \end{DoxyCompactList}\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_c_p_i_swap_a2bf1f6b35df4b4ac8adc032755ed411a}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+zero-\/inflation-\/indexed swap, 
+
+fixed x zero-\/inflation, i.\+e. fixed x C\+PI(i\textquotesingle{}th fixing)/\+C\+PI(base) versus floating + spread
+
+Note that this does ony the inflation-\/vs-\/floating-\/leg. Extension to inflation-\/vs-\/fixed-\/leg. is simple -\/ just replace the floating leg with a fixed leg.
+
+Typically there are notional exchanges at the end\+: either inflated-\/notional vs notional; or just (inflated-\/notional -\/ notional) vs zero. The latter is perhaphs more typical. \begin{DoxyWarning}{Warning}
+Setting subtract\+Inflation\+Nominal to true means that the original inflation nominal is subtracted from both nominals before they are exchanged, even if they are different.
+\end{DoxyWarning}
+This swap can mimic a Z\+C\+I\+IS where [(1+q)$^\wedge$n -\/ 1] is exchanged against (cpi ratio -\/ 1), by using differnt nominals on each leg and setting subtract\+Inflation\+Nominal to true. A\+L\+SO -\/ there must be just one date in each schedule.
+
+The two legs can have different schedules, fixing (days vs lag), settlement, and roll conventions. N.\+B. accrual adjustment periods are already in the schedules. Trade date and swap settlement date are outside the scope of the instrument. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf cpiswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/cpiswap.\+cpp\end{DoxyCompactItemize}

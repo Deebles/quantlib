@@ -1,0 +1,67 @@
+\section{Quant\+Lib\+:\+:Nonstandard\+Swaption Class Reference}
+\label{class_quant_lib_1_1_nonstandard_swaption}\index{Quant\+Lib\+::\+Nonstandard\+Swaption@{Quant\+Lib\+::\+Nonstandard\+Swaption}}
+
+
+nonstandard swaption class  
+
+
+
+
+{\ttfamily \#include $<$nonstandardswaption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Nonstandard\+Swaption\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Nonstandard\+Swaption\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for nonstandard swaption calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em base class for nonstandard swaption engines \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Nonstandard\+Swaption} (const {\bf Swaption} \&from\+Swaption)\label{class_quant_lib_1_1_nonstandard_swaption_a35fed795c326893fde32a8d0edfe51fd}
+
+\item 
+{\bfseries Nonstandard\+Swaption} (const boost\+::shared\+\_\+ptr$<$ {\bf Nonstandard\+Swap} $>$ \&swap, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise, Settlement\+::\+Type delivery=Settlement\+::\+Physical)\label{class_quant_lib_1_1_nonstandard_swaption_a1ffc37dfe062c29d638923e73a609fe7}
+
+\item 
+Disposable$<$ std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Calibration\+Helper $>$ $>$ $>$ {\bfseries calibration\+Basket} (boost\+::shared\+\_\+ptr$<$ Swap\+Index $>$ standard\+Swap\+Base, boost\+::shared\+\_\+ptr$<$ Swaption\+Volatility\+Structure $>$ swaption\+Volatility, const Basket\+Generating\+Engine\+::\+Calibration\+Basket\+Type basket\+Type=Basket\+Generating\+Engine\+::\+Maturity\+Strike\+By\+Delta\+Gamma) const \label{class_quant_lib_1_1_nonstandard_swaption_ad6db84375780ecaf4d43534449bc63bd}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_nonstandard_swaption_a87ef2e42ba2dc2b88df681ca1c93ce59}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_nonstandard_swaption_a07b1fa0986a2be6418388139f4fa3899}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Vanilla\+Swap\+::\+Type {\bfseries type} () const \label{class_quant_lib_1_1_nonstandard_swaption_a6b926a231b6f51a8232d3d5abff187ef}
+
+\item 
+const boost\+::shared\+\_\+ptr$<$ {\bf Nonstandard\+Swap} $>$ \& {\bfseries underlying\+Swap} () const \label{class_quant_lib_1_1_nonstandard_swaption_a41cf6142aba589d3f5b224b935ed6e53}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+nonstandard swaption class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf nonstandardswaption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/nonstandardswaption.\+cpp\end{DoxyCompactItemize}

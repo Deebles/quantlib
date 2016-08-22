@@ -1,0 +1,103 @@
+\section{Quant\+Lib\+:\+:Multi\+Asset\+Option Class Reference}
+\label{class_quant_lib_1_1_multi_asset_option}\index{Quant\+Lib\+::\+Multi\+Asset\+Option@{Quant\+Lib\+::\+Multi\+Asset\+Option}}
+
+
+Base class for options on multiple assets.  
+
+
+
+
+{\ttfamily \#include $<$multiassetoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Multi\+Asset\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Multi\+Asset\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from multi-\/asset option calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Multi\+Asset\+Option} (const boost\+::shared\+\_\+ptr$<$ Payoff $>$ \&, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&)\label{class_quant_lib_1_1_multi_asset_option_a4b9ceec9c56187bad49eb9a74ac2363b}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_multi_asset_option_a359dbefaf43322b3052ea9d2e4f27004}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_multi_asset_option_ab8074f4c625e2ba76702c394a65efc1d}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_multi_asset_option_a505c4359d6ae814658968a11812f1aa1}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf greeks}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries delta} () const \label{class_quant_lib_1_1_multi_asset_option_a9ccec9e50e39f277a0453ae1c2c07704}
+
+\item 
+Real {\bfseries gamma} () const \label{class_quant_lib_1_1_multi_asset_option_ac122bdbb41e15999adddb8039c20d10f}
+
+\item 
+Real {\bfseries theta} () const \label{class_quant_lib_1_1_multi_asset_option_a227640581bd0ecb00a222b8dda5ecf74}
+
+\item 
+Real {\bfseries vega} () const \label{class_quant_lib_1_1_multi_asset_option_a0a65428f86ee22c4813d06a8253e8d11}
+
+\item 
+Real {\bfseries rho} () const \label{class_quant_lib_1_1_multi_asset_option_a612bc02bf9286becc4ef2f42b1b53259}
+
+\item 
+Real {\bfseries dividend\+Rho} () const \label{class_quant_lib_1_1_multi_asset_option_ad7cfef508be9725905a425fc9e1713ea}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries setup\+Expired} () const \label{class_quant_lib_1_1_multi_asset_option_a1d3076f7ec691b38ff5968ebdc72cbe4}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries delta\+\_\+}\label{class_quant_lib_1_1_multi_asset_option_a15ec1ba72437bc618ce22aeff4c2b664}
+
+\item 
+Real {\bfseries gamma\+\_\+}\label{class_quant_lib_1_1_multi_asset_option_a1b734c00d4b96f455cccac65c4816a29}
+
+\item 
+Real {\bfseries theta\+\_\+}\label{class_quant_lib_1_1_multi_asset_option_a542375fc454d827e9769804de60a944a}
+
+\item 
+Real {\bfseries vega\+\_\+}\label{class_quant_lib_1_1_multi_asset_option_a560d57212c304108d64f9a2496267edb}
+
+\item 
+Real {\bfseries rho\+\_\+}\label{class_quant_lib_1_1_multi_asset_option_ae928d5a0223d2b0d08d65f134824e8dc}
+
+\item 
+Real {\bfseries dividend\+Rho\+\_\+}\label{class_quant_lib_1_1_multi_asset_option_a59c6208db8a249fdf66658b98d75a20f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for options on multiple assets. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf multiassetoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/multiassetoption.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,353 @@
+\section{Quant\+Lib\+:\+:Credit\+Default\+Swap Class Reference}
+\label{class_quant_lib_1_1_credit_default_swap}\index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+
+
+Credit default swap.  
+
+
+
+
+{\ttfamily \#include $<$creditdefaultswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Credit\+Default\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Credit\+Default\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{Indent}{\bf Constructors}\par
+\begin{DoxyCompactItemize}
+\item 
+{\bf Credit\+Default\+Swap} (Protection\+::\+Side side, Real notional, Rate spread, const Schedule \&schedule, Business\+Day\+Convention payment\+Convention, const Day\+Counter \&day\+Counter, bool settles\+Accrual=true, bool pays\+At\+Default\+Time=true, const Date \&protection\+Start=Date(), const boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$ \&=boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$())
+\begin{DoxyCompactList}\small\item\em C\+DS quoted as running-\/spread only. \end{DoxyCompactList}\item 
+{\bf Credit\+Default\+Swap} (Protection\+::\+Side side, Real notional, Rate upfront, Rate spread, const Schedule \&schedule, Business\+Day\+Convention payment\+Convention, const Day\+Counter \&day\+Counter, bool settles\+Accrual=true, bool pays\+At\+Default\+Time=true, const Date \&protection\+Start=Date(), const Date \&upfront\+Date=Date(), const boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$ \&=boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$())
+\begin{DoxyCompactList}\small\item\em C\+DS quoted as upfront and running spread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Protection\+::\+Side {\bfseries side} () const \label{class_quant_lib_1_1_credit_default_swap_a5ed397dedbde3907a239cac8bd828723}
+
+\item 
+Real {\bfseries notional} () const \label{class_quant_lib_1_1_credit_default_swap_a099cbdede86e59e34c77d45d70d65a6b}
+
+\item 
+Rate {\bfseries running\+Spread} () const \label{class_quant_lib_1_1_credit_default_swap_a569213d8107c66a4126614dcef4ddb7e}
+
+\item 
+boost\+::optional$<$ Rate $>$ {\bfseries upfront} () const \label{class_quant_lib_1_1_credit_default_swap_a2eea7c79f73ef0127a2d7581e5561166}
+
+\item 
+bool {\bfseries settles\+Accrual} () const \label{class_quant_lib_1_1_credit_default_swap_ac25dfc33a10d5c844db373c6ecc5b713}
+
+\item 
+bool {\bfseries pays\+At\+Default\+Time} () const \label{class_quant_lib_1_1_credit_default_swap_ac2949b69dbe37bf4c5d42803665b60c2}
+
+\item 
+const Leg \& {\bfseries coupons} () const \label{class_quant_lib_1_1_credit_default_swap_aeea8fe21c279314817ac7bb096ac3d16}
+
+\item 
+const Date \& {\bf protection\+Start\+Date} () const \label{class_quant_lib_1_1_credit_default_swap_afe04fd498e488f7459f306c7817a64e7}
+
+\begin{DoxyCompactList}\small\item\em The first date for which defaults will trigger the contract. \end{DoxyCompactList}\item 
+const Date \& {\bf protection\+End\+Date} () const \label{class_quant_lib_1_1_credit_default_swap_af40887fe8f827cc6a8de6e05bea5f1da}
+
+\begin{DoxyCompactList}\small\item\em The last date for which defaults will trigger the contract. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Results}\par
+\begin{DoxyCompactItemize}
+\item 
+Rate {\bf fair\+Upfront} () const 
+\item 
+Rate {\bf fair\+Spread} () const 
+\item 
+Real {\bf coupon\+Leg\+B\+PS} () const 
+\item 
+Real {\bfseries upfront\+B\+PS} () const \label{class_quant_lib_1_1_credit_default_swap_ac40189bdf6c9ae2b3d6faaf64351de43}
+
+\item 
+Real {\bfseries coupon\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_credit_default_swap_aa52d6f621cc2af7467e8dba05cbff402}
+
+\item 
+Real {\bfseries default\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_credit_default_swap_ac3a002ec213cc333f12275c845484d23}
+
+\item 
+Real {\bfseries upfront\+N\+PV} () const \label{class_quant_lib_1_1_credit_default_swap_a2b6dd00d697ca0165962d9c44297bdbd}
+
+\item 
+Rate {\bf implied\+Hazard\+Rate} (Real target\+N\+PV, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve, const Day\+Counter \&day\+Counter, Real recovery\+Rate=0.\+4, Real accuracy=1.\+0e-\/6) const 
+\begin{DoxyCompactList}\small\item\em Implied hazard rate calculation. \end{DoxyCompactList}\item 
+Rate {\bf conventional\+Spread} (Real conventional\+Recovery, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve, const Day\+Counter \&day\+Counter) const 
+\begin{DoxyCompactList}\small\item\em Conventional/standard upfront-\/to-\/spread conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Protection\+::\+Side {\bfseries side\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a93f59331d95a1559460df10c7329de08}
+
+\item 
+Real {\bfseries notional\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a5b6f22c3de7500120b8ee02ee9a5f941}
+
+\item 
+boost\+::optional$<$ Rate $>$ {\bfseries upfront\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_aac33aa411d55569b1d611a5067023a2b}
+
+\item 
+Rate {\bfseries running\+Spread\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a8e2b506e77127912cf83b58d4b300077}
+
+\item 
+bool {\bfseries settles\+Accrual\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a749292ed6759a181b9983d115aa3c34e}
+
+\item 
+bool {\bfseries pays\+At\+Default\+Time\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_ad937e168c3542607ae91cc042b71e638}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$ {\bfseries claim\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_ac9d021d338fe91a5714a95c5ee7a42de}
+
+\item 
+Leg {\bfseries leg\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a308242481975648a8186121c8ab54e30}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ Cash\+Flow $>$ {\bfseries upfront\+Payment\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a29aba25f4df649604ae98f448d43a747}
+
+\item 
+Date {\bfseries protection\+Start\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_aac6ec03e413ac3830f9cdb939b984671}
+
+\item 
+Rate {\bfseries fair\+Upfront\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a6bd4739d35a021936c59e01a5fa9e48b}
+
+\item 
+Rate {\bfseries fair\+Spread\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a8ec4a85a19b64543a8a81ddd4f4bb518}
+
+\item 
+Real {\bfseries coupon\+Leg\+B\+P\+S\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a12454534cd77abeae26ab62bcada0fae}
+
+\item 
+Real {\bfseries coupon\+Leg\+N\+P\+V\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a661c3dc1e4ba8307fe0182e409d258c9}
+
+\item 
+Real {\bfseries upfront\+B\+P\+S\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a7e0a02b4ceaeac917e65967933015527}
+
+\item 
+Real {\bfseries upfront\+N\+P\+V\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_a1d4f1db6a60a1a0ba077e743de52b9d7}
+
+\item 
+Real {\bfseries default\+Leg\+N\+P\+V\+\_\+}\label{class_quant_lib_1_1_credit_default_swap_af2f710c5dd6094a4049b4e74ba702dea}
+
+\end{DoxyCompactItemize}
+\subsection*{Instrument interface}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_credit_default_swap_aceddaf0f925435ca237f1130e2f6473c}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_credit_default_swap_abd09949059739f0cb5c3b84bfcc25412}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_credit_default_swap_ab11aba3d5e7e9edf219a576f326b2f82}
+
+\item 
+void {\bfseries setup\+Expired} () const \label{class_quant_lib_1_1_credit_default_swap_a988392939138ab20e748081d08c54fa5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Credit default swap. 
+
+\begin{DoxyNote}{Note}
+This instrument currently assumes that the issuer did not default until today\textquotesingle{}s date.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+if {\ttfamily Settings\+::include\+Reference\+Date\+Cash\+Flows()} is set to {\ttfamily true}, payments occurring at the settlement date of the swap might be included in the N\+PV and therefore affect the fair-\/spread calculation. This might not be what you want. 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!Credit\+Default\+Swap@{Credit\+Default\+Swap}}
+\index{Credit\+Default\+Swap@{Credit\+Default\+Swap}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{Credit\+Default\+Swap(\+Protection\+::\+Side side, Real notional, Rate spread, const Schedule \&schedule, Business\+Day\+Convention payment\+Convention, const Day\+Counter \&day\+Counter, bool settles\+Accrual=true, bool pays\+At\+Default\+Time=true, const Date \&protection\+Start=\+Date(), const boost\+::shared\+\_\+ptr$<$ Claim $>$ \&=boost\+::shared\+\_\+ptr$<$ Claim $>$())}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Credit\+Default\+Swap\+::\+Credit\+Default\+Swap (
+\begin{DoxyParamCaption}
+\item[{Protection\+::\+Side}]{side, }
+\item[{Real}]{notional, }
+\item[{Rate}]{spread, }
+\item[{const Schedule \&}]{schedule, }
+\item[{Business\+Day\+Convention}]{payment\+Convention, }
+\item[{const Day\+Counter \&}]{day\+Counter, }
+\item[{bool}]{settles\+Accrual = {\ttfamily true}, }
+\item[{bool}]{pays\+At\+Default\+Time = {\ttfamily true}, }
+\item[{const Date \&}]{protection\+Start = {\ttfamily Date()}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$ \&}]{claim = {\ttfamily boost\+:\+:shared\+\_\+ptr$<${\bf Claim}$>$()}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_credit_default_swap_a54ab6f66224220290049b536f6a0f6aa}
+
+
+C\+DS quoted as running-\/spread only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side} & Whether the protection is bought or sold. \\
+\hline
+{\em notional} & Notional value \\
+\hline
+{\em spread} & Running spread in fractional units. \\
+\hline
+{\em schedule} & Coupon schedule. \\
+\hline
+{\em payment\+Convention} & Business-\/day convention for payment-\/date adjustment. \\
+\hline
+{\em day\+Counter} & Day-\/count convention for accrual. \\
+\hline
+{\em settles\+Accrual} & Whether or not the accrued coupon is due in the event of a default. \\
+\hline
+{\em pays\+At\+Default\+Time} & If set to true, any payments triggered by a default event are due at default time. If set to false, they are due at the end of the accrual period. \\
+\hline
+{\em protection\+Start} & The first date where a default event will trigger the contract. \\
+\hline
+\end{DoxyParams}
+\index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!Credit\+Default\+Swap@{Credit\+Default\+Swap}}
+\index{Credit\+Default\+Swap@{Credit\+Default\+Swap}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{Credit\+Default\+Swap(\+Protection\+::\+Side side, Real notional, Rate upfront, Rate spread, const Schedule \&schedule, Business\+Day\+Convention payment\+Convention, const Day\+Counter \&day\+Counter, bool settles\+Accrual=true, bool pays\+At\+Default\+Time=true, const Date \&protection\+Start=\+Date(), const Date \&upfront\+Date=\+Date(), const boost\+::shared\+\_\+ptr$<$ Claim $>$ \&=boost\+::shared\+\_\+ptr$<$ Claim $>$())}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Credit\+Default\+Swap\+::\+Credit\+Default\+Swap (
+\begin{DoxyParamCaption}
+\item[{Protection\+::\+Side}]{side, }
+\item[{Real}]{notional, }
+\item[{Rate}]{upfront, }
+\item[{Rate}]{spread, }
+\item[{const Schedule \&}]{schedule, }
+\item[{Business\+Day\+Convention}]{payment\+Convention, }
+\item[{const Day\+Counter \&}]{day\+Counter, }
+\item[{bool}]{settles\+Accrual = {\ttfamily true}, }
+\item[{bool}]{pays\+At\+Default\+Time = {\ttfamily true}, }
+\item[{const Date \&}]{protection\+Start = {\ttfamily Date()}, }
+\item[{const Date \&}]{upfront\+Date = {\ttfamily Date()}, }
+\item[{const boost\+::shared\+\_\+ptr$<$ {\bf Claim} $>$ \&}]{claim = {\ttfamily boost\+:\+:shared\+\_\+ptr$<${\bf Claim}$>$()}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_credit_default_swap_a073255a8f0cd9a2b2f69ced1fd28b31f}
+
+
+C\+DS quoted as upfront and running spread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em side} & Whether the protection is bought or sold. \\
+\hline
+{\em notional} & Notional value \\
+\hline
+{\em upfront} & Upfront in fractional units. \\
+\hline
+{\em spread} & Running spread in fractional units. \\
+\hline
+{\em schedule} & Coupon schedule. \\
+\hline
+{\em payment\+Convention} & Business-\/day convention for payment-\/date adjustment. \\
+\hline
+{\em day\+Counter} & Day-\/count convention for accrual. \\
+\hline
+{\em settles\+Accrual} & Whether or not the accrued coupon is due in the event of a default. \\
+\hline
+{\em pays\+At\+Default\+Time} & If set to true, any payments triggered by a default event are due at default time. If set to false, they are due at the end of the accrual period. \\
+\hline
+{\em protection\+Start} & The first date where a default event will trigger the contract. \\
+\hline
+{\em upfront\+Date} & \doxyref{Settlement}{p.}{struct_quant_lib_1_1_settlement} date for the upfront payment. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!conventional\+Spread@{conventional\+Spread}}
+\index{conventional\+Spread@{conventional\+Spread}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{conventional\+Spread(\+Real conventional\+Recovery, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve, const Day\+Counter \&day\+Counter) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Credit\+Default\+Swap\+::conventional\+Spread (
+\begin{DoxyParamCaption}
+\item[{Real}]{conventional\+Recovery, }
+\item[{const Handle$<$ Yield\+Term\+Structure $>$ \&}]{discount\+Curve, }
+\item[{const Day\+Counter \&}]{day\+Counter}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_credit_default_swap_a03ba280471403cbacae4ccf779ccc984}
+
+
+Conventional/standard upfront-\/to-\/spread conversion. 
+
+Under a standard I\+S\+DA model and a set of standardised instrument characteristics, it is the running only quoted spread that will make a C\+DS contract have an N\+PV of 0 when quoted for that running only spread. Refer to\+: \char`\"{}\+I\+S\+D\+A
+\+Standard C\+D\+S converter specification.\char`\"{} May 2009.
+
+The conventional recovery rate to apply in the calculation is as specified by I\+S\+DA, not necessarily equal to the market-\/quoted one. It is typically 0.\+4 for Senior\+Sec and 0.\+2 for subordinate.
+
+\begin{DoxyNote}{Note}
+The conversion employs a flat hazard rate. As a result, you will not recover the market quotes.
+
+This method performs the calculation with the instrument characteristics. It will coincide with the I\+S\+DA calculation if your object has the standard characteristics. Notably\+:
+\begin{DoxyItemize}
+\item The calendar should have no bank holidays, just weekends.
+\item The yield curve should be L\+I\+B\+OR piecewise constant in fwd rates, with a discount factor of 1 on the calculation date, which coincides with the trade date.
+\item Convention should be Following for yield curve and contract cashflows.
+\item The C\+DS should pay accrued and mature on standard I\+MM dates, settle on trade date +1 and upfront settle on trade date +3. 
+\end{DoxyItemize}
+\end{DoxyNote}
+\index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!coupon\+Leg\+B\+PS@{coupon\+Leg\+B\+PS}}
+\index{coupon\+Leg\+B\+PS@{coupon\+Leg\+B\+PS}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{coupon\+Leg\+B\+P\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Credit\+Default\+Swap\+::coupon\+Leg\+B\+PS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_credit_default_swap_a4de2975df5c85a7dfda61b53bddbdf7a}
+Returns the variation of the fixed-\/leg value given a one-\/basis-\/point change in the running spread. \index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!fair\+Spread@{fair\+Spread}}
+\index{fair\+Spread@{fair\+Spread}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{fair\+Spread() const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Credit\+Default\+Swap\+::fair\+Spread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_credit_default_swap_a01f84710d3f711fe4d643aa78e5efc7d}
+Returns the running spread that, given the quoted recovery rate, will make the running-\/only C\+DS have an N\+PV of 0.
+
+\begin{DoxyNote}{Note}
+This calculation does not take any upfront into account, even if one was given. 
+\end{DoxyNote}
+\index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!fair\+Upfront@{fair\+Upfront}}
+\index{fair\+Upfront@{fair\+Upfront}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{fair\+Upfront() const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Credit\+Default\+Swap\+::fair\+Upfront (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_credit_default_swap_ad2d393e741eaab4fb85bbb185b995ed2}
+Returns the upfront spread that, given the running spread and the quoted recovery rate, will make the instrument have an N\+PV of 0. \index{Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}!implied\+Hazard\+Rate@{implied\+Hazard\+Rate}}
+\index{implied\+Hazard\+Rate@{implied\+Hazard\+Rate}!Quant\+Lib\+::\+Credit\+Default\+Swap@{Quant\+Lib\+::\+Credit\+Default\+Swap}}
+\subsubsection[{implied\+Hazard\+Rate(\+Real target\+N\+P\+V, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve, const Day\+Counter \&day\+Counter, Real recovery\+Rate=0.\+4, Real accuracy=1.\+0e-\/6) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Credit\+Default\+Swap\+::implied\+Hazard\+Rate (
+\begin{DoxyParamCaption}
+\item[{Real}]{target\+N\+PV, }
+\item[{const Handle$<$ Yield\+Term\+Structure $>$ \&}]{discount\+Curve, }
+\item[{const Day\+Counter \&}]{day\+Counter, }
+\item[{Real}]{recovery\+Rate = {\ttfamily 0.4}, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/6}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_credit_default_swap_aa8b7607482eaec9f3ed538a86c01849d}
+
+
+Implied hazard rate calculation. 
+
+\begin{DoxyNote}{Note}
+This method performs the calculation with the instrument characteristics. It will coincide with the I\+S\+DA calculation if your object has the standard characteristics. Notably\+:
+\begin{DoxyItemize}
+\item The calendar should have no bank holidays, just weekends.
+\item The yield curve should be L\+I\+B\+OR piecewise constant in fwd rates, with a discount factor of 1 on the calculation date, which coincides with the trade date.
+\item Convention should be Following for yield curve and contract cashflows.
+\item The C\+DS should pay accrued and mature on standard I\+MM dates, settle on trade date +1 and upfront settle on trade date +3. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf creditdefaultswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/creditdefaultswap.\+cpp\end{DoxyCompactItemize}

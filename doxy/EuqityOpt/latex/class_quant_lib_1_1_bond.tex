@@ -1,0 +1,437 @@
+\section{Quant\+Lib\+:\+:Bond Class Reference}
+\label{class_quant_lib_1_1_bond}\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+
+
+Base bond class.  
+
+
+
+
+{\ttfamily \#include $<$bond.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Bond\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Bond\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Bond} (Natural settlement\+Days, const Calendar \&calendar, const Date \&issue\+Date=Date(), const Leg \&coupons=Leg())
+\begin{DoxyCompactList}\small\item\em constructor for amortizing or non-\/amortizing bonds. \end{DoxyCompactList}\item 
+{\bf Bond} (Natural settlement\+Days, const Calendar \&calendar, Real face\+Amount, const Date \&maturity\+Date, const Date \&issue\+Date=Date(), const Leg \&{\bf cashflows}=Leg())
+\begin{DoxyCompactList}\small\item\em old constructor for non amortizing bonds. \end{DoxyCompactList}\item 
+virtual Rate {\bf next\+Coupon\+Rate} (Date d=Date()) const 
+\item 
+Rate {\bf previous\+Coupon\+Rate} (Date d=Date()) const 
+\begin{DoxyCompactList}\small\item\em Previous coupon already paid at a given date. \end{DoxyCompactList}\item 
+Date {\bfseries next\+Cash\+Flow\+Date} (Date d=Date()) const \label{class_quant_lib_1_1_bond_afdd11972d067d9737d0c36e188020e84}
+
+\item 
+Date {\bfseries previous\+Cash\+Flow\+Date} (Date d=Date()) const \label{class_quant_lib_1_1_bond_a8ca08bee1ea924b0d4dc0004753eeecf}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_bond_aeb50a257d6bc42856a9c6d47efbe6eaf}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Natural {\bfseries settlement\+Days} () const \label{class_quant_lib_1_1_bond_a836228ffb95570c807fb8aaa60009c13}
+
+\item 
+const Calendar \& {\bfseries calendar} () const \label{class_quant_lib_1_1_bond_a66624b4d283fdb51c64ddbf24528cb92}
+
+\item 
+const std\+::vector$<$ Real $>$ \& {\bfseries notionals} () const \label{class_quant_lib_1_1_bond_a14d8acc267e7856059e0e3621c14ca99}
+
+\item 
+virtual Real {\bfseries notional} (Date d=Date()) const \label{class_quant_lib_1_1_bond_aaece8be3f3d02a781a78ac82fc9052be}
+
+\item 
+const Leg \& {\bf cashflows} () const 
+\item 
+const Leg \& {\bf redemptions} () const 
+\item 
+const boost\+::shared\+\_\+ptr$<$ Cash\+Flow $>$ \& {\bf redemption} () const 
+\item 
+Date {\bfseries start\+Date} () const \label{class_quant_lib_1_1_bond_a5016b6486b8b167dfe91500385244c9a}
+
+\item 
+Date {\bfseries maturity\+Date} () const \label{class_quant_lib_1_1_bond_a92427e867c4c97aca018660f107b074b}
+
+\item 
+Date {\bfseries issue\+Date} () const \label{class_quant_lib_1_1_bond_a963f0b2d771c01fd0ebe851f6ead47b6}
+
+\item 
+bool {\bfseries is\+Tradable} (Date d=Date()) const \label{class_quant_lib_1_1_bond_a3941c49e6689a36db0792616eb2f5c89}
+
+\item 
+Date {\bfseries settlement\+Date} (Date d=Date()) const \label{class_quant_lib_1_1_bond_aceed02cd4a20c157ce583a65c7677a83}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Calculations}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bf clean\+Price} () const 
+\begin{DoxyCompactList}\small\item\em theoretical clean price \end{DoxyCompactList}\item 
+Real {\bf dirty\+Price} () const 
+\begin{DoxyCompactList}\small\item\em theoretical dirty price \end{DoxyCompactList}\item 
+Real {\bf settlement\+Value} () const 
+\begin{DoxyCompactList}\small\item\em theoretical settlement value \end{DoxyCompactList}\item 
+Rate {\bf yield} (const Day\+Counter \&dc, Compounding comp, Frequency freq, Real accuracy=1.\+0e-\/8, Size max\+Evaluations=100) const 
+\begin{DoxyCompactList}\small\item\em theoretical bond yield \end{DoxyCompactList}\item 
+Real {\bf clean\+Price} (Rate {\bf yield}, const Day\+Counter \&dc, Compounding comp, Frequency freq, Date settlement\+Date=Date()) const 
+\begin{DoxyCompactList}\small\item\em clean price given a yield and settlement date \end{DoxyCompactList}\item 
+Real {\bf dirty\+Price} (Rate {\bf yield}, const Day\+Counter \&dc, Compounding comp, Frequency freq, Date settlement\+Date=Date()) const 
+\begin{DoxyCompactList}\small\item\em dirty price given a yield and settlement date \end{DoxyCompactList}\item 
+Real {\bf settlement\+Value} (Real {\bf clean\+Price}) const 
+\begin{DoxyCompactList}\small\item\em settlement value as a function of the clean price \end{DoxyCompactList}\item 
+Rate {\bf yield} (Real {\bf clean\+Price}, const Day\+Counter \&dc, Compounding comp, Frequency freq, Date settlement\+Date=Date(), Real accuracy=1.\+0e-\/8, Size max\+Evaluations=100) const 
+\begin{DoxyCompactList}\small\item\em yield given a (clean) price and settlement date \end{DoxyCompactList}\item 
+virtual Real {\bf accrued\+Amount} (Date d=Date()) const 
+\begin{DoxyCompactList}\small\item\em accrued amount at a given date \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries setup\+Expired} () const \label{class_quant_lib_1_1_bond_ac8780f0a5b086b948ec20ff01ae6665c}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_bond_aa158db08aeff63d6eff3d4a51557b04d}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_bond_a265a900ac92c511557a53785feae37c7}
+
+\item 
+void {\bf add\+Redemptions\+To\+Cashflows} (const std\+::vector$<$ Real $>$ \&{\bf redemptions}=std\+::vector$<$ Real $>$())
+\item 
+void {\bf set\+Single\+Redemption} (Real notional, Real {\bf redemption}, const Date \&date)
+\item 
+void {\bf set\+Single\+Redemption} (Real notional, const boost\+::shared\+\_\+ptr$<$ Cash\+Flow $>$ \&{\bf redemption})
+\item 
+void {\bf calculate\+Notionals\+From\+Cashflows} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Natural {\bfseries settlement\+Days\+\_\+}\label{class_quant_lib_1_1_bond_a73653e4daab6f79d4e4b43959805dcf5}
+
+\item 
+Calendar {\bfseries calendar\+\_\+}\label{class_quant_lib_1_1_bond_abdb0f073ef7ab0446b2fcc537b338a2d}
+
+\item 
+std\+::vector$<$ Date $>$ {\bfseries notional\+Schedule\+\_\+}\label{class_quant_lib_1_1_bond_ad305a0db329332dfd086767111930dee}
+
+\item 
+std\+::vector$<$ Real $>$ {\bfseries notionals\+\_\+}\label{class_quant_lib_1_1_bond_a01aa695599f96e8bca2b44e78fd1f3cc}
+
+\item 
+Leg {\bfseries cashflows\+\_\+}\label{class_quant_lib_1_1_bond_a3b67d66ca4ca84900877a17c14a88fb7}
+
+\item 
+Leg {\bfseries redemptions\+\_\+}\label{class_quant_lib_1_1_bond_aa51ead614a160da5dedaf862db8ef84e}
+
+\item 
+Date {\bfseries maturity\+Date\+\_\+}\label{class_quant_lib_1_1_bond_a826583ebd14ee9d90e1e2864897da034}
+
+\item 
+Date {\bfseries issue\+Date\+\_\+}\label{class_quant_lib_1_1_bond_a6e5b7c316a846a8f60fdfa3eed11548d}
+
+\item 
+Real {\bfseries settlement\+Value\+\_\+}\label{class_quant_lib_1_1_bond_a371196d9d28a301f517ebf7126db45a2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base bond class. 
+
+Derived classes must fill the uninitialized data members.
+
+\begin{DoxyWarning}{Warning}
+Most methods assume that the cash flows are stored sorted by date, the redemption(s) being after any cash flow at the same date. In particular, if there\textquotesingle{}s one single redemption, it must be the last cash flow,
+\end{DoxyWarning}
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]
+\begin{DoxyItemize}
+\item price/yield calculations are cross-\/checked for consistency.
+\item price/yield calculations are checked against known good values. 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!Bond@{Bond}}
+\index{Bond@{Bond}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{Bond(\+Natural settlement\+Days, const Calendar \&calendar, const Date \&issue\+Date=\+Date(), const Leg \&coupons=\+Leg())}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Bond\+::\+Bond (
+\begin{DoxyParamCaption}
+\item[{Natural}]{settlement\+Days, }
+\item[{const Calendar \&}]{calendar, }
+\item[{const Date \&}]{issue\+Date = {\ttfamily Date()}, }
+\item[{const Leg \&}]{coupons = {\ttfamily Leg()}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_bond_a7b936305dff5ea2253545533121f6f39}
+
+
+constructor for amortizing or non-\/amortizing bonds. 
+
+Redemptions and maturity are calculated from the coupon data, if available. Therefore, redemptions must not be included in the passed cash flows. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!Bond@{Bond}}
+\index{Bond@{Bond}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{Bond(\+Natural settlement\+Days, const Calendar \&calendar, Real face\+Amount, const Date \&maturity\+Date, const Date \&issue\+Date=\+Date(), const Leg \&cashflows=\+Leg())}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Bond\+::\+Bond (
+\begin{DoxyParamCaption}
+\item[{Natural}]{settlement\+Days, }
+\item[{const Calendar \&}]{calendar, }
+\item[{Real}]{face\+Amount, }
+\item[{const Date \&}]{maturity\+Date, }
+\item[{const Date \&}]{issue\+Date = {\ttfamily Date()}, }
+\item[{const Leg \&}]{cashflows = {\ttfamily Leg()}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_bond_ad484038d7f9ca7dfe303ec7cf0349895}
+
+
+old constructor for non amortizing bonds. 
+
+\begin{DoxyWarning}{Warning}
+The last passed cash flow must be the bond redemption. No other cash flow can have a date later than the redemption date. 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!accrued\+Amount@{accrued\+Amount}}
+\index{accrued\+Amount@{accrued\+Amount}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{accrued\+Amount(\+Date d=\+Date()) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::accrued\+Amount (
+\begin{DoxyParamCaption}
+\item[{Date}]{d = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_bond_aa435081e92be7fc19e807c6dfc43e132}
+
+
+accrued amount at a given date 
+
+The default bond settlement is used if no date is given. 
+
+Reimplemented in {\bf Quant\+Lib\+::\+B\+TP} \doxyref{}{p.}{class_quant_lib_1_1_b_t_p_a230e542685c98be52e6060c31b90cb55}, and {\bf Quant\+Lib\+::\+C\+C\+T\+EU} \doxyref{}{p.}{class_quant_lib_1_1_c_c_t_e_u_a7cdc800de764b56c40b9a54a047b9aa7}.
+
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!add\+Redemptions\+To\+Cashflows@{add\+Redemptions\+To\+Cashflows}}
+\index{add\+Redemptions\+To\+Cashflows@{add\+Redemptions\+To\+Cashflows}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{add\+Redemptions\+To\+Cashflows(const std\+::vector$<$ Real $>$ \&redemptions=std\+::vector$<$ Real $>$())}]{\setlength{\rightskip}{0pt plus 5cm}void Quant\+Lib\+::\+Bond\+::add\+Redemptions\+To\+Cashflows (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Real $>$ \&}]{redemptions = {\ttfamily std\+:\+:vector$<$Real$>$()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_bond_a0c477dc3fa147e8a15c6a8a3e79e0740}
+This method can be called by derived classes in order to build redemption payments from the existing cash flows. It must be called after setting up the cashflows\+\_\+ vector and will fill the notional\+Schedule\+\_\+, notionals\+\_\+, and redemptions\+\_\+ data members.
+
+If given, the elements of the redemptions vector will multiply the amount of the redemption cash flow. The elements will be taken in base 100, i.\+e., a redemption equal to 100 does not modify the amount.
+
+\begin{DoxyPrecond}{Precondition}
+The cashflows\+\_\+ vector must contain at least one coupon and must be sorted by date. 
+\end{DoxyPrecond}
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!calculate\+Notionals\+From\+Cashflows@{calculate\+Notionals\+From\+Cashflows}}
+\index{calculate\+Notionals\+From\+Cashflows@{calculate\+Notionals\+From\+Cashflows}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{calculate\+Notionals\+From\+Cashflows()}]{\setlength{\rightskip}{0pt plus 5cm}void Quant\+Lib\+::\+Bond\+::calculate\+Notionals\+From\+Cashflows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_bond_ae5b077356ca91d3eea2022dadeb03ee0}
+used internally to collect notional information from the coupons. It should not be called by derived classes, unless they already provide redemption cash flows (in which case they must set up the redemptions\+\_\+ data member independently). It will fill the notional\+Schedule\+\_\+ and notionals\+\_\+ data members. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!cashflows@{cashflows}}
+\index{cashflows@{cashflows}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{cashflows() const }]{\setlength{\rightskip}{0pt plus 5cm}const Leg \& Quant\+Lib\+::\+Bond\+::cashflows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quant_lib_1_1_bond_a6fcdb0cfa7c459aac46eddb00e683288}
+\begin{DoxyNote}{Note}
+returns all the cashflows, including the redemptions. 
+\end{DoxyNote}
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!clean\+Price@{clean\+Price}}
+\index{clean\+Price@{clean\+Price}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{clean\+Price() const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::clean\+Price (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a0d055753920bd722db4c3f9d1c9394f5}
+
+
+theoretical clean price 
+
+The default bond settlement is used for calculation.
+
+\begin{DoxyWarning}{Warning}
+the theoretical price calculated from a flat term structure might differ slightly from the price calculated from the corresponding yield by means of the other overload of this function. If the price from a constant yield is desired, it is advisable to use such other overload. 
+\end{DoxyWarning}
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!clean\+Price@{clean\+Price}}
+\index{clean\+Price@{clean\+Price}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{clean\+Price(\+Rate yield, const Day\+Counter \&dc, Compounding comp, Frequency freq, Date settlement\+Date=\+Date()) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::clean\+Price (
+\begin{DoxyParamCaption}
+\item[{Rate}]{yield, }
+\item[{const Day\+Counter \&}]{dc, }
+\item[{Compounding}]{comp, }
+\item[{Frequency}]{freq, }
+\item[{Date}]{settlement\+Date = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_af8e130c444716afd79b64aebb5a951bf}
+
+
+clean price given a yield and settlement date 
+
+The default bond settlement is used if no date is given. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!dirty\+Price@{dirty\+Price}}
+\index{dirty\+Price@{dirty\+Price}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{dirty\+Price() const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::dirty\+Price (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_aeec94a644ca7b6526182c6cc2a397da4}
+
+
+theoretical dirty price 
+
+The default bond settlement is used for calculation.
+
+\begin{DoxyWarning}{Warning}
+the theoretical price calculated from a flat term structure might differ slightly from the price calculated from the corresponding yield by means of the other overload of this function. If the price from a constant yield is desired, it is advisable to use such other overload. 
+\end{DoxyWarning}
+\index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!dirty\+Price@{dirty\+Price}}
+\index{dirty\+Price@{dirty\+Price}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{dirty\+Price(\+Rate yield, const Day\+Counter \&dc, Compounding comp, Frequency freq, Date settlement\+Date=\+Date()) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::dirty\+Price (
+\begin{DoxyParamCaption}
+\item[{Rate}]{yield, }
+\item[{const Day\+Counter \&}]{dc, }
+\item[{Compounding}]{comp, }
+\item[{Frequency}]{freq, }
+\item[{Date}]{settlement\+Date = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a401455698cb579f22359f3601d9da81f}
+
+
+dirty price given a yield and settlement date 
+
+The default bond settlement is used if no date is given. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!next\+Coupon\+Rate@{next\+Coupon\+Rate}}
+\index{next\+Coupon\+Rate@{next\+Coupon\+Rate}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{next\+Coupon\+Rate(\+Date d=\+Date()) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Bond\+::next\+Coupon\+Rate (
+\begin{DoxyParamCaption}
+\item[{Date}]{d = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_bond_ac1b45f47f9b1fa52eda1d02e8c9bcc8e}
+Expected next coupon\+: depending on (the bond and) the given date the coupon can be historic, deterministic or expected in a stochastic sense. When the bond settlement date is used the coupon is the already-\/fixed not-\/yet-\/paid one.
+
+The current bond settlement is used if no date is given. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!previous\+Coupon\+Rate@{previous\+Coupon\+Rate}}
+\index{previous\+Coupon\+Rate@{previous\+Coupon\+Rate}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{previous\+Coupon\+Rate(\+Date d=\+Date()) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Bond\+::previous\+Coupon\+Rate (
+\begin{DoxyParamCaption}
+\item[{Date}]{d = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a237b1c6355be2dd1d5d9cbedced28188}
+
+
+Previous coupon already paid at a given date. 
+
+Expected previous coupon\+: depending on (the bond and) the given date the coupon can be historic, deterministic or expected in a stochastic sense. When the bond settlement date is used the coupon is the last paid one.
+
+The current bond settlement is used if no date is given. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!redemption@{redemption}}
+\index{redemption@{redemption}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{redemption() const }]{\setlength{\rightskip}{0pt plus 5cm}const shared\+\_\+ptr$<$ Cash\+Flow $>$ \& Quant\+Lib\+::\+Bond\+::redemption (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a806cd499623c72dd712759c22d10ae91}
+returns the redemption, if only one is defined \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!redemptions@{redemptions}}
+\index{redemptions@{redemptions}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{redemptions() const }]{\setlength{\rightskip}{0pt plus 5cm}const Leg \& Quant\+Lib\+::\+Bond\+::redemptions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quant_lib_1_1_bond_a4ab0e18c3689a9c1c9533cfe94382f72}
+returns just the redemption flows (not interest payments) \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!set\+Single\+Redemption@{set\+Single\+Redemption}}
+\index{set\+Single\+Redemption@{set\+Single\+Redemption}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{set\+Single\+Redemption(\+Real notional, Real redemption, const Date \&date)}]{\setlength{\rightskip}{0pt plus 5cm}void Quant\+Lib\+::\+Bond\+::set\+Single\+Redemption (
+\begin{DoxyParamCaption}
+\item[{Real}]{notional, }
+\item[{Real}]{redemption, }
+\item[{const Date \&}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_bond_aa01b6ab924b0c7417f4f6e5e0d446058}
+This method can be called by derived classes in order to build a bond with a single redemption payment. It will fill the notional\+Schedule\+\_\+, notionals\+\_\+, and redemptions\+\_\+ data members. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!set\+Single\+Redemption@{set\+Single\+Redemption}}
+\index{set\+Single\+Redemption@{set\+Single\+Redemption}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{set\+Single\+Redemption(\+Real notional, const boost\+::shared\+\_\+ptr$<$ Cash\+Flow $>$ \&redemption)}]{\setlength{\rightskip}{0pt plus 5cm}void Quant\+Lib\+::\+Bond\+::set\+Single\+Redemption (
+\begin{DoxyParamCaption}
+\item[{Real}]{notional, }
+\item[{const boost\+::shared\+\_\+ptr$<$ Cash\+Flow $>$ \&}]{redemption}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_bond_a922e81d4fb412f0eb9f7cf0c7649f251}
+This method can be called by derived classes in order to build a bond with a single redemption payment. It will fill the notional\+Schedule\+\_\+, notionals\+\_\+, and redemptions\+\_\+ data members. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!settlement\+Value@{settlement\+Value}}
+\index{settlement\+Value@{settlement\+Value}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{settlement\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::settlement\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a71250889ba5d6a5f0ef556c1efe1558b}
+
+
+theoretical settlement value 
+
+The default bond settlement date is used for calculation. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!settlement\+Value@{settlement\+Value}}
+\index{settlement\+Value@{settlement\+Value}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{settlement\+Value(\+Real clean\+Price) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Bond\+::settlement\+Value (
+\begin{DoxyParamCaption}
+\item[{Real}]{clean\+Price}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_ae2429e1987ec45bf8b1e8c6a9acb7740}
+
+
+settlement value as a function of the clean price 
+
+The default bond settlement date is used for calculation. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!yield@{yield}}
+\index{yield@{yield}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{yield(const Day\+Counter \&dc, Compounding comp, Frequency freq, Real accuracy=1.\+0e-\/8, Size max\+Evaluations=100) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Bond\+::yield (
+\begin{DoxyParamCaption}
+\item[{const Day\+Counter \&}]{dc, }
+\item[{Compounding}]{comp, }
+\item[{Frequency}]{freq, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/8}, }
+\item[{Size}]{max\+Evaluations = {\ttfamily 100}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a04f5625818885a32c4f43e3774a9a0c8}
+
+
+theoretical bond yield 
+
+The default bond settlement and theoretical price are used for calculation. \index{Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}!yield@{yield}}
+\index{yield@{yield}!Quant\+Lib\+::\+Bond@{Quant\+Lib\+::\+Bond}}
+\subsubsection[{yield(\+Real clean\+Price, const Day\+Counter \&dc, Compounding comp, Frequency freq, Date settlement\+Date=\+Date(), Real accuracy=1.\+0e-\/8, Size max\+Evaluations=100) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+Bond\+::yield (
+\begin{DoxyParamCaption}
+\item[{Real}]{clean\+Price, }
+\item[{const Day\+Counter \&}]{dc, }
+\item[{Compounding}]{comp, }
+\item[{Frequency}]{freq, }
+\item[{Date}]{settlement\+Date = {\ttfamily Date()}, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/8}, }
+\item[{Size}]{max\+Evaluations = {\ttfamily 100}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_bond_a3e2a44c7e6d336588bed03b94d4a3110}
+
+
+yield given a (clean) price and settlement date 
+
+The default bond settlement is used if no date is given. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf bond.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bond.\+cpp\end{DoxyCompactItemize}

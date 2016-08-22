@@ -1,0 +1,64 @@
+\section{Quant\+Lib\+:\+:Bespoke\+Calendar Class Reference}
+\label{class_quant_lib_1_1_bespoke_calendar}\index{Quant\+Lib\+::\+Bespoke\+Calendar@{Quant\+Lib\+::\+Bespoke\+Calendar}}
+
+
+Bespoke calendar.  
+
+
+
+
+{\ttfamily \#include $<$bespokecalendar.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Bespoke\+Calendar\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Bespoke\+Calendar\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Bespoke\+Calendar} (const std\+::string \&name=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Weekend} (Weekday)
+\begin{DoxyCompactList}\small\item\em marks the passed day as part of the weekend \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bespoke calendar. 
+
+This calendar has no predefined set of business days. Holidays and weekdays can be defined by means of the provided interface. Instances constructed by copying remain linked to the original one; adding a new holiday or weekday will affect all linked instances. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+Bespoke\+Calendar@{Quant\+Lib\+::\+Bespoke\+Calendar}!Bespoke\+Calendar@{Bespoke\+Calendar}}
+\index{Bespoke\+Calendar@{Bespoke\+Calendar}!Quant\+Lib\+::\+Bespoke\+Calendar@{Quant\+Lib\+::\+Bespoke\+Calendar}}
+\subsubsection[{Bespoke\+Calendar(const std\+::string \&name="""")}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Bespoke\+Calendar\+::\+Bespoke\+Calendar (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_bespoke_calendar_a86e3cd8275e1759c853b9c572b950da5}
+\begin{DoxyWarning}{Warning}
+different bespoke calendars created with the same name (or different bespoke calendars created with no name) will compare as equal. 
+\end{DoxyWarning}
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Bespoke\+Calendar@{Quant\+Lib\+::\+Bespoke\+Calendar}!add\+Weekend@{add\+Weekend}}
+\index{add\+Weekend@{add\+Weekend}!Quant\+Lib\+::\+Bespoke\+Calendar@{Quant\+Lib\+::\+Bespoke\+Calendar}}
+\subsubsection[{add\+Weekend(\+Weekday)}]{\setlength{\rightskip}{0pt plus 5cm}void Quant\+Lib\+::\+Bespoke\+Calendar\+::add\+Weekend (
+\begin{DoxyParamCaption}
+\item[{Weekday}]{w}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_bespoke_calendar_a60e90ad2d92f3614b50430f78467bfe8}
+
+
+marks the passed day as part of the weekend 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/time/calendars/{\bf bespokecalendar.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/time/calendars/{\bf bespokecalendar.\+cpp}\end{DoxyCompactItemize}

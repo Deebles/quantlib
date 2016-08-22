@@ -1,0 +1,12 @@
+digraph "QuantLib::Forward"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="QuantLib::Forward",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Instrument",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="QuantLib::FixedRateBondForward",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_fixed_rate_bond_forward.html",tooltip="Forward contract on a fixed-rate bond "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QuantLib::ForwardRateAgreement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_forward_rate_agreement.html"];
+}

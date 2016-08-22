@@ -1,0 +1,46 @@
+\section{Quant\+Lib\+:\+:detail\+:\+:Implied\+Volatility\+Helper Class Reference}
+\label{class_quant_lib_1_1detail_1_1_implied_volatility_helper}\index{Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper@{Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper}}
+
+
+helper class for one-\/asset implied-\/volatility calculation  
+
+
+
+
+{\ttfamily \#include $<$impliedvolatility.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Volatility {\bfseries calculate} (const Instrument \&instrument, const Pricing\+Engine \&engine, Simple\+Quote \&vol\+Quote, Real target\+Value, Real accuracy, Natural max\+Evaluations, Volatility min\+Vol, Volatility max\+Vol)\label{class_quant_lib_1_1detail_1_1_implied_volatility_helper_a2aa818e310c5b8f72585861b3192a8fc}
+
+\item 
+static boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ {\bf clone} (const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&, const boost\+::shared\+\_\+ptr$<$ Simple\+Quote $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+helper class for one-\/asset implied-\/volatility calculation 
+
+The passed engine must be linked to the passed quote (see, e.\+g., \doxyref{Vanilla\+Option}{p.}{class_quant_lib_1_1_vanilla_option} to see how this can be achieved.)
+
+\begin{DoxyNote}{Note}
+this function is meant for developers of option classes so that they can implement an implied\+Volatility() method. 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper@{Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper}!clone@{clone}}
+\index{clone@{clone}!Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper@{Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper}}
+\subsubsection[{clone(const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&, const boost\+::shared\+\_\+ptr$<$ Simple\+Quote $>$ \&)}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ Quant\+Lib\+::detail\+::\+Implied\+Volatility\+Helper\+::clone (
+\begin{DoxyParamCaption}
+\item[{const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&}]{process, }
+\item[{const boost\+::shared\+\_\+ptr$<$ Simple\+Quote $>$ \&}]{vol\+Quote}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_quant_lib_1_1detail_1_1_implied_volatility_helper_ac6514f87f51dea24db10f9b3971fc450}
+The returned process is equal to the passed one, except for the volatility which is flat and whose value is driven by the passed quote. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf impliedvolatility.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/impliedvolatility.\+cpp\end{DoxyCompactItemize}

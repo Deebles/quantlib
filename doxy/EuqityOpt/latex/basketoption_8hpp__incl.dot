@@ -1,0 +1,17 @@
+digraph "C:/quantlib/QuantLib/ql/instruments/basketoption.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="C:/quantlib/QuantLib\l/ql/instruments/basketoption.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="ql/instruments/payoffs.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$payoffs_8hpp.html",tooltip="Payoffs for various options. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="ql/option.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="ql/payoff.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="ql/instruments/multiassetoption.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$multiassetoption_8hpp.html",tooltip="Option on multiple assets. "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="ql/math/array.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

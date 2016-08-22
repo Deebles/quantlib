@@ -1,0 +1,91 @@
+\section{Quant\+Lib\+:\+:B\+TP Class Reference}
+\label{class_quant_lib_1_1_b_t_p}\index{Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}}
+
+
+Italian \doxyref{B\+TP}{p.}{class_quant_lib_1_1_b_t_p} (Buono Poliennali del Tesoro) fixed rate bond.  
+
+
+
+
+{\ttfamily \#include $<$btp.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:B\+TP\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:B\+TP\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries B\+TP} (const Date \&maturity\+Date, Rate fixed\+Rate, const Date \&start\+Date=Date(), const Date \&issue\+Date=Date())\label{class_quant_lib_1_1_b_t_p_a32e9853bcb28fb150f262b9c77d5ba80}
+
+\item 
+{\bf B\+TP} (const Date \&maturity\+Date, Rate fixed\+Rate, Real {\bf redemption}, const Date \&start\+Date=Date(), const Date \&issue\+Date=Date())
+\item 
+Rate {\bf yield} (Real {\bf clean\+Price}, Date settlement\+Date=Date(), Real accuracy=1.\+0e-\/8, Size max\+Evaluations=100) const 
+\begin{DoxyCompactList}\small\item\em \doxyref{B\+TP}{p.}{class_quant_lib_1_1_b_t_p} yield given a (clean) price and settlement date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Bond interface}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bf accrued\+Amount} (Date d=Date()) const 
+\begin{DoxyCompactList}\small\item\em accrued amount at a given date \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Italian \doxyref{B\+TP}{p.}{class_quant_lib_1_1_b_t_p} (Buono Poliennali del Tesoro) fixed rate bond. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}!B\+TP@{B\+TP}}
+\index{B\+TP@{B\+TP}!Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}}
+\subsubsection[{B\+T\+P(const Date \&maturity\+Date, Rate fixed\+Rate, Real redemption, const Date \&start\+Date=\+Date(), const Date \&issue\+Date=\+Date())}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+B\+T\+P\+::\+B\+TP (
+\begin{DoxyParamCaption}
+\item[{const Date \&}]{maturity\+Date, }
+\item[{Rate}]{fixed\+Rate, }
+\item[{Real}]{redemption, }
+\item[{const Date \&}]{start\+Date = {\ttfamily Date()}, }
+\item[{const Date \&}]{issue\+Date = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_b_t_p_ad5ec312485656461e50c831738c9a1a6}
+constructor needed for legacy non-\/par redemption B\+T\+Ps. As of today the only remaining one is I\+T123456789012 that will redeem 99.\+999 on xx-\/may-\/2037 
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}!accrued\+Amount@{accrued\+Amount}}
+\index{accrued\+Amount@{accrued\+Amount}!Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}}
+\subsubsection[{accrued\+Amount(\+Date d=\+Date()) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+B\+T\+P\+::accrued\+Amount (
+\begin{DoxyParamCaption}
+\item[{Date}]{d = {\ttfamily Date()}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quant_lib_1_1_b_t_p_a230e542685c98be52e6060c31b90cb55}
+
+
+accrued amount at a given date 
+
+The default bond settlement is used if no date is given. 
+
+Reimplemented from {\bf Quant\+Lib\+::\+Bond} \doxyref{}{p.}{class_quant_lib_1_1_bond_aa435081e92be7fc19e807c6dfc43e132}.
+
+\index{Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}!yield@{yield}}
+\index{yield@{yield}!Quant\+Lib\+::\+B\+TP@{Quant\+Lib\+::\+B\+TP}}
+\subsubsection[{yield(\+Real clean\+Price, Date settlement\+Date=\+Date(), Real accuracy=1.\+0e-\/8, Size max\+Evaluations=100) const }]{\setlength{\rightskip}{0pt plus 5cm}Rate Quant\+Lib\+::\+B\+T\+P\+::yield (
+\begin{DoxyParamCaption}
+\item[{Real}]{clean\+Price, }
+\item[{Date}]{settlement\+Date = {\ttfamily Date()}, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/8}, }
+\item[{Size}]{max\+Evaluations = {\ttfamily 100}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_b_t_p_a64e78c7e024c4e1a5a728739cf6bfcec}
+
+
+\doxyref{B\+TP}{p.}{class_quant_lib_1_1_b_t_p} yield given a (clean) price and settlement date. 
+
+The default \doxyref{B\+TP}{p.}{class_quant_lib_1_1_b_t_p} conventions are used\+: Actual/\+Actual (I\+S\+MA), Compounded, Annual. The default bond settlement is used if no date is given. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/{\bf btp.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/btp.\+cpp\end{DoxyCompactItemize}

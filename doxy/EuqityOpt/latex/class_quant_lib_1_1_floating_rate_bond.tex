@@ -1,0 +1,42 @@
+\section{Quant\+Lib\+:\+:Floating\+Rate\+Bond Class Reference}
+\label{class_quant_lib_1_1_floating_rate_bond}\index{Quant\+Lib\+::\+Floating\+Rate\+Bond@{Quant\+Lib\+::\+Floating\+Rate\+Bond}}
+
+
+floating-\/rate bond (possibly capped and/or floored)  
+
+
+
+
+{\ttfamily \#include $<$floatingratebond.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Floating\+Rate\+Bond\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Floating\+Rate\+Bond\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Floating\+Rate\+Bond} (Natural settlement\+Days, Real face\+Amount, const Schedule \&schedule, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, const Day\+Counter \&accrual\+Day\+Counter, Business\+Day\+Convention payment\+Convention=Following, Natural fixing\+Days=Null$<$ Natural $>$(), const std\+::vector$<$ Real $>$ \&gearings=std\+::vector$<$ Real $>$(1, 1.\+0), const std\+::vector$<$ Spread $>$ \&spreads=std\+::vector$<$ Spread $>$(1, 0.\+0), const std\+::vector$<$ Rate $>$ \&caps=std\+::vector$<$ Rate $>$(), const std\+::vector$<$ Rate $>$ \&floors=std\+::vector$<$ Rate $>$(), bool in\+Arrears=false, Real {\bf redemption}=100.\+0, const Date \&issue\+Date=Date())\label{class_quant_lib_1_1_floating_rate_bond_ad3755afaa42e633c72b0035aeb7cf5a7}
+
+\item 
+{\bfseries Floating\+Rate\+Bond} (Natural settlement\+Days, Real face\+Amount, const Date \&start\+Date, const Date \&maturity\+Date, Frequency coupon\+Frequency, const Calendar \&calendar, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, const Day\+Counter \&accrual\+Day\+Counter, Business\+Day\+Convention accrual\+Convention=Following, Business\+Day\+Convention payment\+Convention=Following, Natural fixing\+Days=Null$<$ Natural $>$(), const std\+::vector$<$ Real $>$ \&gearings=std\+::vector$<$ Real $>$(1, 1.\+0), const std\+::vector$<$ Spread $>$ \&spreads=std\+::vector$<$ Spread $>$(1, 0.\+0), const std\+::vector$<$ Rate $>$ \&caps=std\+::vector$<$ Rate $>$(), const std\+::vector$<$ Rate $>$ \&floors=std\+::vector$<$ Rate $>$(), bool in\+Arrears=false, Real {\bf redemption}=100.\+0, const Date \&issue\+Date=Date(), const Date \&stub\+Date=Date(), Date\+Generation\+::\+Rule rule=Date\+Generation\+::\+Backward, bool end\+Of\+Month=false)\label{class_quant_lib_1_1_floating_rate_bond_a3f7f8836ba1a35ebace77ecab06d42cc}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+floating-\/rate bond (possibly capped and/or floored) 
+
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]calculations are tested by checking results against cached values. \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/{\bf floatingratebond.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bonds/floatingratebond.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\section{Quant\+Lib\+:\+:Make\+Cms Class Reference}
+\label{class_quant_lib_1_1_make_cms}\index{Quant\+Lib\+::\+Make\+Cms@{Quant\+Lib\+::\+Make\+Cms}}
+
+
+helper class for instantiating C\+MS  
+
+
+
+
+{\ttfamily \#include $<$makecms.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Make\+Cms} (const Period \&swap\+Tenor, const boost\+::shared\+\_\+ptr$<$ Swap\+Index $>$ \&swap\+Index, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, Spread ibor\+Spread=0.\+0, const Period \&forward\+Start=0 $\ast$Days)\label{class_quant_lib_1_1_make_cms_acbba31d4c2a11c1b3f0387b1535ea46c}
+
+\item 
+{\bfseries Make\+Cms} (const Period \&swap\+Tenor, const boost\+::shared\+\_\+ptr$<$ Swap\+Index $>$ \&swap\+Index, Spread ibor\+Spread=0.\+0, const Period \&forward\+Start=0 $\ast$Days)\label{class_quant_lib_1_1_make_cms_ac8146fea94182ff243d9db7f6ae0400c}
+
+\item 
+{\bfseries operator Swap} () const \label{class_quant_lib_1_1_make_cms_ac3df600dc389e7846b73fdb57ff5de75}
+
+\item 
+{\bfseries operator boost\+::shared\+\_\+ptr$<$ Swap $>$} () const \label{class_quant_lib_1_1_make_cms_a413d6a37a19b4b33d078e621039a5686}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries receive\+Cms} (bool flag=true)\label{class_quant_lib_1_1_make_cms_a0c0c3933de4c7bc0b32b6095a8fd4ca2}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Nominal} (Real n)\label{class_quant_lib_1_1_make_cms_a8fa502ceaca8162629ec3a1809d69500}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Effective\+Date} (const Date \&)\label{class_quant_lib_1_1_make_cms_a02792823771328689388b64ea7ef05e2}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Tenor} (const Period \&t)\label{class_quant_lib_1_1_make_cms_ad45ceff08e135f1525d7e6b1ee4d4cdf}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Calendar} (const Calendar \&cal)\label{class_quant_lib_1_1_make_cms_ab49f2544011b42004b4f5523ab524322}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Convention} (Business\+Day\+Convention bdc)\label{class_quant_lib_1_1_make_cms_a6811faad6e314ca9e2b404bbf96c6754}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Termination\+Date\+Convention} (Business\+Day\+Convention)\label{class_quant_lib_1_1_make_cms_a095a59d3a812e5d061d21682a7cf54bd}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Rule} (Date\+Generation\+::\+Rule r)\label{class_quant_lib_1_1_make_cms_aeb1ca009e2175830ad8770926669e365}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+End\+Of\+Month} (bool flag=true)\label{class_quant_lib_1_1_make_cms_a5ee8f35f7555312bb51c5401df74192e}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+First\+Date} (const Date \&d)\label{class_quant_lib_1_1_make_cms_a57ac0b95f9028bd3df922507eed49f12}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Next\+To\+Last\+Date} (const Date \&d)\label{class_quant_lib_1_1_make_cms_a526ec2003ac0e2026f7e7af45b1b70a0}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Leg\+Day\+Count} (const Day\+Counter \&dc)\label{class_quant_lib_1_1_make_cms_a615d1891d9916774b6b29842d77d3a1a}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Tenor} (const Period \&t)\label{class_quant_lib_1_1_make_cms_a454082b9f13356b3a73e32ac6c9a93e6}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Calendar} (const Calendar \&cal)\label{class_quant_lib_1_1_make_cms_af404bba37a63bdf083d8a49f65ac8674}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Convention} (Business\+Day\+Convention bdc)\label{class_quant_lib_1_1_make_cms_a717bf0f3edbb7ab8e69cfc9c06259e20}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Termination\+Date\+Convention} (Business\+Day\+Convention bdc)\label{class_quant_lib_1_1_make_cms_afbbd1f0451ac09cb33e68a55da4acd91}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Rule} (Date\+Generation\+::\+Rule r)\label{class_quant_lib_1_1_make_cms_a0024d18ed967c7f2fb4d8db57a1cd4e0}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+End\+Of\+Month} (bool flag=true)\label{class_quant_lib_1_1_make_cms_ac067447daa5602a657513d771b25bf33}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+First\+Date} (const Date \&d)\label{class_quant_lib_1_1_make_cms_af353ede99a7f66963db9025614a2dddc}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Next\+To\+Last\+Date} (const Date \&d)\label{class_quant_lib_1_1_make_cms_a124a2bb92a0c0e7d154fa3e05228551d}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Floating\+Leg\+Day\+Count} (const Day\+Counter \&dc)\label{class_quant_lib_1_1_make_cms_aab53303765aace36a6ff5718b45e60eb}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Atm\+Spread} (bool flag=true)\label{class_quant_lib_1_1_make_cms_a9bc4e1dba2f171682d67e95b3a59628c}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Discounting\+Term\+Structure} (const Handle$<$ Yield\+Term\+Structure $>$ \&discounting\+Term\+Structure)\label{class_quant_lib_1_1_make_cms_adaa05ee7db26477af48db709843a6bf1}
+
+\item 
+{\bf Make\+Cms} \& {\bfseries with\+Cms\+Coupon\+Pricer} (const boost\+::shared\+\_\+ptr$<$ Cms\+Coupon\+Pricer $>$ \&coupon\+Pricer)\label{class_quant_lib_1_1_make_cms_aba9bbcb7d4a2dd3f3e4011ec66795565}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+helper class for instantiating C\+MS 
+
+This class provides a more comfortable way to instantiate standard market constant maturity swap. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf makecms.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/makecms.\+cpp\end{DoxyCompactItemize}

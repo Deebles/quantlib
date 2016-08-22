@@ -1,0 +1,55 @@
+\section{Quant\+Lib\+:\+:Composite\+Instrument Class Reference}
+\label{class_quant_lib_1_1_composite_instrument}\index{Quant\+Lib\+::\+Composite\+Instrument@{Quant\+Lib\+::\+Composite\+Instrument}}
+
+
+Composite instrument  
+
+
+
+
+{\ttfamily \#include $<$compositeinstrument.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Composite\+Instrument\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Composite\+Instrument\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf add} (const boost\+::shared\+\_\+ptr$<$ Instrument $>$ \&instrument, Real multiplier=1.\+0)\label{class_quant_lib_1_1_composite_instrument_a0f136cbe699995ead8b506c87e7eda7f}
+
+\begin{DoxyCompactList}\small\item\em adds an instrument to the composite \end{DoxyCompactList}\item 
+void {\bf subtract} (const boost\+::shared\+\_\+ptr$<$ Instrument $>$ \&instrument, Real multiplier=1.\+0)\label{class_quant_lib_1_1_composite_instrument_a5021a286b1fcdbd6300dc4b06c4a0146}
+
+\begin{DoxyCompactList}\small\item\em shorts an instrument from the composite \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Instrument interface}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_composite_instrument_a889e33cee9c42bfc82cca9926b8bbd79}
+
+\item 
+void {\bfseries perform\+Calculations} () const \label{class_quant_lib_1_1_composite_instrument_a0477f18f4f619d1832371caad04b89d1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Composite instrument 
+
+This instrument is an aggregate of other instruments. Its N\+PV is the sum of the N\+P\+Vs of its components, each possibly multiplied by a given factor.
+
+{\bfseries Example\+: } \doxyref{static replication of a down-\/and-\/out barrier option }{p.}{}
+
+\begin{DoxyWarning}{Warning}
+Methods that drive the calculation directly (such as recalculate(), freeze() and others) might not work correctly. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf compositeinstrument.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/compositeinstrument.\+cpp\end{DoxyCompactItemize}

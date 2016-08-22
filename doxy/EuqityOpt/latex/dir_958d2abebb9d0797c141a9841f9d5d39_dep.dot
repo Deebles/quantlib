@@ -1,0 +1,10 @@
+digraph "C:/quantlib/QuantLib/ql" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_958d2abebb9d0797c141a9841f9d5d39 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_958d2abebb9d0797c141a9841f9d5d39.html"];
+    dir_958d2abebb9d0797c141a9841f9d5d39 [shape=plaintext label="ql"];
+    dir_525e98820fff7af514b8df9283f9035f [shape=box label="instruments" color="red" fillcolor="white" style="filled" URL="dir_525e98820fff7af514b8df9283f9035f.html"];
+  }
+}

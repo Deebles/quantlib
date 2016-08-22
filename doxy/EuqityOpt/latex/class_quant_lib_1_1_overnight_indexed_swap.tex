@@ -1,0 +1,102 @@
+\section{Quant\+Lib\+:\+:Overnight\+Indexed\+Swap Class Reference}
+\label{class_quant_lib_1_1_overnight_indexed_swap}\index{Quant\+Lib\+::\+Overnight\+Indexed\+Swap@{Quant\+Lib\+::\+Overnight\+Indexed\+Swap}}
+
+
+Overnight indexed swap\+: fix vs compounded overnight rate.  
+
+
+
+
+{\ttfamily \#include $<$overnightindexedswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Overnight\+Indexed\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Overnight\+Indexed\+Swap\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Receiver} = -\/1, 
+{\bfseries Payer} = 1
+ \}\label{class_quant_lib_1_1_overnight_indexed_swap_a12311eda4739f7c84ed87fd42959f311}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Overnight\+Indexed\+Swap} (Type type, Real nominal, const Schedule \&schedule, Rate fixed\+Rate, const Day\+Counter \&fixed\+DC, const boost\+::shared\+\_\+ptr$<$ Overnight\+Index $>$ \&overnight\+Index, Spread spread=0.\+0)\label{class_quant_lib_1_1_overnight_indexed_swap_aba3ddfc270dd15d685dcbd5161973fc8}
+
+\item 
+{\bfseries Overnight\+Indexed\+Swap} (Type type, std\+::vector$<$ Real $>$ nominals, const Schedule \&schedule, Rate fixed\+Rate, const Day\+Counter \&fixed\+DC, const boost\+::shared\+\_\+ptr$<$ Overnight\+Index $>$ \&overnight\+Index, Spread spread=0.\+0)\label{class_quant_lib_1_1_overnight_indexed_swap_aca2b863e4ba579f58603494cce6ce575}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Type {\bfseries type} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a2ac991651858ddb3bb2cc9c2236cad89}
+
+\item 
+Real {\bfseries nominal} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a0b97ad0780f73bef39f7290d26ddc322}
+
+\item 
+std\+::vector$<$ Real $>$ {\bfseries nominals} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a4db847ad47a6c0b66bc0329626c5cf70}
+
+\item 
+Frequency {\bfseries payment\+Frequency} ()\label{class_quant_lib_1_1_overnight_indexed_swap_a5051b3e8bf446c17d5710a4fd46214cc}
+
+\item 
+Rate {\bfseries fixed\+Rate} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a360aa1be5d31e97a624a02d53dda69cc}
+
+\item 
+const Day\+Counter \& {\bfseries fixed\+Day\+Count} ()\label{class_quant_lib_1_1_overnight_indexed_swap_a527f6046f746b365bc5af8c81252010b}
+
+\item 
+const boost\+::shared\+\_\+ptr$<$ Overnight\+Index $>$ \& {\bfseries overnight\+Index} ()\label{class_quant_lib_1_1_overnight_indexed_swap_a831445e9998bd54e133619057ab72548}
+
+\item 
+Spread {\bfseries spread} ()\label{class_quant_lib_1_1_overnight_indexed_swap_ab00a9951284e36ed941a3d986539c65f}
+
+\item 
+const Leg \& {\bfseries fixed\+Leg} () const \label{class_quant_lib_1_1_overnight_indexed_swap_aeb4fd2872945044ccfed3191372fe56d}
+
+\item 
+const Leg \& {\bfseries overnight\+Leg} () const \label{class_quant_lib_1_1_overnight_indexed_swap_af5f40df4a71952e680e580c48faacb19}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Results}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries fixed\+Leg\+B\+PS} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a0cf66be155db62c91ad9d7c153e4c9d3}
+
+\item 
+Real {\bfseries fixed\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_overnight_indexed_swap_aca47c73e0be2e44c2fd6d10b96d17a41}
+
+\item 
+Real {\bfseries fair\+Rate} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a3c44f465b35a55a3a1df474359d9ce4c}
+
+\item 
+Real {\bfseries overnight\+Leg\+B\+PS} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a6b6ae87240d4d751a259614530eb5eb2}
+
+\item 
+Real {\bfseries overnight\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_overnight_indexed_swap_ad29f8bb5429bc128b15a5159d056ae56}
+
+\item 
+Spread {\bfseries fair\+Spread} () const \label{class_quant_lib_1_1_overnight_indexed_swap_a8e41371de588561f04781df9662413d5}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Overnight indexed swap\+: fix vs compounded overnight rate. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf overnightindexedswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/overnightindexedswap.\+cpp\end{DoxyCompactItemize}

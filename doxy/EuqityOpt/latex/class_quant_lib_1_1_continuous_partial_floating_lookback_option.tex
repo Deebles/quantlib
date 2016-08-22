@@ -1,0 +1,58 @@
+\section{Quant\+Lib\+:\+:Continuous\+Partial\+Floating\+Lookback\+Option Class Reference}
+\label{class_quant_lib_1_1_continuous_partial_floating_lookback_option}\index{Quant\+Lib\+::\+Continuous\+Partial\+Floating\+Lookback\+Option@{Quant\+Lib\+::\+Continuous\+Partial\+Floating\+Lookback\+Option}}
+
+
+Continuous-\/partial-\/floating lookback option.  
+
+
+
+
+{\ttfamily \#include $<$lookbackoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Continuous\+Partial\+Floating\+Lookback\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Continuous\+Partial\+Floating\+Lookback\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for continuous partial floating lookback option calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em Continuous partial floating lookback engine base class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Continuous\+Partial\+Floating\+Lookback\+Option} (Real current\+Minmax, Real lambda, Date lookback\+Period\+End, const boost\+::shared\+\_\+ptr$<$ {\bf Type\+Payoff} $>$ \&payoff, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise)\label{class_quant_lib_1_1_continuous_partial_floating_lookback_option_add9f07dd88900106aad5be45e98d038e}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_continuous_partial_floating_lookback_option_aff940ccbb9369631acd969e37d89b2a2}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries lambda\+\_\+}\label{class_quant_lib_1_1_continuous_partial_floating_lookback_option_a4462b4097db2bd46ff53b2d407c3a452}
+
+\item 
+Date {\bfseries lookback\+Period\+End\+\_\+}\label{class_quant_lib_1_1_continuous_partial_floating_lookback_option_a13b20e9b7c630429d19de5f572c7f1a1}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Continuous-\/partial-\/floating lookback option. 
+
+From {\tt http\+://help.\+rmetrics.\+org/f\+Exotic\+Options/\+Lookback\+Options.\+html} \+:
+
+For a partial-\/time floating strike lookback option, the lookback period starts at time zero and ends at an arbitrary date before expiration. Except for the partial lookback period, the option is similar to a floating strike lookback option. The partial-\/time floating strike lookback option is cheaper than a similar standard floating strike lookback option. Partial-\/time floating strike lookback options can be priced analytically using a model introduced by Heynen and Kat (1994). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf lookbackoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/lookbackoption.\+cpp\end{DoxyCompactItemize}

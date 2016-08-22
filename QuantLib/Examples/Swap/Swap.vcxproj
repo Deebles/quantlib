@@ -152,6 +152,10 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">SwapValuation-$(qlCompilerTag)-mt</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SwapValuation-$(qlCompilerTag)-x64-mt</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files\boost\boost_1_61_0;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\boost\boost_1_61_0\libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <Midl>
       <TypeLibraryName>.\build\$(qlCompilerTag)\$(Platform)\$(Configuration)\Swap.tlb</TypeLibraryName>

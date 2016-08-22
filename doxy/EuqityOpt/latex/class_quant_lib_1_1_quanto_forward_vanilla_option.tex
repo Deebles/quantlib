@@ -1,0 +1,62 @@
+\section{Quant\+Lib\+:\+:Quanto\+Forward\+Vanilla\+Option Class Reference}
+\label{class_quant_lib_1_1_quanto_forward_vanilla_option}\index{Quant\+Lib\+::\+Quanto\+Forward\+Vanilla\+Option@{Quant\+Lib\+::\+Quanto\+Forward\+Vanilla\+Option}}
+
+
+Quanto version of a forward vanilla option.  
+
+
+
+
+{\ttfamily \#include $<$quantoforwardvanillaoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Quanto\+Forward\+Vanilla\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Quanto\+Forward\+Vanilla\+Option\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef {\bf Forward\+Vanilla\+Option\+::arguments} {\bfseries arguments}\label{class_quant_lib_1_1_quanto_forward_vanilla_option_ac874e11a5caeb531bbc5e7ba24fa2dc5}
+
+\item 
+typedef {\bf Quanto\+Option\+Results}$<$ {\bf Forward\+Vanilla\+Option\+::results} $>$ {\bfseries results}\label{class_quant_lib_1_1_quanto_forward_vanilla_option_a489e8a6973382dc2f2fe2e5d77182e20}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Quanto\+Forward\+Vanilla\+Option} (Real moneyness, const Date \&reset\+Date, const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&)\label{class_quant_lib_1_1_quanto_forward_vanilla_option_a74cfbfbb1a9034f6a0e832358aec525f}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_quanto_forward_vanilla_option_aba14a9e66dd417ca8e110b032834f35f}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf greeks}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries qvega} () const \label{class_quant_lib_1_1_quanto_forward_vanilla_option_a79202cd724d8da48aeb8ff8013e6e7fe}
+
+\item 
+Real {\bfseries qrho} () const \label{class_quant_lib_1_1_quanto_forward_vanilla_option_ad1d30a108d3c8f43935ad5714f69a2cb}
+
+\item 
+Real {\bfseries qlambda} () const \label{class_quant_lib_1_1_quanto_forward_vanilla_option_ab0db6717c03d4d7b7295bb5189d92d46}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Quanto version of a forward vanilla option. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf quantoforwardvanillaoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/quantoforwardvanillaoption.\+cpp\end{DoxyCompactItemize}

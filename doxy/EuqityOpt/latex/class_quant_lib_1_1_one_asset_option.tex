@@ -1,0 +1,130 @@
+\section{Quant\+Lib\+:\+:One\+Asset\+Option Class Reference}
+\label{class_quant_lib_1_1_one_asset_option}\index{Quant\+Lib\+::\+One\+Asset\+Option@{Quant\+Lib\+::\+One\+Asset\+Option}}
+
+
+Base class for options on a single asset.  
+
+
+
+
+{\ttfamily \#include $<$oneassetoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:One\+Asset\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:One\+Asset\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from single-\/asset option calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries One\+Asset\+Option} (const boost\+::shared\+\_\+ptr$<$ Payoff $>$ \&, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&)\label{class_quant_lib_1_1_one_asset_option_a9611017c17fac3c45aa9f281a4b2ecd6}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_one_asset_option_af682c7e1d276a29462693dba9bbba488}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_one_asset_option_aa3c541a90955be727dae042539518fa0}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf greeks}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries delta} () const \label{class_quant_lib_1_1_one_asset_option_a17265f927ab9be13ce870d9b575c00cb}
+
+\item 
+Real {\bfseries delta\+Forward} () const \label{class_quant_lib_1_1_one_asset_option_aec28023b70dfc71f5e6fa9757fd1832a}
+
+\item 
+Real {\bfseries elasticity} () const \label{class_quant_lib_1_1_one_asset_option_a6cf7c6562740c85756a144469e2df8da}
+
+\item 
+Real {\bfseries gamma} () const \label{class_quant_lib_1_1_one_asset_option_ae566241a75e5f240846a80923c7a2f39}
+
+\item 
+Real {\bfseries theta} () const \label{class_quant_lib_1_1_one_asset_option_a56f7387983ab8268b9200421b4f59098}
+
+\item 
+Real {\bfseries theta\+Per\+Day} () const \label{class_quant_lib_1_1_one_asset_option_af3a4f561198d53a7f19d738e9ac26821}
+
+\item 
+Real {\bfseries vega} () const \label{class_quant_lib_1_1_one_asset_option_a568df2478c8e0e0d3c9c986a30b78a19}
+
+\item 
+Real {\bfseries rho} () const \label{class_quant_lib_1_1_one_asset_option_a25563922cbeb5d46886fd5754e6b8edb}
+
+\item 
+Real {\bfseries dividend\+Rho} () const \label{class_quant_lib_1_1_one_asset_option_aed6e8c8bdc9ed2aee8415637027861d5}
+
+\item 
+Real {\bfseries strike\+Sensitivity} () const \label{class_quant_lib_1_1_one_asset_option_abb3d53a82ea94a1c100cae16bd62097a}
+
+\item 
+Real {\bfseries itm\+Cash\+Probability} () const \label{class_quant_lib_1_1_one_asset_option_aeb30bd4f16fda114ed7dca52ac4eada3}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries setup\+Expired} () const \label{class_quant_lib_1_1_one_asset_option_aeb1fc193c9e4b91d392b89b8127be11a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries delta\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a0f2486ef271b5cfda29f59d6b21726d5}
+
+\item 
+Real {\bfseries delta\+Forward\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a46ff6fe39afba281f273310751de4523}
+
+\item 
+Real {\bfseries elasticity\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a62eee9c1e86fa3606446f7cb6f5b89fe}
+
+\item 
+Real {\bfseries gamma\+\_\+}\label{class_quant_lib_1_1_one_asset_option_acd566d7bddc02fc9b822a27072ccad90}
+
+\item 
+Real {\bfseries theta\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a06d44ade435f5aeced2117952abfda11}
+
+\item 
+Real {\bfseries theta\+Per\+Day\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a2eaaa309e0848702e8c8328334edacdd}
+
+\item 
+Real {\bfseries vega\+\_\+}\label{class_quant_lib_1_1_one_asset_option_aaa99d88f04727d63bca4cb23e164b6e1}
+
+\item 
+Real {\bfseries rho\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a7a8b8781122df61dc8d29352d3337621}
+
+\item 
+Real {\bfseries dividend\+Rho\+\_\+}\label{class_quant_lib_1_1_one_asset_option_acec199353113b55df04b0b1758988f47}
+
+\item 
+Real {\bfseries strike\+Sensitivity\+\_\+}\label{class_quant_lib_1_1_one_asset_option_a60b4335a10c0e0e080eee3685faee269}
+
+\item 
+Real {\bfseries itm\+Cash\+Probability\+\_\+}\label{class_quant_lib_1_1_one_asset_option_ac7be4123d83cf536d9dc812a138d87d1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for options on a single asset. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf oneassetoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/oneassetoption.\+cpp\end{DoxyCompactItemize}

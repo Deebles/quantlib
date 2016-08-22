@@ -1,0 +1,73 @@
+\section{Quant\+Lib\+:\+:Make\+O\+IS Class Reference}
+\label{class_quant_lib_1_1_make_o_i_s}\index{Quant\+Lib\+::\+Make\+O\+IS@{Quant\+Lib\+::\+Make\+O\+IS}}
+
+
+helper class  
+
+
+
+
+{\ttfamily \#include $<$makeois.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Make\+O\+IS} (const Period \&swap\+Tenor, const boost\+::shared\+\_\+ptr$<$ Overnight\+Index $>$ \&overnight\+Index, Rate fixed\+Rate=Null$<$ Rate $>$(), const Period \&fwd\+Start=0 $\ast$Days)\label{class_quant_lib_1_1_make_o_i_s_a86939d48db185f7251f9a8f46afcf010}
+
+\item 
+{\bfseries operator Overnight\+Indexed\+Swap} () const \label{class_quant_lib_1_1_make_o_i_s_a3bc8d5966dfe1dd532f5a363b3e91226}
+
+\item 
+{\bfseries operator boost\+::shared\+\_\+ptr$<$ Overnight\+Indexed\+Swap $>$} () const \label{class_quant_lib_1_1_make_o_i_s_aca29b340a93348f392d0637d0cd61310}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries receive\+Fixed} (bool flag=true)\label{class_quant_lib_1_1_make_o_i_s_a443214f36121ab2d83c6c119263e9858}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Type} (Overnight\+Indexed\+Swap\+::\+Type type)\label{class_quant_lib_1_1_make_o_i_s_a7741f4eaaf325a5376fa2a1e9d6463fd}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Nominal} (Real n)\label{class_quant_lib_1_1_make_o_i_s_ad392420dd3130cd0d055675c54cb23ac}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Settlement\+Days} (Natural settlement\+Days)\label{class_quant_lib_1_1_make_o_i_s_abcee7089678f162e84a97bc96d6b4650}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Effective\+Date} (const Date \&)\label{class_quant_lib_1_1_make_o_i_s_ac87a2e86344a07e2036a4d48ef92fd06}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Termination\+Date} (const Date \&)\label{class_quant_lib_1_1_make_o_i_s_a5ce30792175e1e446cd6629600e09174}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Rule} (Date\+Generation\+::\+Rule r)\label{class_quant_lib_1_1_make_o_i_s_a64cddf30e5c2d496f88a03b3b4a474fa}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Payment\+Frequency} (Frequency f)\label{class_quant_lib_1_1_make_o_i_s_a92c93fd5478824d422b53dc956623738}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+End\+Of\+Month} (bool flag=true)\label{class_quant_lib_1_1_make_o_i_s_a245c14dbfe76ebbe91dedbfcf2d1c1d0}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Fixed\+Leg\+Day\+Count} (const Day\+Counter \&dc)\label{class_quant_lib_1_1_make_o_i_s_adb2e6118c17b2756c41220262dd1f4d6}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Overnight\+Leg\+Spread} (Spread sp)\label{class_quant_lib_1_1_make_o_i_s_abd6df2a0cb822a139296f15151741fed}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Discounting\+Term\+Structure} (const Handle$<$ Yield\+Term\+Structure $>$ \&discounting\+Term\+Structure)\label{class_quant_lib_1_1_make_o_i_s_a9f9a8721f2f66003fc112746883e1a0a}
+
+\item 
+{\bf Make\+O\+IS} \& {\bfseries with\+Pricing\+Engine} (const boost\+::shared\+\_\+ptr$<$ Pricing\+Engine $>$ \&engine)\label{class_quant_lib_1_1_make_o_i_s_ace837ce8d58d952c27b2ba0c0e8e3ace}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+helper class 
+
+This class provides a more comfortable way to instantiate overnight indexed swaps. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf makeois.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/makeois.\+cpp\end{DoxyCompactItemize}

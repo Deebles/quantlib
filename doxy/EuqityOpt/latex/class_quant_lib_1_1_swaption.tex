@@ -1,0 +1,82 @@
+\section{Quant\+Lib\+:\+:Swaption Class Reference}
+\label{class_quant_lib_1_1_swaption}\index{Quant\+Lib\+::\+Swaption@{Quant\+Lib\+::\+Swaption}}
+
+
+Swaption class  
+
+
+
+
+{\ttfamily \#include $<$swaption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Swaption\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Swaption\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for swaption calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em base class for swaption engines \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Swaption} (const boost\+::shared\+\_\+ptr$<$ {\bf Vanilla\+Swap} $>$ \&swap, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise, Settlement\+::\+Type delivery=Settlement\+::\+Physical)\label{class_quant_lib_1_1_swaption_a4979ebb79a94ddf23c52ec37d9a72bcc}
+
+\item 
+Volatility {\bf implied\+Volatility} (Real price, const Handle$<$ Yield\+Term\+Structure $>$ \&discount\+Curve, Volatility guess, Real accuracy=1.\+0e-\/4, Natural max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0, Real displacement=0.\+0) const \label{class_quant_lib_1_1_swaption_af9db75c21c10191bc9097609f30542fd}
+
+\begin{DoxyCompactList}\small\item\em implied volatility \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_swaption_a3000e8e9fd9bad91898f99529a153631}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_swaption_a5c81c0a893a49a7fcb2d9942a117e7cf}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Settlement\+::\+Type {\bfseries settlement\+Type} () const \label{class_quant_lib_1_1_swaption_ad9faea03c1849286bf055cec03398437}
+
+\item 
+Vanilla\+Swap\+::\+Type {\bfseries type} () const \label{class_quant_lib_1_1_swaption_a1ba72fe83f81b018ed1854652ea74a63}
+
+\item 
+const boost\+::shared\+\_\+ptr$<$ {\bf Vanilla\+Swap} $>$ \& {\bfseries underlying\+Swap} () const \label{class_quant_lib_1_1_swaption_a3443c5e73c3140d7d3b0aaed7c5c9b95}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Swaption class 
+
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]
+\begin{DoxyItemize}
+\item the correctness of the returned value is tested by checking that the price of a payer (resp. receiver) swaption decreases (resp. increases) with the strike.
+\item the correctness of the returned value is tested by checking that the price of a payer (resp. receiver) swaption increases (resp. decreases) with the spread.
+\item the correctness of the returned value is tested by checking it against that of a swaption on a swap with no spread and a correspondingly adjusted fixed rate.
+\item the correctness of the returned value is tested by checking it against a known good value.
+\item the correctness of the returned value of cash settled swaptions is tested by checking the modified annuity against a value calculated without using the \doxyref{Swaption}{p.}{class_quant_lib_1_1_swaption} class.
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]add greeks and explicit exercise lag \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf swaption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/swaption.\+cpp\end{DoxyCompactItemize}

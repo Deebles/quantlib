@@ -1,0 +1,55 @@
+\section{Quant\+Lib\+:\+:Cliquet\+Option Class Reference}
+\label{class_quant_lib_1_1_cliquet_option}\index{Quant\+Lib\+::\+Cliquet\+Option@{Quant\+Lib\+::\+Cliquet\+Option}}
+
+
+cliquet (Ratchet) option  
+
+
+
+
+{\ttfamily \#include $<$cliquetoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Cliquet\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Cliquet\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for cliquet option calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em Cliquet engine base class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Cliquet\+Option} (const boost\+::shared\+\_\+ptr$<$ {\bf Percentage\+Strike\+Payoff} $>$ \&, const boost\+::shared\+\_\+ptr$<$ European\+Exercise $>$ \&maturity, const std\+::vector$<$ Date $>$ \&reset\+Dates)\label{class_quant_lib_1_1_cliquet_option_a568192700fc4b2ddef83a0d4fd0f1976}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_cliquet_option_a4d090efaae06cb00e8f97b3dae2f9e36}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+cliquet (Ratchet) option 
+
+A cliquet option, also known as Ratchet option, is a series of forward-\/starting (a.\+k.\+a. deferred strike) options where the strike for each forward start option is set equal to a fixed percentage of the spot price at the beginning of each period.
+
+\begin{DoxyRefDesc}{Todo}
+\item[{\bf Todo}]
+\begin{DoxyItemize}
+\item add local/global caps/floors
+\item add accrued coupon and last fixing
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf cliquetoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/cliquetoption.\+cpp\end{DoxyCompactItemize}

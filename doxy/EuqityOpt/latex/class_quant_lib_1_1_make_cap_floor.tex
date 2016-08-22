@@ -1,0 +1,73 @@
+\section{Quant\+Lib\+:\+:Make\+Cap\+Floor Class Reference}
+\label{class_quant_lib_1_1_make_cap_floor}\index{Quant\+Lib\+::\+Make\+Cap\+Floor@{Quant\+Lib\+::\+Make\+Cap\+Floor}}
+
+
+helper class  
+
+
+
+
+{\ttfamily \#include $<$makecapfloor.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Make\+Cap\+Floor} (Cap\+Floor\+::\+Type cap\+Floor\+Type, const Period \&cap\+Floor\+Tenor, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, Rate strike=Null$<$ Rate $>$(), const Period \&forward\+Start=0 $\ast$Days)\label{class_quant_lib_1_1_make_cap_floor_ae690fd8fbfbd71818ecd8718d543bef0}
+
+\item 
+{\bfseries operator Cap\+Floor} () const \label{class_quant_lib_1_1_make_cap_floor_a37d012f410fb63c9376bc39bacea069f}
+
+\item 
+{\bfseries operator boost\+::shared\+\_\+ptr$<$ Cap\+Floor $>$} () const \label{class_quant_lib_1_1_make_cap_floor_ad43197c904d6cd1bff89b95e26806f2a}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Nominal} (Real n)\label{class_quant_lib_1_1_make_cap_floor_a370d213b5538367fe7cf8ba6b5f134bf}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Effective\+Date} (const Date \&effective\+Date, bool first\+Caplet\+Excluded)\label{class_quant_lib_1_1_make_cap_floor_a12e7678b583748fd4b7903a0e20441b5}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Tenor} (const Period \&t)\label{class_quant_lib_1_1_make_cap_floor_ab8c667ab871aad1859ff4768babe374c}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Calendar} (const Calendar \&cal)\label{class_quant_lib_1_1_make_cap_floor_a0f954fb73c7b0b06803e049fa24cb265}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Convention} (Business\+Day\+Convention bdc)\label{class_quant_lib_1_1_make_cap_floor_a62c66889cff5e8acd20b639f5fddc9b9}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Termination\+Date\+Convention} (Business\+Day\+Convention bdc)\label{class_quant_lib_1_1_make_cap_floor_aba808ccdc699efed7d0b30159c885e9f}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Rule} (Date\+Generation\+::\+Rule r)\label{class_quant_lib_1_1_make_cap_floor_a5eb0bbe27ffb2e46fdfc22f6374c2f3a}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+End\+Of\+Month} (bool flag=true)\label{class_quant_lib_1_1_make_cap_floor_a29d8856bdbeb0961e5c1725df138c12a}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+First\+Date} (const Date \&d)\label{class_quant_lib_1_1_make_cap_floor_ac72cc951122dbea0864c97b4d4ec8290}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Next\+To\+Last\+Date} (const Date \&d)\label{class_quant_lib_1_1_make_cap_floor_a6f6d9cff43be4c1b133aeb75d7cbfdb7}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Day\+Count} (const Day\+Counter \&dc)\label{class_quant_lib_1_1_make_cap_floor_a4cdd4f215935aba49379d614e1c3dcab}
+
+\item 
+{\bf Make\+Cap\+Floor} \& {\bf as\+Optionlet} (bool b=true)\label{class_quant_lib_1_1_make_cap_floor_a1700c4ccf8307f9680f492616a690533}
+
+\begin{DoxyCompactList}\small\item\em only get last coupon \end{DoxyCompactList}\item 
+{\bf Make\+Cap\+Floor} \& {\bfseries with\+Pricing\+Engine} (const boost\+::shared\+\_\+ptr$<$ Pricing\+Engine $>$ \&engine)\label{class_quant_lib_1_1_make_cap_floor_a657121037a06ce4b54f3ced46ac9654b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+helper class 
+
+This class provides a more comfortable way to instantiate standard market cap and floor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf makecapfloor.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/makecapfloor.\+cpp\end{DoxyCompactItemize}

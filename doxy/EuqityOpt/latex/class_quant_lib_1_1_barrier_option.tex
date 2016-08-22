@@ -1,0 +1,79 @@
+\section{Quant\+Lib\+:\+:Barrier\+Option Class Reference}
+\label{class_quant_lib_1_1_barrier_option}\index{Quant\+Lib\+::\+Barrier\+Option@{Quant\+Lib\+::\+Barrier\+Option}}
+
+
+Barrier option on a single asset.  
+
+
+
+
+{\ttfamily \#include $<$barrieroption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Barrier\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Barrier\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for barrier option calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em Barrier-\/option engine base class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Barrier\+Option} (Barrier\+::\+Type barrier\+Type, Real barrier, Real rebate, const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&payoff, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise)\label{class_quant_lib_1_1_barrier_option_a1e878109cde6660e12b9a897ce142052}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_barrier_option_a9ada44e96cc646df8ee5572464722eb0}
+
+\item 
+Volatility {\bf implied\+Volatility} (Real price, const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&process, Real accuracy=1.\+0e-\/4, Size max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Barrier\+::\+Type {\bfseries barrier\+Type\+\_\+}\label{class_quant_lib_1_1_barrier_option_a5a5af534eb3296c57043da71f57ea9f8}
+
+\item 
+Real {\bfseries barrier\+\_\+}\label{class_quant_lib_1_1_barrier_option_aa96b6eecb7e5a44e8269c2cfa2867b49}
+
+\item 
+Real {\bfseries rebate\+\_\+}\label{class_quant_lib_1_1_barrier_option_a8ca09d4a4310deddc1ada5aa5afc1efd}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Barrier option on a single asset. 
+
+The analytic pricing engine will be used if none if passed. 
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Barrier\+Option@{Quant\+Lib\+::\+Barrier\+Option}!implied\+Volatility@{implied\+Volatility}}
+\index{implied\+Volatility@{implied\+Volatility}!Quant\+Lib\+::\+Barrier\+Option@{Quant\+Lib\+::\+Barrier\+Option}}
+\subsubsection[{implied\+Volatility(\+Real price, const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&process, Real accuracy=1.\+0e-\/4, Size max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const }]{\setlength{\rightskip}{0pt plus 5cm}Volatility Quant\+Lib\+::\+Barrier\+Option\+::implied\+Volatility (
+\begin{DoxyParamCaption}
+\item[{Real}]{price, }
+\item[{const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&}]{process, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/4}, }
+\item[{Size}]{max\+Evaluations = {\ttfamily 100}, }
+\item[{Volatility}]{min\+Vol = {\ttfamily 1.0e-\/7}, }
+\item[{Volatility}]{max\+Vol = {\ttfamily 4.0}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_barrier_option_a2f01762c4c1d10cd086fbd514b8b60c8}
+\begin{DoxyWarning}{Warning}
+see \doxyref{Vanilla\+Option}{p.}{class_quant_lib_1_1_vanilla_option} for notes on implied-\/volatility calculation. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf barrieroption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/barrieroption.\+cpp\end{DoxyCompactItemize}

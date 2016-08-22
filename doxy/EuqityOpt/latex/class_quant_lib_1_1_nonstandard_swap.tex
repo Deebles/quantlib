@@ -1,0 +1,99 @@
+\section{Quant\+Lib\+:\+:Nonstandard\+Swap Class Reference}
+\label{class_quant_lib_1_1_nonstandard_swap}\index{Quant\+Lib\+::\+Nonstandard\+Swap@{Quant\+Lib\+::\+Nonstandard\+Swap}}
+
+
+nonstandard swap  
+
+
+
+
+{\ttfamily \#include $<$nonstandardswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Nonstandard\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Nonstandard\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for nonstandard swap calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\begin{DoxyCompactList}\small\item\em Results from nonstandard swap calculation \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Nonstandard\+Swap} (const {\bf Vanilla\+Swap} \&from\+Vanilla)\label{class_quant_lib_1_1_nonstandard_swap_aa2cc63d4d7367bf89306bf9e4fa5df64}
+
+\item 
+{\bfseries Nonstandard\+Swap} (const Vanilla\+Swap\+::\+Type type, const std\+::vector$<$ Real $>$ \&fixed\+Nominal, const std\+::vector$<$ Real $>$ \&floating\+Nominal, const Schedule \&fixed\+Schedule, const std\+::vector$<$ Real $>$ \&fixed\+Rate, const Day\+Counter \&fixed\+Day\+Count, const Schedule \&floating\+Schedule, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&ibor\+Index, const Real gearing, const Spread spread, const Day\+Counter \&floating\+Day\+Count, const bool intermediate\+Capital\+Exchange=false, const bool final\+Capital\+Exchange=false, boost\+::optional$<$ Business\+Day\+Convention $>$ payment\+Convention=boost\+::none)\label{class_quant_lib_1_1_nonstandard_swap_aae56ebf40879463798fc8d141a2e7a55}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$args) const \label{class_quant_lib_1_1_nonstandard_swap_a61b1169ee3c5fe7141828b9753d7040a}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_nonstandard_swap_a4d48f886a70fcc19ec4e88d5622024c4}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Vanilla\+Swap\+::\+Type {\bfseries type} () const \label{class_quant_lib_1_1_nonstandard_swap_a510c527312e41141ed1db2999352aa0f}
+
+\item 
+const std\+::vector$<$ Real $>$ \& {\bfseries fixed\+Nominal} () const \label{class_quant_lib_1_1_nonstandard_swap_af21ebac8f99fb636d49c9af14422f491}
+
+\item 
+const std\+::vector$<$ Real $>$ \& {\bfseries floating\+Nominal} () const \label{class_quant_lib_1_1_nonstandard_swap_a4bc2076ca11c108b81c6d23e3cb303cd}
+
+\item 
+const Schedule \& {\bfseries fixed\+Schedule} () const \label{class_quant_lib_1_1_nonstandard_swap_a8e143446b63386235c860ec594ae39c9}
+
+\item 
+const std\+::vector$<$ Real $>$ \& {\bfseries fixed\+Rate} () const \label{class_quant_lib_1_1_nonstandard_swap_a6b90dc7c37c9b45cc5662831e2dfc269}
+
+\item 
+const Day\+Counter \& {\bfseries fixed\+Day\+Count} () const \label{class_quant_lib_1_1_nonstandard_swap_a5867d482b89e9a1ed52e681baf0e6a17}
+
+\item 
+const Schedule \& {\bfseries floating\+Schedule} () const \label{class_quant_lib_1_1_nonstandard_swap_ae96c948b94f36649f9f69823254f1ae3}
+
+\item 
+const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \& {\bfseries ibor\+Index} () const \label{class_quant_lib_1_1_nonstandard_swap_ae039038b1d796159b549bfe6ee4e8aac}
+
+\item 
+const Spread {\bfseries spread} () const \label{class_quant_lib_1_1_nonstandard_swap_a09c16467418d6f548cc1e0af5b528a99}
+
+\item 
+const Real {\bfseries gearing} () const \label{class_quant_lib_1_1_nonstandard_swap_a2779c9f9853184f83b0f466e76285bbe}
+
+\item 
+const Day\+Counter \& {\bfseries floating\+Day\+Count} () const \label{class_quant_lib_1_1_nonstandard_swap_a5c4496ff7d5d9a874e89066464c51c17}
+
+\item 
+Business\+Day\+Convention {\bfseries payment\+Convention} () const \label{class_quant_lib_1_1_nonstandard_swap_ae47cd90eb3e7e26a402b9f0f57e61c81}
+
+\item 
+const Leg \& {\bfseries fixed\+Leg} () const \label{class_quant_lib_1_1_nonstandard_swap_a4d68432ad5831fac4b586269555bb1fb}
+
+\item 
+const Leg \& {\bfseries floating\+Leg} () const \label{class_quant_lib_1_1_nonstandard_swap_a7a25d9b71d47fdc5cb231540830b0e70}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+nonstandard swap 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf nonstandardswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/nonstandardswap.\+cpp\end{DoxyCompactItemize}

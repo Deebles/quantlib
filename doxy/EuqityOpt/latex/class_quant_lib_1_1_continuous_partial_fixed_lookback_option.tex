@@ -1,0 +1,55 @@
+\section{Quant\+Lib\+:\+:Continuous\+Partial\+Fixed\+Lookback\+Option Class Reference}
+\label{class_quant_lib_1_1_continuous_partial_fixed_lookback_option}\index{Quant\+Lib\+::\+Continuous\+Partial\+Fixed\+Lookback\+Option@{Quant\+Lib\+::\+Continuous\+Partial\+Fixed\+Lookback\+Option}}
+
+
+Continuous-\/partial-\/fixed lookback option.  
+
+
+
+
+{\ttfamily \#include $<$lookbackoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Continuous\+Partial\+Fixed\+Lookback\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Continuous\+Partial\+Fixed\+Lookback\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for continuous partial fixed lookback option calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em Continuous partial fixed lookback engine base class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Continuous\+Partial\+Fixed\+Lookback\+Option} (Date lookback\+Period\+Start, const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&payoff, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise)\label{class_quant_lib_1_1_continuous_partial_fixed_lookback_option_aba9a0c8ab26c0ee30f37d22ac3daf17d}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_continuous_partial_fixed_lookback_option_ab58e1b54c596e216bf1e9b593d603511}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Date {\bfseries lookback\+Period\+Start\+\_\+}\label{class_quant_lib_1_1_continuous_partial_fixed_lookback_option_aa389dc2860ab4b57d596f84f103b3242}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Continuous-\/partial-\/fixed lookback option. 
+
+From {\tt http\+://help.\+rmetrics.\+org/f\+Exotic\+Options/\+Lookback\+Options.\+html} \+:
+
+For a partial-\/time fixed strike lookback option, the lookback period starts at a predetermined date after the initialization date of the option. The partial-\/time fixed strike lookback call option payoff is given by the difference between the maximum observed price of the underlying asset during the lookback period and the fixed strike price. The partial-\/time fixed strike lookback put option payoff is given by the difference between the fixed strike price and the minimum observed price of the underlying asset during the lookback period. The partial-\/time fixed strike lookback option is cheaper than a similar standard fixed strike lookback option. Partial-\/time fixed strike lookback options can be priced analytically using a model introduced by Heynen and Kat (1994). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf lookbackoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/lookbackoption.\+cpp\end{DoxyCompactItemize}

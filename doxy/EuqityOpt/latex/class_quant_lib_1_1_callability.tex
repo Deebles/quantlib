@@ -1,0 +1,66 @@
+\section{Quant\+Lib\+:\+:Callability Class Reference}
+\label{class_quant_lib_1_1_callability}\index{Quant\+Lib\+::\+Callability@{Quant\+Lib\+::\+Callability}}
+
+
+instrument callability  
+
+
+
+
+{\ttfamily \#include $<$callabilityschedule.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Callability\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Callability\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Price}
+\begin{DoxyCompactList}\small\item\em amount to be paid upon callability \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Type} \{ {\bfseries Call}, 
+{\bfseries Put}
+ \}\label{class_quant_lib_1_1_callability_a81816f4b88f2293c2a193fd4fc17fb4f}
+\begin{DoxyCompactList}\small\item\em type of the callability \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Callability} (const {\bf Price} \&price, {\bf Type} type, const Date \&date)\label{class_quant_lib_1_1_callability_ad228bde23a2d0b46caebd1ea15fd30c5}
+
+\item 
+const {\bf Price} \& {\bfseries price} () const \label{class_quant_lib_1_1_callability_a6adadeb5414e06999c297d531730dc21}
+
+\item 
+{\bf Type} {\bfseries type} () const \label{class_quant_lib_1_1_callability_a9be4cb1b8e8355bdf035408972e098fa}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Event interface}\par
+\begin{DoxyCompactItemize}
+\item 
+Date {\bfseries date} () const \label{class_quant_lib_1_1_callability_a219712d701b779bf8c69c73f2c20e2e8}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Visitability}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries accept} (Acyclic\+Visitor \&)\label{class_quant_lib_1_1_callability_a03dbbd31ce703dace42bb623d10daa27}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+instrument callability 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf callabilityschedule.\+hpp}\end{DoxyCompactItemize}

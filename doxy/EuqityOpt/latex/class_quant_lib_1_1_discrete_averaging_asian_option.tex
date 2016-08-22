@@ -1,0 +1,62 @@
+\section{Quant\+Lib\+:\+:Discrete\+Averaging\+Asian\+Option Class Reference}
+\label{class_quant_lib_1_1_discrete_averaging_asian_option}\index{Quant\+Lib\+::\+Discrete\+Averaging\+Asian\+Option@{Quant\+Lib\+::\+Discrete\+Averaging\+Asian\+Option}}
+
+
+Discrete-\/averaging Asian option.  
+
+
+
+
+{\ttfamily \#include $<$asianoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Discrete\+Averaging\+Asian\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Discrete\+Averaging\+Asian\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Extra arguments for single-\/asset discrete-\/average Asian option. \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em Discrete-\/averaging Asian engine base class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Discrete\+Averaging\+Asian\+Option} (Average\+::\+Type average\+Type, Real running\+Accumulator, Size past\+Fixings, const std\+::vector$<$ Date $>$ \&fixing\+Dates, const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&payoff, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise)\label{class_quant_lib_1_1_discrete_averaging_asian_option_a94f3099b52f8b6e97d8d2266ae8c5272}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_discrete_averaging_asian_option_a0f3e0409d17a9a039502fc27aa9161ea}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Average\+::\+Type {\bfseries average\+Type\+\_\+}\label{class_quant_lib_1_1_discrete_averaging_asian_option_a9b654baa0a85dd721e712e2a6dc8a82a}
+
+\item 
+Real {\bfseries running\+Accumulator\+\_\+}\label{class_quant_lib_1_1_discrete_averaging_asian_option_ae74336699bc04b62758a24bb9ee37c46}
+
+\item 
+Size {\bfseries past\+Fixings\+\_\+}\label{class_quant_lib_1_1_discrete_averaging_asian_option_ae66566eb1a26d6459354ba85dde6da64}
+
+\item 
+std\+::vector$<$ Date $>$ {\bfseries fixing\+Dates\+\_\+}\label{class_quant_lib_1_1_discrete_averaging_asian_option_ab9d72c951a8955bfc31161908f912738}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Discrete-\/averaging Asian option. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf asianoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/asianoption.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,70 @@
+\section{Quant\+Lib\+:\+:Dividend\+Vanilla\+Option Class Reference}
+\label{class_quant_lib_1_1_dividend_vanilla_option}\index{Quant\+Lib\+::\+Dividend\+Vanilla\+Option@{Quant\+Lib\+::\+Dividend\+Vanilla\+Option}}
+
+
+Single-\/asset vanilla option (no barriers) with discrete dividends.  
+
+
+
+
+{\ttfamily \#include $<$dividendvanillaoption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Dividend\+Vanilla\+Option\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Dividend\+Vanilla\+Option\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for dividend vanilla option calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em Dividend-\/vanilla-\/option engine base class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Dividend\+Vanilla\+Option} (const boost\+::shared\+\_\+ptr$<$ {\bf Striked\+Type\+Payoff} $>$ \&payoff, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise, const std\+::vector$<$ Date $>$ \&dividend\+Dates, const std\+::vector$<$ Real $>$ \&dividends)\label{class_quant_lib_1_1_dividend_vanilla_option_ae2b372829388492543c25745527771d3}
+
+\item 
+Volatility {\bf implied\+Volatility} (Real price, const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&process, Real accuracy=1.\+0e-\/4, Size max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_dividend_vanilla_option_ada54e8cf928136e2177fa8907cbf488b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Single-\/asset vanilla option (no barriers) with discrete dividends. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Dividend\+Vanilla\+Option@{Quant\+Lib\+::\+Dividend\+Vanilla\+Option}!implied\+Volatility@{implied\+Volatility}}
+\index{implied\+Volatility@{implied\+Volatility}!Quant\+Lib\+::\+Dividend\+Vanilla\+Option@{Quant\+Lib\+::\+Dividend\+Vanilla\+Option}}
+\subsubsection[{implied\+Volatility(\+Real price, const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&process, Real accuracy=1.\+0e-\/4, Size max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0) const }]{\setlength{\rightskip}{0pt plus 5cm}Volatility Quant\+Lib\+::\+Dividend\+Vanilla\+Option\+::implied\+Volatility (
+\begin{DoxyParamCaption}
+\item[{Real}]{price, }
+\item[{const boost\+::shared\+\_\+ptr$<$ Generalized\+Black\+Scholes\+Process $>$ \&}]{process, }
+\item[{Real}]{accuracy = {\ttfamily 1.0e-\/4}, }
+\item[{Size}]{max\+Evaluations = {\ttfamily 100}, }
+\item[{Volatility}]{min\+Vol = {\ttfamily 1.0e-\/7}, }
+\item[{Volatility}]{max\+Vol = {\ttfamily 4.0}}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_dividend_vanilla_option_ac0059529697d071a7c8934f3b5919094}
+\begin{DoxyWarning}{Warning}
+see \doxyref{Vanilla\+Option}{p.}{class_quant_lib_1_1_vanilla_option} for notes on implied-\/volatility calculation. 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf dividendvanillaoption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/dividendvanillaoption.\+cpp\end{DoxyCompactItemize}

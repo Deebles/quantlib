@@ -1,0 +1,142 @@
+\section{Quant\+Lib\+:\+:Swap Class Reference}
+\label{class_quant_lib_1_1_swap}\index{Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}}
+
+
+Interest rate swap.  
+
+
+
+
+{\ttfamily \#include $<$swap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\item 
+class {\bf engine}
+\item 
+class {\bf results}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{Indent}{\bf Additional interface}\par
+\begin{DoxyCompactItemize}
+\item 
+Date {\bfseries start\+Date} () const \label{class_quant_lib_1_1_swap_abd8324d97fe0a988efe5585d96beab62}
+
+\item 
+Date {\bfseries maturity\+Date} () const \label{class_quant_lib_1_1_swap_a9f9257fc68196de403d036f1575089df}
+
+\item 
+Real {\bfseries leg\+B\+PS} (Size j) const \label{class_quant_lib_1_1_swap_a8c80c921a35a4d177db6f02df3d99f79}
+
+\item 
+Real {\bfseries leg\+N\+PV} (Size j) const \label{class_quant_lib_1_1_swap_acc680c10440d9a5d8b4387654ef0fa43}
+
+\item 
+Discount\+Factor {\bfseries start\+Discounts} (Size j) const \label{class_quant_lib_1_1_swap_aee7271fdd52e4c01676043a6503d9203}
+
+\item 
+Discount\+Factor {\bfseries end\+Discounts} (Size j) const \label{class_quant_lib_1_1_swap_a5e2f2359e2c0e542eaf49cec6b8a0e9b}
+
+\item 
+Discount\+Factor {\bfseries npv\+Date\+Discount} () const \label{class_quant_lib_1_1_swap_a359f83c97b8023534c004c69bce7e876}
+
+\item 
+const Leg \& {\bfseries leg} (Size j) const \label{class_quant_lib_1_1_swap_a8c26a2e8d54a9aeeaec79ed1af8b5389}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Leg $>$ {\bfseries legs\+\_\+}\label{class_quant_lib_1_1_swap_a1ca08a7d6e5957950d40383eb4cf0b63}
+
+\item 
+std\+::vector$<$ Real $>$ {\bfseries payer\+\_\+}\label{class_quant_lib_1_1_swap_a82468c93e5a364d73e164df46bd50445}
+
+\item 
+std\+::vector$<$ Real $>$ {\bfseries leg\+N\+P\+V\+\_\+}\label{class_quant_lib_1_1_swap_ac85f31b7bf3b97e6c03848c64bef33af}
+
+\item 
+std\+::vector$<$ Real $>$ {\bfseries leg\+B\+P\+S\+\_\+}\label{class_quant_lib_1_1_swap_af40f759b518542c642d71cbc262cab84}
+
+\item 
+std\+::vector$<$ Discount\+Factor $>$ {\bfseries start\+Discounts\+\_\+}\label{class_quant_lib_1_1_swap_aa235d3e00058faa863f579d9665301e4}
+
+\item 
+std\+::vector$<$ Discount\+Factor $>$ {\bfseries end\+Discounts\+\_\+}\label{class_quant_lib_1_1_swap_ac3b82c6fb8b5951424767b5e95e9a0b3}
+
+\item 
+Discount\+Factor {\bfseries npv\+Date\+Discount\+\_\+}\label{class_quant_lib_1_1_swap_a390b5eebe9b8a8915d393465a93809ad}
+
+\end{DoxyCompactItemize}
+\subsection*{Constructors}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Swap} (const Leg \&first\+Leg, const Leg \&second\+Leg)
+\item 
+{\bf Swap} (const std\+::vector$<$ Leg $>$ \&legs, const std\+::vector$<$ bool $>$ \&payer)
+\item 
+{\bf Swap} (Size legs)
+\end{DoxyCompactItemize}
+\subsection*{Instrument interface}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_swap_a48a06dd6603a05e28449a962d26aad07}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_swap_a94a7d9c9982680ca4ac21de6456ab2c2}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$) const \label{class_quant_lib_1_1_swap_aaa466c14f325e50e820a75a938912c46}
+
+\item 
+void {\bfseries setup\+Expired} () const \label{class_quant_lib_1_1_swap_afbfb2d3cb2b4133a05eb68b91af1382b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interest rate swap. 
+
+The cash flows belonging to the first leg are paid; the ones belonging to the second leg are received. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}!Swap@{Swap}}
+\index{Swap@{Swap}!Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}}
+\subsubsection[{Swap(const Leg \&first\+Leg, const Leg \&second\+Leg)}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Swap\+::\+Swap (
+\begin{DoxyParamCaption}
+\item[{const Leg \&}]{first\+Leg, }
+\item[{const Leg \&}]{second\+Leg}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_swap_a88c4221d6c0156759c5e84c3188459c8}
+The cash flows belonging to the first leg are paid; the ones belonging to the second leg are received. \index{Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}!Swap@{Swap}}
+\index{Swap@{Swap}!Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}}
+\subsubsection[{Swap(const std\+::vector$<$ Leg $>$ \&legs, const std\+::vector$<$ bool $>$ \&payer)}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Swap\+::\+Swap (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Leg $>$ \&}]{legs, }
+\item[{const std\+::vector$<$ bool $>$ \&}]{payer}
+\end{DoxyParamCaption}
+)}\label{class_quant_lib_1_1_swap_a546a1d0746c86ad1fed70a0904b18024}
+Multi leg constructor. \index{Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}!Swap@{Swap}}
+\index{Swap@{Swap}!Quant\+Lib\+::\+Swap@{Quant\+Lib\+::\+Swap}}
+\subsubsection[{Swap(\+Size legs)}]{\setlength{\rightskip}{0pt plus 5cm}Quant\+Lib\+::\+Swap\+::\+Swap (
+\begin{DoxyParamCaption}
+\item[{Size}]{legs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quant_lib_1_1_swap_a953a237540a310c121aebbf8b4f7621e}
+This constructor can be used by derived classes that will build their legs themselves. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf swap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/swap.\+cpp\end{DoxyCompactItemize}

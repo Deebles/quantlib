@@ -1,0 +1,27 @@
+digraph "QuantLib::TypePayoff"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="QuantLib::TypePayoff",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Payoff",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="QuantLib::FloatingTypePayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_floating_type_payoff.html",tooltip="Payoff based on a floating strike "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QuantLib::StrikedTypePayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_striked_type_payoff.html",tooltip="Intermediate class for payoffs based on a fixed strike. "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="QuantLib::AssetOrNothing\lPayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_asset_or_nothing_payoff.html",tooltip="Binary asset-or-nothing payoff. "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="QuantLib::CashOrNothingPayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_cash_or_nothing_payoff.html",tooltip="Binary cash-or-nothing payoff. "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="QuantLib::GapPayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_gap_payoff.html",tooltip="Binary gap payoff. "];
+  Node4 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="QuantLib::PercentageStrike\lPayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_percentage_strike_payoff.html",tooltip="Payoff with strike expressed as percentage "];
+  Node4 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="QuantLib::PlainVanillaPayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_plain_vanilla_payoff.html",tooltip="Plain-vanilla payoff. "];
+  Node4 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="QuantLib::SuperFundPayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_super_fund_payoff.html",tooltip="Binary supershare and superfund payoffs. "];
+  Node4 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="QuantLib::SuperSharePayoff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_quant_lib_1_1_super_share_payoff.html",tooltip="Binary supershare payoff. "];
+}

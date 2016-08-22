@@ -1,0 +1,108 @@
+\section{Quant\+Lib\+:\+:Forward\+Rate\+Agreement Class Reference}
+\label{class_quant_lib_1_1_forward_rate_agreement}\index{Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}}
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Forward\+Rate\+Agreement\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Forward\+Rate\+Agreement\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Forward\+Rate\+Agreement} (const Date \&value\+Date, const Date \&maturity\+Date, Position\+::\+Type type, Rate strike\+Forward\+Rate, Real notional\+Amount, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&index, const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf discount\+Curve}=Handle$<$ Yield\+Term\+Structure $>$())\label{class_quant_lib_1_1_forward_rate_agreement_a2de1ed2681b021f41cc806e5917788e7}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Calculations}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Expired} () const 
+\item 
+Date {\bf settlement\+Date} () const 
+\item 
+Real {\bf spot\+Income} (const Handle$<$ Yield\+Term\+Structure $>$ \&{\bf income\+Discount\+Curve}) const 
+\item 
+Real {\bf spot\+Value} () const 
+\begin{DoxyCompactList}\small\item\em Spot value (N\+PV) of the underlying loan. \end{DoxyCompactList}\item 
+Interest\+Rate {\bf forward\+Rate} () const \label{class_quant_lib_1_1_forward_rate_agreement_a869bcb3f31062590a3a1aee5f73685a4}
+
+\begin{DoxyCompactList}\small\item\em Returns the relevant forward rate associated with the F\+RA term. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries perform\+Calculations} () const \label{class_quant_lib_1_1_forward_rate_agreement_a347c6d0e7fe4a43326a4493f7fdde876}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Position\+::\+Type {\bfseries fra\+Type\+\_\+}\label{class_quant_lib_1_1_forward_rate_agreement_ad4d9eeedb20548b734fbf2fc899d05cb}
+
+\item 
+Interest\+Rate {\bf forward\+Rate\+\_\+}\label{class_quant_lib_1_1_forward_rate_agreement_aca36714874768c18f1a5097d7cd0e1c5}
+
+\begin{DoxyCompactList}\small\item\em aka F\+RA rate (the market forward rate) \end{DoxyCompactList}\item 
+Interest\+Rate {\bf strike\+Forward\+Rate\+\_\+}\label{class_quant_lib_1_1_forward_rate_agreement_aa88c543f95ea0b8c0b969694d487e600}
+
+\begin{DoxyCompactList}\small\item\em aka F\+RA fixing rate, contract rate \end{DoxyCompactList}\item 
+Real {\bfseries notional\+Amount\+\_\+}\label{class_quant_lib_1_1_forward_rate_agreement_a35f0b90c800531e3177f17962ae1024d}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ {\bfseries index\+\_\+}\label{class_quant_lib_1_1_forward_rate_agreement_a8baaf46bab1ab13b6d1895228bc69108}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}!is\+Expired@{is\+Expired}}
+\index{is\+Expired@{is\+Expired}!Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}}
+\subsubsection[{is\+Expired() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Quant\+Lib\+::\+Forward\+Rate\+Agreement\+::is\+Expired (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_quant_lib_1_1_forward_rate_agreement_adc4d24e1181fa6a7bfde37e238f53435}
+A F\+RA expires/settles on the value\+Date \index{Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}!settlement\+Date@{settlement\+Date}}
+\index{settlement\+Date@{settlement\+Date}!Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}}
+\subsubsection[{settlement\+Date() const }]{\setlength{\rightskip}{0pt plus 5cm}Date Quant\+Lib\+::\+Forward\+Rate\+Agreement\+::settlement\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_forward_rate_agreement_a6264ecab130d238a18900710af4532f7}
+This returns evaluation\+Date + settlement\+Days (not F\+RA value\+Date). 
+
+Reimplemented from {\bf Quant\+Lib\+::\+Forward} \doxyref{}{p.}{class_quant_lib_1_1_forward}.
+
+\index{Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}!spot\+Income@{spot\+Income}}
+\index{spot\+Income@{spot\+Income}!Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}}
+\subsubsection[{spot\+Income(const Handle$<$ Yield\+Term\+Structure $>$ \&income\+Discount\+Curve) const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Forward\+Rate\+Agreement\+::spot\+Income (
+\begin{DoxyParamCaption}
+\item[{const Handle$<$ Yield\+Term\+Structure $>$ \&}]{income\+Discount\+Curve}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_forward_rate_agreement_ad6d4c3e3609afe3f8e3d1b168da98d29}
+Income is zero for a F\+RA 
+
+Implements {\bf Quant\+Lib\+::\+Forward} \doxyref{}{p.}{class_quant_lib_1_1_forward_ac5ab4da5fe37b6deb97d33ec5787d720}.
+
+\index{Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}!spot\+Value@{spot\+Value}}
+\index{spot\+Value@{spot\+Value}!Quant\+Lib\+::\+Forward\+Rate\+Agreement@{Quant\+Lib\+::\+Forward\+Rate\+Agreement}}
+\subsubsection[{spot\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}Real Quant\+Lib\+::\+Forward\+Rate\+Agreement\+::spot\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quant_lib_1_1_forward_rate_agreement_af61d22ce02cf374f86c9cfaecfb60067}
+
+
+Spot value (N\+PV) of the underlying loan. 
+
+This has always a positive value (asset), even if short the F\+RA 
+
+Implements {\bf Quant\+Lib\+::\+Forward} \doxyref{}{p.}{class_quant_lib_1_1_forward_a39e2d619090d24736a2c608655a65008}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf forwardrateagreement.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/forwardrateagreement.\+cpp\end{DoxyCompactItemize}

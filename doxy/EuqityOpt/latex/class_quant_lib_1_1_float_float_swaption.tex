@@ -1,0 +1,64 @@
+\section{Quant\+Lib\+:\+:Float\+Float\+Swaption Class Reference}
+\label{class_quant_lib_1_1_float_float_swaption}\index{Quant\+Lib\+::\+Float\+Float\+Swaption@{Quant\+Lib\+::\+Float\+Float\+Swaption}}
+
+
+floatfloat swaption class  
+
+
+
+
+{\ttfamily \#include $<$floatfloatswaption.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Float\+Float\+Swaption\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Float\+Float\+Swaption\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for cms swaption calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em base class for cms swaption engines \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Float\+Float\+Swaption} (const boost\+::shared\+\_\+ptr$<$ {\bf Float\+Float\+Swap} $>$ \&swap, const boost\+::shared\+\_\+ptr$<$ Exercise $>$ \&exercise)\label{class_quant_lib_1_1_float_float_swaption_a620398082db3c130b4bf407857fc8539}
+
+\item 
+Disposable$<$ std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ Calibration\+Helper $>$ $>$ $>$ {\bfseries calibration\+Basket} (boost\+::shared\+\_\+ptr$<$ Swap\+Index $>$ standard\+Swap\+Base, boost\+::shared\+\_\+ptr$<$ Swaption\+Volatility\+Structure $>$ swaption\+Volatility, const Basket\+Generating\+Engine\+::\+Calibration\+Basket\+Type basket\+Type=Basket\+Generating\+Engine\+::\+Maturity\+Strike\+By\+Delta\+Gamma) const \label{class_quant_lib_1_1_float_float_swaption_a7661543d7888dd2f57eaf71779fdab43}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_float_float_swaption_a13307ca9a1fccbb57831a10483269953}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_float_float_swaption_afbaf1f87b8e039e72541533dc904314a}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Vanilla\+Swap\+::\+Type {\bfseries type} () const \label{class_quant_lib_1_1_float_float_swaption_aefcb7f1aad5738a6998089507f60bceb}
+
+\item 
+const boost\+::shared\+\_\+ptr$<$ {\bf Float\+Float\+Swap} $>$ \& {\bfseries underlying\+Swap} () const \label{class_quant_lib_1_1_float_float_swaption_a83f90454396db67d352675847d95d55d}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+floatfloat swaption class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf floatfloatswaption.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/floatfloatswaption.\+cpp\end{DoxyCompactItemize}

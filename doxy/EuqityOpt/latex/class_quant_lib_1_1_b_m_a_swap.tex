@@ -1,0 +1,87 @@
+\section{Quant\+Lib\+:\+:B\+M\+A\+Swap Class Reference}
+\label{class_quant_lib_1_1_b_m_a_swap}\index{Quant\+Lib\+::\+B\+M\+A\+Swap@{Quant\+Lib\+::\+B\+M\+A\+Swap}}
+
+
+swap paying Libor against B\+MA coupons  
+
+
+
+
+{\ttfamily \#include $<$bmaswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:B\+M\+A\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:B\+M\+A\+Swap\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Receiver} = -\/1, 
+{\bfseries Payer} = 1
+ \}\label{class_quant_lib_1_1_b_m_a_swap_aa6eb64defb099fe5623452e969daa6be}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries B\+M\+A\+Swap} (Type {\bf type}, Real nominal, const Schedule \&libor\+Schedule, Rate libor\+Fraction, Rate libor\+Spread, const boost\+::shared\+\_\+ptr$<$ Ibor\+Index $>$ \&libor\+Index, const Day\+Counter \&libor\+Day\+Count, const Schedule \&bma\+Schedule, const boost\+::shared\+\_\+ptr$<$ B\+M\+A\+Index $>$ \&bma\+Index, const Day\+Counter \&bma\+Day\+Count)\label{class_quant_lib_1_1_b_m_a_swap_a79008d168c4555ac595d77cee96c6387}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries libor\+Fraction} () const \label{class_quant_lib_1_1_b_m_a_swap_a485bba7adc04021dbac53b59eb6af31f}
+
+\item 
+Spread {\bfseries libor\+Spread} () const \label{class_quant_lib_1_1_b_m_a_swap_aab2ddf3bd77429bfa4e5de4ceb5a0bac}
+
+\item 
+Real {\bfseries nominal} () const \label{class_quant_lib_1_1_b_m_a_swap_abf8134aab4861addd1a361654dadec48}
+
+\item 
+Type {\bf type} () const \label{class_quant_lib_1_1_b_m_a_swap_aa6e28f2f11e4491c9f0013a0b7dee77e}
+
+\begin{DoxyCompactList}\small\item\em \char`\"{}payer\char`\"{} or \char`\"{}receiver\char`\"{} refer to the B\+MA leg \end{DoxyCompactList}\item 
+const Leg \& {\bfseries bma\+Leg} () const \label{class_quant_lib_1_1_b_m_a_swap_aa38de0f1efc3b0840bae32df8e4b8708}
+
+\item 
+const Leg \& {\bfseries libor\+Leg} () const \label{class_quant_lib_1_1_b_m_a_swap_a355a3571f71e7856131b4633f3bbfbde}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Results}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries libor\+Leg\+B\+PS} () const \label{class_quant_lib_1_1_b_m_a_swap_ab3d1bd2defd628691f0280a6e41e52d2}
+
+\item 
+Real {\bfseries libor\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_b_m_a_swap_adc9e746b6b8d610345c0d02339589b24}
+
+\item 
+Rate {\bfseries fair\+Libor\+Fraction} () const \label{class_quant_lib_1_1_b_m_a_swap_a2f3a0514a4186bf4318fdf51b6c1c077}
+
+\item 
+Spread {\bfseries fair\+Libor\+Spread} () const \label{class_quant_lib_1_1_b_m_a_swap_ad6cd20a15b0162020a75f7e94ac66d0c}
+
+\item 
+Real {\bfseries bma\+Leg\+B\+PS} () const \label{class_quant_lib_1_1_b_m_a_swap_a2292ccc67381cd159d28d5801c6a2b4e}
+
+\item 
+Real {\bfseries bma\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_b_m_a_swap_a918f2937e59e5c10ff8e85e77d396b4c}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+swap paying Libor against B\+MA coupons 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf bmaswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/bmaswap.\+cpp\end{DoxyCompactItemize}

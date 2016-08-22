@@ -1,0 +1,183 @@
+\section{Quant\+Lib\+:\+:Zero\+Coupon\+Inflation\+Swap Class Reference}
+\label{class_quant_lib_1_1_zero_coupon_inflation_swap}\index{Quant\+Lib\+::\+Zero\+Coupon\+Inflation\+Swap@{Quant\+Lib\+::\+Zero\+Coupon\+Inflation\+Swap}}
+
+
+Zero-\/coupon inflation-\/indexed swap.  
+
+
+
+
+{\ttfamily \#include $<$zerocouponinflationswap.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Zero\+Coupon\+Inflation\+Swap\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Zero\+Coupon\+Inflation\+Swap\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\item 
+class {\bf engine}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Receiver} = -\/1, 
+{\bfseries Payer} = 1
+ \}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a5f9792139420279a7ce2769272d772f6}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Zero\+Coupon\+Inflation\+Swap} (Type {\bf type}, Real nominal, const Date \&start\+Date, const Date \&maturity, const Calendar \&fix\+Calendar, Business\+Day\+Convention fix\+Convention, const Day\+Counter \&day\+Counter, Rate {\bf fixed\+Rate}, const boost\+::shared\+\_\+ptr$<$ Zero\+Inflation\+Index $>$ \&inf\+Index, const Period \&observation\+Lag, bool adjust\+Inf\+Obs\+Dates=false, Calendar inf\+Calendar=Calendar(), Business\+Day\+Convention inf\+Convention=Business\+Day\+Convention())\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a4630181576ac237dce6ad96aadab7a98}
+
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Type {\bf type} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a2b300346a0357c1817392c5f236bbca5}
+
+\begin{DoxyCompactList}\small\item\em \char`\"{}payer\char`\"{} or \char`\"{}receiver\char`\"{} refer to the inflation-\/indexed leg \end{DoxyCompactList}\item 
+Real {\bfseries nominal} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a6aaf3230fb3f514ce2f989254446b140}
+
+\item 
+Date {\bfseries start\+Date} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_aff8a07f88bd522da568433cc6ae4b497}
+
+\item 
+Date {\bfseries maturity\+Date} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a1ead13d19de84cae915bf7fe70c6b2f8}
+
+\item 
+Calendar {\bfseries fixed\+Calendar} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a5740c8735acfe250eaeb279d73c8a257}
+
+\item 
+Business\+Day\+Convention {\bfseries fixed\+Convention} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_ad15c46ee11e8f137967e2a281de6b76f}
+
+\item 
+Day\+Counter {\bfseries day\+Counter} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a795505b27ad0fcdbae9ace4719f246ee}
+
+\item 
+Rate {\bf fixed\+Rate} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a759d874513b0445b57d7921b19c8736b}
+
+\begin{DoxyCompactList}\small\item\em $ K $ in the above formula. \end{DoxyCompactList}\item 
+boost\+::shared\+\_\+ptr$<$ Zero\+Inflation\+Index $>$ {\bfseries inflation\+Index} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a6b9b9f81fe07bbf2e028c44408dda03b}
+
+\item 
+Period {\bfseries observation\+Lag} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a90beb8e91b947bd4a8fb8bea6e1147a1}
+
+\item 
+bool {\bfseries adjust\+Observation\+Dates} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a7ca319fc2a4d965830ec6b304b0f3bee}
+
+\item 
+Calendar {\bfseries inflation\+Calendar} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a82ec7c5d480d755a9d8808c8185c5ecb}
+
+\item 
+Business\+Day\+Convention {\bfseries inflation\+Convention} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a385c6b3bf930db04861204e92307c077}
+
+\item 
+const Leg \& {\bf fixed\+Leg} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a0a5d4166babde9e3958e31b41f97184c}
+
+\begin{DoxyCompactList}\small\item\em just one cashflow (that is not a coupon) in each leg \end{DoxyCompactList}\item 
+const Leg \& {\bf inflation\+Leg} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a23e4da6ab05d99514f1d6a17a142d8fb}
+
+\begin{DoxyCompactList}\small\item\em just one cashflow (that is not a coupon) in each leg \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a3f6ee3e2ed7e0b1b5eb12ec5c55547d2}
+
+\item 
+void {\bfseries fetch\+Results} (const Pricing\+Engine\+::results $\ast$r) const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a67de924598e4f159c75cc5249726cbe0}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Results}\par
+\begin{DoxyCompactItemize}
+\item 
+Real {\bfseries fixed\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a0567720ed91cdabb583584890b218f34}
+
+\item 
+Real {\bfseries inflation\+Leg\+N\+PV} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a32a0fc942fc3879ed300b739f929e6c9}
+
+\item 
+Real {\bfseries fair\+Rate} () const \label{class_quant_lib_1_1_zero_coupon_inflation_swap_a15efde8258eb1f5af5335baca1ecaae1}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Type {\bfseries type\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a3e5371ce4d9959f7980ca182caac69c2}
+
+\item 
+Real {\bfseries nominal\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_ac01fcd1429b5df7b590c46dfea23a3ed}
+
+\item 
+Date {\bfseries start\+Date\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a7079158926589371fdef8567516a7465}
+
+\item 
+Date {\bfseries maturity\+Date\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a94ce4aa5f3a84bfe7617e811e90508f6}
+
+\item 
+Calendar {\bfseries fix\+Calendar\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_ab2b3cd9f973572835cd57cb75258a4f1}
+
+\item 
+Business\+Day\+Convention {\bfseries fix\+Convention\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_acd58eb28c4da2e0add07c0a55bbbae98}
+
+\item 
+Rate {\bfseries fixed\+Rate\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a155df9616ef2306510655c53235d7f43}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ Zero\+Inflation\+Index $>$ {\bfseries inf\+Index\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a294e9c3101a727cb0b5f7b7dc593446a}
+
+\item 
+Period {\bfseries observation\+Lag\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_ad5fbe98deee4edc850722ffe3d485d88}
+
+\item 
+bool {\bfseries adjust\+Inf\+Obs\+Dates\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a733cc22e571ce8486d94be8048861a2e}
+
+\item 
+Calendar {\bfseries inf\+Calendar\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a022be4d6da2622b3911472cf50113142}
+
+\item 
+Business\+Day\+Convention {\bfseries inf\+Convention\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_ae78e02ae64d1d53e87f3ec268f341fe9}
+
+\item 
+Day\+Counter {\bfseries day\+Counter\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a76cbe18559431f469e1d7fe721a69f36}
+
+\item 
+Date {\bfseries base\+Date\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_a2d0e11b0c9ae14b8a7a96c99fb045142}
+
+\item 
+Date {\bfseries obs\+Date\+\_\+}\label{class_quant_lib_1_1_zero_coupon_inflation_swap_ac1c10979ae6212701ef878a5ea6c61c9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Zero-\/coupon inflation-\/indexed swap. 
+
+Quoted as a fixed rate $ K $. At start\+: \[ P_n(0,T) N [(1+K)^{T}-1] = P_n(0,T) N \left[ \frac{I(T)}{I(0)} -1 \right] \] where $ T $ is the maturity time, $ P_n(0,t) $ is the nominal discount factor at time $ t $, $ N $ is the notional, and $ I(t) $ is the inflation index value at time $ t $.
+
+This inherits from swap and has two very simple legs\+: a fixed leg, from the quote (K); and an indexed leg. At maturity the two single cashflows are swapped. These are the notional versus the inflation-\/indexed notional Because the coupons are zero there are no accruals (and no coupons).
+
+Inflation is generally available on every day, including holidays and weekends. Hence there is a variable to state whether the observe/fix dates for inflation are adjusted or not. The default is not to adjust.
+
+A zero inflation swap is a simple enough instrument that the standard discounting pricing engine that works for a vanilla swap also works.
+
+\begin{DoxyNote}{Note}
+we do not need Schedules on the legs because they use one or two dates only per leg. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf zerocouponinflationswap.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/zerocouponinflationswap.\+cpp\end{DoxyCompactItemize}

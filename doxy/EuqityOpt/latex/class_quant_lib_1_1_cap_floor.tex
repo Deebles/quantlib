@@ -1,0 +1,108 @@
+\section{Quant\+Lib\+:\+:Cap\+Floor Class Reference}
+\label{class_quant_lib_1_1_cap_floor}\index{Quant\+Lib\+::\+Cap\+Floor@{Quant\+Lib\+::\+Cap\+Floor}}
+
+
+Base class for cap-\/like instruments.  
+
+
+
+
+{\ttfamily \#include $<$capfloor.\+hpp$>$}
+
+
+
+Inheritance diagram for Quant\+Lib\+:\+:Cap\+Floor\+:
+% FIG 0
+
+
+Collaboration diagram for Quant\+Lib\+:\+:Cap\+Floor\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf arguments}
+\begin{DoxyCompactList}\small\item\em Arguments for cap/floor calculation \end{DoxyCompactList}\item 
+class {\bf engine}
+\begin{DoxyCompactList}\small\item\em base class for cap/floor engines \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Type} \{ {\bfseries Cap}, 
+{\bfseries Floor}, 
+{\bfseries Collar}
+ \}\label{class_quant_lib_1_1_cap_floor_acb87beb1b21d83b5a1a252f69c4ce09c}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Cap\+Floor} (Type type, const Leg \&floating\+Leg, const std\+::vector$<$ Rate $>$ \&cap\+Rates, const std\+::vector$<$ Rate $>$ \&floor\+Rates)\label{class_quant_lib_1_1_cap_floor_acdaf9bfa8ce27fd122fff922518149e2}
+
+\item 
+{\bfseries Cap\+Floor} (Type type, const Leg \&floating\+Leg, const std\+::vector$<$ Rate $>$ \&strikes)\label{class_quant_lib_1_1_cap_floor_ae45bc01044940561034af65c12e3df0a}
+
+\item 
+Rate {\bfseries atm\+Rate} (const Yield\+Term\+Structure \&discount\+Curve) const \label{class_quant_lib_1_1_cap_floor_a5e8890446c02eb198248372b82b71154}
+
+\item 
+Volatility {\bf implied\+Volatility} (Real price, const Handle$<$ Yield\+Term\+Structure $>$ \&disc, Volatility guess, Real accuracy=1.\+0e-\/4, Natural max\+Evaluations=100, Volatility min\+Vol=1.\+0e-\/7, Volatility max\+Vol=4.\+0, Real displacement=0.\+0) const \label{class_quant_lib_1_1_cap_floor_a8bf0898dce37062c6b54e68da31a7e34}
+
+\begin{DoxyCompactList}\small\item\em implied term volatility \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}{\bf Instrument interface}\par
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Expired} () const \label{class_quant_lib_1_1_cap_floor_aace0179971919af89348ba674854d19f}
+
+\item 
+void {\bfseries setup\+Arguments} (Pricing\+Engine\+::arguments $\ast$) const \label{class_quant_lib_1_1_cap_floor_af2b7143c91efa25045a7b2107d80df6d}
+
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Inspectors}\par
+\begin{DoxyCompactItemize}
+\item 
+Type {\bfseries type} () const \label{class_quant_lib_1_1_cap_floor_a2e04490d36e4f940e884df9e2f6c9600}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries cap\+Rates} () const \label{class_quant_lib_1_1_cap_floor_ac7819783ac295f45e045de2489de36b9}
+
+\item 
+const std\+::vector$<$ Rate $>$ \& {\bfseries floor\+Rates} () const \label{class_quant_lib_1_1_cap_floor_aa1e719b11c41bfdcd7c9d00628a9b7a5}
+
+\item 
+const Leg \& {\bfseries floating\+Leg} () const \label{class_quant_lib_1_1_cap_floor_ac11eafc7a948bc0497b8dc43282b636e}
+
+\item 
+Date {\bfseries start\+Date} () const \label{class_quant_lib_1_1_cap_floor_a4b51152f3e484fe59ae00ffc1e21dd84}
+
+\item 
+Date {\bfseries maturity\+Date} () const \label{class_quant_lib_1_1_cap_floor_aab0af437da3c706b29f931d4e45aa67a}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ Floating\+Rate\+Coupon $>$ {\bfseries last\+Floating\+Rate\+Coupon} () const \label{class_quant_lib_1_1_cap_floor_ad6c0819b9ec98ce70e674ac7d6aa3896}
+
+\item 
+boost\+::shared\+\_\+ptr$<$ {\bf Cap\+Floor} $>$ {\bf optionlet} (const Size n) const \label{class_quant_lib_1_1_cap_floor_a158ece3106b6c3995a87945d6356c5ae}
+
+\begin{DoxyCompactList}\small\item\em Returns the n-\/th optionlet as a new \doxyref{Cap\+Floor}{p.}{class_quant_lib_1_1_cap_floor} with only one cash flow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Base class for cap-\/like instruments. 
+
+\begin{DoxyRefDesc}{Test}
+\item[{\bf Test}]
+\begin{DoxyItemize}
+\item the correctness of the returned value is tested by checking that the price of a cap (resp. floor) decreases (resp. increases) with the strike rate.
+\item the relationship between the values of caps, floors and the resulting collars is checked.
+\item the put-\/call parity between the values of caps, floors and swaps is checked.
+\item the correctness of the returned implied volatility is tested by using it for reproducing the target value.
+\item the correctness of the returned value is tested by checking it against a known good value. 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/{\bf capfloor.\+hpp}\item 
+C\+:/quantlib/\+Quant\+Lib/ql/instruments/capfloor.\+cpp\end{DoxyCompactItemize}
